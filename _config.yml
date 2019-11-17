@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: Graymatter Developer
+subtitle: 'Semi-random ramblings about code, tech and everything else'
 description: ''
 keywords:
-author: John Doe
+author: Michael Yarichuk
 language: en
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://graymatterdeveloper.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -43,8 +43,10 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
 highlight:
   enable: true
+  hljs: true # Add this line!
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -90,9 +92,20 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Butterfly
+
+# Hexo feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: heroku
+  repo: https://git.heroku.com/graymatterdeveloper.git
