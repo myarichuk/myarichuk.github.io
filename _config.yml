@@ -107,5 +107,7 @@ feed:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: heroku
-  repo: https://git.heroku.com/graymatterdeveloper.git
+  type: git
+  repo: https://github.com/myarichuk/Blog.git
+  branch: Published
+  message:
