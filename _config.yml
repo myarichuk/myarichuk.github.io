@@ -104,6 +104,8 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
 
+all_minifier: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
