@@ -419,7 +419,7 @@ subtitle:
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   sub:
     - A man is defined not by his flaws but by how he overcomes them
-    - The body needs many different foods to remain healthy. And the mind needs many different ideas to remain sharp.
+    - The mind needs many different ideas to remain sharp.
 
 
 ####    側邊欄    ####
@@ -430,12 +430,12 @@ aside_mobile: true
 # 側邊欄顯示設置
 aside:
   position: right # left or right
-  card_author: true
+  card_author: false
   card_announcement: false
   card_recent_post: true
-  card_categories: true
+  card_categories: false
   card_tags: true
-  card_archives: true
+  card_archives: false
   card_webinfo: false
 
 # 網站公告
