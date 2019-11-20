@@ -118,5 +118,5 @@ all_minifier: true
 deploy:
   type: git
   repo: https://github.com/myarichuk/Blog.git
-  branch: Published
-  message:
+  branch: master
+  message: Generated site pushed ({{ now('YYYY-MM-DD HH:mm:ss') }})
