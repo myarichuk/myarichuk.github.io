@@ -91,7 +91,7 @@ katex:
 # baidu_analytics:
 
 #Google Analytics
-google_analytics:
+google_analytics: UA-125949801-1 
 
 
 # Post info settings

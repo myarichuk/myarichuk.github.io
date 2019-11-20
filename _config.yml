@@ -4,9 +4,16 @@
 
 # Site
 title: Graymatter Developer
-subtitle: 'Semi-random ramblings about code, tech and everything else'
-description: ''
+subtitle: 'My somewhat random thoughts about tech'
+description: 'Personal blog about all things geeky, tech and anything else I find interesting at the moment'
 keywords:
+  - C#
+  - Programming
+  - .Net
+  - .Net Core
+  - Tech
+  - Software Development
+
 author: Michael Yarichuk
 language: en
 timezone: ''
