@@ -77,5 +77,5 @@ deploy:
 
 You can read more about the deploy command [in it's documentation article](https://hexo.io/docs/one-command-deployment).
 
-#### So, that's it. Have fun blogging! 
-#### Actually, I think this blog post is a bit longer than it can be, but I wanted to be thorough, especially since this is my first blog post :)
+So, that's it. Have fun blogging! <br/>
+Actually, I think this blog post is a bit longer than it could (or should!) be, but I wanted to be thorough, especially since this is my first blog post :)

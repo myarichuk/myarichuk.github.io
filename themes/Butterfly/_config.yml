@@ -418,7 +418,7 @@ subtitle:
   source: false
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   sub:
-    - Hi! My name is Michael and I write code.
+    - Hi! My name is Michael and I love writing code.
     - Talk is cheap. Show me the code.
 
 
