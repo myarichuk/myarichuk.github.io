@@ -2,7 +2,9 @@
 Thumbs.db
 db.json
 *.log
+.deploy_git/
 node_modules/
 .deploy*/
+public/
 /package-lock.json
 yarn.lock
