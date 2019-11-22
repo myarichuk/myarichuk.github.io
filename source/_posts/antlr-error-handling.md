@@ -13,7 +13,7 @@ cover: /2019/11/21/antlr-error-handling/antlr.jpg
 ### There is more than one way to peel an orange!
 <br/>   
 Once a colleague told me: "you can't really generate user-friendly error messages with ANTLR. This didn't seem right - serious parser generators must have ways to generate proper errors!
-Online searching has shown approaches to error handling mostly revolve around either various implementations of [ANTLRErrorStrategy](https://www.antlr.org/api/Java/org/antlr/v4/runtime/ANTLRErrorStrategy.html) or "fail fast" strategy that involves overriding implementation of [DefaultErrorStrategy](https://www.antlr.org/api/Java/org/antlr/v4/runtime/DefaultErrorStrategy.html) to throw [ParseCancellationException](https://www.antlr.org/api/Java/org/antlr/v4/runtime/misc/ParseCancellationException.html), which would cause parsing to stop at the first syntax error.
+Online searching has shown approaches to error handling mostly revolve around either various implementations of ``ANTLRErrorStrategy`` (https://www.antlr.org/api/Java/org/antlr/v4/runtime/ANTLRErrorStrategy.html) or "fail fast" strategy that involves overriding implementation of ``DefaultErrorStrategy`` (https://www.antlr.org/api/Java/org/antlr/v4/runtime/DefaultErrorStrategy.html) to throw ``ParseCancellationException``, which would cause parsing to stop at the first syntax error.
 Those approaches were nice, but I wanted to find a way that would allow me to control both error messages and the "offending token" - syntax token to be highlighted in UI when showing syntax errors.
 <br/>
 
