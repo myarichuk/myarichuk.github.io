@@ -11,12 +11,10 @@ author: Michael Yarichuk
 cover: /2019/11/21/antlr-error-handling/antlr.jpg
 ---
 ### There is more than one way to peel an orange!
-<br/>   
-Once a colleague told me: "you can't really generate user-friendly error messages with ANTLR. This didn't seem right - serious parser generators must have ways to generate proper errors!
-Online searching has shown approaches to error handling mostly revolve around either various implementations of ``ANTLRErrorStrategy`` (https://www.antlr.org/api/Java/org/antlr/v4/runtime/ANTLRErrorStrategy.html) or "fail fast" strategy that involves overriding implementation of ``DefaultErrorStrategy`` (https://www.antlr.org/api/Java/org/antlr/v4/runtime/DefaultErrorStrategy.html) to throw ``ParseCancellationException``, which would cause parsing to stop at the first syntax error.
-Those approaches were nice, but I wanted to find a way that would allow me to control both error messages and the "offending token" - syntax token to be highlighted in UI when showing syntax errors.
-<br/>
-
+Once a colleague told me: "you can't really generate user-friendly error messages with ANTLR. This didn't seem right - serious parser generators must have ways to generate proper errors...  
+Online searching has shown approaches to error handling mostly revolve around either various implementations of [ANTLRErrorStrategy](https://www.antlr.org/api/Java/org/antlr/v4/runtime/ANTLRErrorStrategy.html) or "fail fast" strategy that involves overriding implementation of [DefaultErrorStrategy](https://www.antlr.org/api/Java/org/antlr/v4/runtime/DefaultErrorStrategy.html) to throw **ParseCancellationException**, which would cause parsing to stop at the first syntax error.  
+Those approaches were nice, but I wanted to find a way that would allow me to control both error messages and the "offending token" - syntax token to be highlighted in UI when showing syntax errors.  
+  
 Consider the following ANTLR grammar:
 ``` antlr
 grammar TestStrings;
@@ -45,8 +43,8 @@ CHAR_SEQUENCE: (~('"'| '\\'))*;
 
 SPACES: [ \u000B\t\r\n] -> channel(HIDDEN);
 ```
-_Note how **_input.Lt(-1)** is used to specify which token in the lexer stream is the "problematic" one, by using offset from current position in the stream. 
-Coupled with the following error listener, this way of specifying errors provided me with what I wanted.
+Note how **_input.Lt(-1)** is used to specify which token in the lexer stream is the "problematic" one, by using offset from current position in the stream. 
+Coupled with the following simple error listener, this way of specifying errors provided me with what I wanted.
 
 ``` cs
 public readonly struct SyntaxError
@@ -81,4 +79,4 @@ public class SyntaxErrorListener : BaseErrorListener
 }
 ```
 
-As I am not an expert on ANTLR, if you think this can be done in a better way or you think this is not a good way of handling errors in ANTLR, do let me know! There is always a place for improvement.
+As I am not an expert on ANTLR, if you think this can be done in a better way or you think this is not a good way of handling errors in ANTLR, do let me know!<br/>There is always a place for improvement.
