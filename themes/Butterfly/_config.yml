@@ -8,7 +8,6 @@ menu:
   Home: / || fa fa-home
   Archives: /archives/ || fa fa-archive
   Tags: /tags/ || fa fa-tags
-  Categories: /categories/ || fa fa-folder-open
   About: /about/ || fa fa-heart
   
 # Favicon
@@ -418,7 +417,7 @@ subtitle:
   source: false
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   sub:
-    - Hi! My name is Michael and I love writing code.
+    - Hi! My name is Michael. I write code and have fun while doing it.
     - Talk is cheap. Show me the code.
 
 
