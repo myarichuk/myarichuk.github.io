@@ -28,7 +28,7 @@ CHAR_SEQUENCE: (~('"'| '\\'))*;
 
 SPACES: [ \u000B\t\r\n] -> channel(HIDDEN);
 ```
-This combined grammar parses character sequence and detects C-style quoted strings. Now, let's add a custom error to be thrown if the string is missing a closing quote. 
+This combined grammar parses character sequence and detects C-style quoted strings. Now, in order to add custom errors in a declarative way, we will add a custom error to be thrown if the string is missing a closing quote. 
 ``` antlr
 grammar TestStrings;
 
@@ -44,8 +44,10 @@ CHAR_SEQUENCE: (~('"'| '\\'))*;
 
 SPACES: [ \u000B\t\r\n] -> channel(HIDDEN);
 ```
+{% note info %}
 Note how **_input.Lt(-1)** is used to specify which token in the lexer stream is the "problematic" one, by using offset from current position in the stream. 
-Coupled with the following simple error listener, this way of specifying errors provided me with what I wanted.
+{% endnote %}
+Coupled with the following simple error listener, specifying errors like this provided me with what I wanted.
 
 ``` cs
 public readonly struct SyntaxError

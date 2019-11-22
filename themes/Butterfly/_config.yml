@@ -270,7 +270,7 @@ reward:
 
 # 推薦文章
 related_post:
-  enable: false
+  enable: true
   limit: 6 # 顯示推薦文章數目
 
 ####    美化/效果    ####
@@ -373,7 +373,7 @@ ClickShowText:
   fontSize: 15px
 
 # 頭像會一直轉圈
-avatar_effect: true
+avatar_effect: false
 
 # 網站顯示模式
 # light 默認模式
@@ -430,7 +430,7 @@ aside_mobile: true
 # 側邊欄顯示設置
 aside:
   position: right # left or right
-  card_author: false
+  card_author: true
   card_announcement: false
   card_recent_post: true
   card_categories: true
