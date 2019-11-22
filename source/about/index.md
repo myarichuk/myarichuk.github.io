@@ -1,8 +1,9 @@
 ---
 title: About
 date: 2019-11-17 20:40:24
+comments: false
 ---
-<img align="left" style="margin-right:10px; margin-left:10px;" width="150" src="me_large.jpg" />
+<img align="left" style="margin-right:10px; margin-left:10px;" width="160" src="me_large.jpg" />
 
 Hi, my name is Michael. I am a software developer by day, and a passionate tinkerer by night, spending good portion of my free time on various pet projects, exploring new technologies, testing out ideas and having fun while doing it :)
 The results of my tinkering you can find in my [GitHub repository](https://github.com/myarichuk). No technology or idea is out-of-scope for my tinkering - the more complex the topic, the better!

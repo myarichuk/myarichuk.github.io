@@ -5,6 +5,7 @@ tags:
   - ANTLR
   - C#
   - Parsers
+  - Programming
 categories:
   - Programming
 author: Michael Yarichuk
