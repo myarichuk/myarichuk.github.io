@@ -9,15 +9,15 @@ comments: false
   <div class="container">
 	<h3>Contact me for questions, comments, or any feedback about my pet projects and my conference talks</h3>
     <div class="grid grid-2">
-		<input type="text" placeholder="Name" required>  
+		<input type="text" placeholder="Name" name="Name" required>  
 	</div>
 	<div class="grid grid-2">
-		<input class="required" type="email" placeholder="Email" required>  
+		<input class="required" type="email" name="_replyto" placeholder="Email" required>  
 	</div>
     <div class="grid grid-2">
-		<input type="text" placeholder="Company">
+		<input type="text" placeholder="Company" name="Company">
 	</div>
-	<textarea placeholder="Message" required></textarea>
+	<textarea placeholder="Message" name="Message" required></textarea>
 	<div class="grid grid-3">		
 		<button class="btn-grid" type="submit">
 			<span class="front">Send</span>
