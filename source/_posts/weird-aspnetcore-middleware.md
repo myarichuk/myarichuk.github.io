@@ -10,7 +10,7 @@ author: Michael Yarichuk
 top_img: nancy_middleware_code.jpg
 cover: /2019/11/27/weird-aspnetcore-middleware/nancy_middleware_code.jpg
 ---
-This might seem like a clickbait-y article, but I really think this way. Allow me to explain.  
+This might seem like a clickbait-y article, but... it really looks this way! Allow me to explain.  
 For one of my pet projects, I considered implementing REST endpoints using [Nancy](http://nancyfx.org/), a nice and low ceremony web framework that I like.  
 To my surprise, in order to host it in .Net Core, as evident from the [example here](https://github.com/NancyFx/Nancy/tree/master/samples/Nancy.Demo.Hosting.Kestrel), I would need to use **Microsoft.AspNetCore.Owin** as a "mediator" between Kestrel and Nancy. Seeing this as an excuse to write something in the area I haven't looked into yet, I looked into implementing a middleware component to run Nancy engine directly.  (You can find what I wrote in NuGet or in [Github](https://github.com/myarichuk/Nancy.Hosting.Kestrel))
 To my surprise, a minimal middleware implementation looks like this:  
