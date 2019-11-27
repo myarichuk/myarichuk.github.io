@@ -217,7 +217,7 @@ valine:
 
 #####     Footer Settings    ####
 # ------------------------------------
-since: 2018
+since: 2019
 
 footer_custom_text:
 
@@ -444,9 +444,9 @@ announcement:
 
 # busuanzi count for PV / UV in site
 busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+  site_uv: false
+  site_pv: false
+  page_pv: false
 
 # 網頁開通時間
 # 格式: 月/日/年 時間
