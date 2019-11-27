@@ -9,6 +9,7 @@ menu:
   Archives: /archives/ || fa fa-archive
   Categories: /categories/ || fa fa-folder-open
   Tags: /tags/ || fa fa-tag
+  Contact: /contact/ || fa fa-envelope-open
   About: /about/ || fa fa-heart
   
 # Favicon
@@ -50,6 +51,8 @@ copy:
 social:
   fa fa-github: https://github.com/myarichuk
   fa fa-envelope: mailto:michael.yarichuk@gmail.com
+  fa fa-twitter: https://twitter.com/myarichuk
+  fa fa-linkedin: https://www.linkedin.com/in/myarichuk/
   fa fa-rss: /atom.xml
 
 ####    search    ####
