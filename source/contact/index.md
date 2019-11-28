@@ -7,7 +7,7 @@ comments: false
 
 <form class="my-form" action="//formspree.io/michael.yarichuk@gmail.com" method="POST">
   <div class="container">
-	<h3>Contact me for questions, comments, or any feedback about my pet projects and my conference talks</h3>
+	<h3>Contact me for questions, comments, or any feedback about stuff I do.</h3>
     <div class="grid grid-2">
 		<input type="text" placeholder="Name" name="Name" required>  
 	</div>
