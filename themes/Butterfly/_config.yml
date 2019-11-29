@@ -273,7 +273,7 @@ reward:
 
 # 推薦文章
 related_post:
-  enable: true
+  enable: false
   limit: 6 # 顯示推薦文章數目
 
 ####    美化/效果    ####
