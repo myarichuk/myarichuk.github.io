@@ -5,10 +5,11 @@ tags:
   - ANTLR
   - C#
   - Parsers
-  - Programming
 categories:
   - Programming
+  - Parsers
 author: Michael Yarichuk
+top_img: top.jpg
 cover: /2019/11/21/antlr-error-handling/antlr.jpg
 ---
 ### There is more than one way to peel an orange!
