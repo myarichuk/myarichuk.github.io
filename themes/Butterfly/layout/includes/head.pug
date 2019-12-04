@@ -128,3 +128,11 @@ if !is_post()
 
 if theme.blog_title_font.font_link
   link(rel='stylesheet', href=url_for(theme.blog_title_font.font_link))
+  
+if theme.mermaid.enable == true
+  script(type='text/javascript', id='maid-script' mermaidoptioins=theme.mermaid.options src='https://unpkg.com/mermaid@'+ theme.mermaid.version + '/dist/mermaid.min.js')
+  script.
+    if (window.mermaid) {
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+      mermaid.initialize(options);
+    }

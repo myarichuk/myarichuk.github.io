@@ -113,6 +113,13 @@ feed:
 
 all_minifier: true
 
+# mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -120,3 +127,4 @@ deploy:
   repo: https://github.com/myarichuk/Blog.git
   branch: master
   message: Generated site pushed ({{ now('YYYY-MM-DD HH:mm:ss') }})
+ 
