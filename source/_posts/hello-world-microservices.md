@@ -16,7 +16,20 @@ cover: /2019/11/28/hello-world-microservices/microservices.jpg
 A friend of mine was having trouble finding simple but working example of microservices that he could tinker with, finding instead either buzzword-heavy theoretical articles or just samples in weird languages. I decided to prepare a simple project so it can be understood in short amount of time.  
   
 The sample project is modeling a "Starbucks-style" coffee ordering process with a cashier, barista and order pick up counter with the following flow:
-![](process.jpg)
+
+```mermaid
+sequenceDiagram
+   participant Customer
+   participant Cashier
+   participant Barista
+   participant PickUpCounter
+   Customer->>Cashier: Order drink and pay
+   Cashier->>Barista: Relay customer order
+   Note over Barista: prepares the drink
+   Barista->>PickUpCounter:Bring prepared drink
+   Note over PickUpCounter: Announce that the drink is ready
+```
+
   
   
 ### The sample project
