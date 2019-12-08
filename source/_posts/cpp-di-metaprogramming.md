@@ -1,5 +1,5 @@
 ---
-title: Adventures of a C# dev in C++ land: dependency injection
+title: Adventures of a C# dev in C++ land - dependency injection
 date: 2019-12-07 01:15:48
 tags:
   - C++
