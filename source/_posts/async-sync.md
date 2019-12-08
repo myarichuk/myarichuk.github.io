@@ -8,7 +8,7 @@ tags:
   - Multithreading
 categories:
   - Programming
-  - Multithreading
+  - Debugging
 author: Michael Yarichuk
 top_img: top.jpg
 cover: /2019/12/05/async-sync/cover.jpg

@@ -9,6 +9,7 @@ tags:
   - Programming
 categories:
   - Programming
+  - Architecture
 author: Michael Yarichuk
 top_img: top.jpg
 cover: /2019/11/28/hello-world-microservices/microservices.jpg

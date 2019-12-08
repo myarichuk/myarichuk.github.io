@@ -3,7 +3,7 @@ title: Middleware implementation in ASP.Net Core is weird
 date: 2019-11-27 08:21:44  
 categories:
   - Programming
-  - ASP.Net Core
+  - ASP.Net
 tags: 
  - C# 
  - ASP.Net Core
