@@ -12,9 +12,9 @@ author: Michael Yarichuk
 top_img: top.jpg
 cover: /2019/12/07/cpp-di-metaprogramming/cover.jpg
 ---
-I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident but was instantly intrigued: for a developer used to C# (like me!), dependency injection during compilation time sounds... crazy.
+I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident and was instantly intrigued: for a developer used to C# (like me!), dependency injection during compilation time sounds... crazy.
 
-[Template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming) in C++ it is a new feature, but in case you are not familiar with it, in short, it is a way to create code that runs executes at compile time. If you *ARE* familiar, you can skip the next section.
+C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming) is not a new feature, but in case you are not familiar with it, in short, it is a language within language that executes at compile time. If you *ARE* familiar with it, you can skip the next section.
 
 ### Template Metaprogramming
 Here is a "classic" example that calculates numbers from fibonacci sequence during compilation time:
@@ -50,7 +50,7 @@ Let's get back to the topic: with the help of template metaprogramming, Boost.DI
 Just take a look at [IOC/DI library benchmarks](https://github.com/danielpalme/IocPerformance#basic-features)! 
 > In case you are not familiar with DI, a good place to start reading *what* it is and *why* it is needed is those [slides from a conference talk](https://boost-experimental.github.io/di/cppcon-2018/#/). 
 
-In comparison to C#, resolving dependencies at runtime sounds especially awesome. However, not all is well with such approach: what if you make some sort of mistake? For example, after looking at samples, I came up with the following (simple) code that *should* have worked.
+In comparison to C#, resolving dependencies during compilation sounds especially awesome. However, not all is well with such approach: what if you make some sort of mistake? For example, after looking at samples, I came up with the following (simple) code that *should* have worked.
 ```c++ 
 #include "di.hpp"
 #include <string>
@@ -107,10 +107,10 @@ int main()
 }
 
 ```
-It *should* have worked, but it fails with very cryptic errors, which highlight a big problem with C++ template metaprogramming: bad, errors.  
+It *should* have worked, but it fails with very cryptic errors, which highlight a big problem with C++ template metaprogramming: cryptic errors which are not really "user-friendly".
 ![BoostDI Compilation Error](wtf.jpg)
 
-Apparently, because of the arcane rules of C++ template magick (I may know thing or two about C# but I am a total noob in C++), I needed to change the declaration of ``greeter`` and add 'public' to inheritance declaration.
+Apparently, because of the arcane rules of C++ and even more arcane rules of template magick, I needed to change the declaration of ``greeter`` and add 'public' to inheritance declaration.
 ```c++
 class greeter : public igreeter //made the inheritance 'public' *facepalm*
 {
@@ -125,10 +125,10 @@ public:
 	virtual void greet() override { std::cout << message_ << std::endl; }
 };
 ```
-
-![rage](rage.jpg)
 *It actually worked!*
-Now, the only thing left for this particular example is to make that ``message`` a named parameter, so only ``greeter`` classd will receive the value binding and not every class that has a ``std::string`` in its constructor.
+![rage](rage.jpg)
+  
+Now, the only thing left for this particular example is to make that ``message`` a named parameter, so not every class that has a ``std::string`` in its constructor will receive the value binding.  
 Only a minor change was needed to ``greeter`` declaration:
 ```c++
 auto msg = [] {}; //this is parameter 'name'
