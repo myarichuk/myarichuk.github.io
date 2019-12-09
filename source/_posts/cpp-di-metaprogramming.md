@@ -14,7 +14,7 @@ cover: /2019/12/07/cpp-di-metaprogramming/cover.jpg
 ---
 I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident and was instantly intrigued: for a developer used to C#, dependency injection during compilation time sounds crazy.
 
-Boost.DI uses C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming) to implement its functionality. If you are not familiar with it, take a look [here](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/).
+> Boost.DI uses C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming) to implement its functionality. If you are not familiar with it, take a look [here](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/).
 
 ### Dependency Injection
 Resolves dependencies during compilation sounds great as an optimization. The biggest problem with DI libraries in C# is performance.  
@@ -78,7 +78,7 @@ int main()
 }
 
 ```
-It *should* have worked, but it failed with cryptic errors, which highlight a big problem with C++ template metaprogramming: if something goes wrong, the error messages are not really "user-friendly".
+It *should* have worked, but it failed with a cryptic error.
 ![Compilation Error](wtf.jpg)
 
 After fiddling around with code, I solved it. Apparently, because of the arcane rules of C++ and even more arcane rules of template magick, so I needed to change the declaration of ``greeter`` and add 'public' to inheritance declaration.
