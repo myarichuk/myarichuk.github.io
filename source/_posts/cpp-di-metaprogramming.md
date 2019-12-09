@@ -12,18 +12,17 @@ author: Michael Yarichuk
 top_img: top.jpg
 cover: /2019/12/07/cpp-di-metaprogramming/cover.jpg
 ---
-I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident and was instantly intrigued: for a developer used to C# (like me!), dependency injection during compilation time sounds... crazy.
+I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident and was instantly intrigued: for a developer used to C#, dependency injection during compilation time sounds crazy.
 
-Boost.DI uses C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming) to implement its functionality. 
-Template metaprogramming is practically a language within C++ that executes at compile time. AND it is [proven to be Turing Complete](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.3670), because why not! 
-If you are not familiar with template metaprogramming, [you can find here](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/) a great introduction.
+Executes at... compile time? Well, Boost.DI uses C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming)  - it is practically a language within C++. AND it is [proven to be Turing Complete](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.3670), because why not! 
+If you are not familiar with it, a good place to start is [here](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/).
 
 ### Dependency Injection
-With the help of template metaprogramming, Boost.DI resolves dependencies during compilation. This sounds great as an optimization, especially for a C# developer like me. IOC/DI libraries in C# are useful and easy to use but it has a price tag: performance.  
+Resolves dependencies during compilation sounds great as an optimization. The biggest problem with DI libraries in C# is performance.  
 Just take a look at [IOC/DI library benchmarks](https://github.com/danielpalme/IocPerformance#basic-features)! 
 > In case you are not familiar with DI, a good place to start reading *what* it is and *why* it is needed is those [slides from a conference talk](https://boost-experimental.github.io/di/cppcon-2018/#/). 
 
-In comparison to C#, resolving dependencies during compilation sounds especially awesome. However, not all is well with such approach: what if you make some sort of mistake? For example, after looking at samples, I came up with the following (simple) code that *should* have worked.
+Everything seems great in "hello world"-ish sample code, I thought, wondering if actually using it would be as easy as it seems. Perhaps if I had better C++ skills, because after a short while I ran into an issue. I came up with the following test code that *should* have worked.
 ```c++ 
 #include "di.hpp"
 #include <string>
@@ -80,10 +79,10 @@ int main()
 }
 
 ```
-It *should* have worked, but it fails with very cryptic errors, which highlight a big problem with C++ template metaprogramming: cryptic errors which are not really "user-friendly".
-![BoostDI Compilation Error](wtf.jpg)
+It *should* have worked, but it failed with cryptic errors, which highlight a big problem with C++ template metaprogramming: if something goes wrong, the error messages are not really "user-friendly".
+![Compilation Error](wtf.jpg)
 
-Apparently, because of the arcane rules of C++ and even more arcane rules of template magick, I needed to change the declaration of ``greeter`` and add 'public' to inheritance declaration.
+After fiddling around with code, I solved it. Apparently, because of the arcane rules of C++ and even more arcane rules of template magick, so I needed to change the declaration of ``greeter`` and add 'public' to inheritance declaration.
 ```c++
 class greeter : public igreeter //made the inheritance 'public' *facepalm*
 {
@@ -99,10 +98,10 @@ public:
 };
 ```
 *It actually worked!*
-![rage](rage.jpg)
+![that feeling when your code finally works](rage.jpg)
   
-Now, the only thing left for this particular example is to make that ``message`` a named parameter, so not every class that has a ``std::string`` in its constructor will receive the value binding.  
-Only a minor change was needed to ``greeter`` declaration:
+Now, the only thing left in this case is to make ``message`` a named parameter, so not every class that has a ``std::string`` in its constructor will receive the value from the binding.  
+A minor change was needed to ``greeter`` declaration:
 ```c++
 auto msg = [] {}; //this is parameter 'name'
 
@@ -135,7 +134,7 @@ const auto injector = make_injector
 ```
 
 
-All in all, using the library feels a bit awkward to me, but what do I know? I am not a C++ developer and in any case I am used to C# IOC/DI libraries...   
+I continued to play around with the library, using it feels a bit awkward to me, but what do I know? I am not a C++ developer and it is likely I felt that way because I am used to the way C# IOC/DI libraries work.   
 Considering the fact that C++ has no reflection, I never thought a library with such rich functionality is even possible. (and I am very happy to be wrong!)  
 > If you want to see *how* rich is the functionality, take a look at [Boost.DI examples](https://boost-experimental.github.io/di/examples.html)
 
