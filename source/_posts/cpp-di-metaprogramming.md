@@ -14,15 +14,14 @@ cover: /2019/12/07/cpp-di-metaprogramming/cover.jpg
 ---
 I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident and was instantly intrigued: for a developer used to C#, dependency injection during compilation time sounds crazy.
 
-Executes at... compile time? Well, Boost.DI uses C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming)  - it is practically a language within C++. AND it is [proven to be Turing Complete](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.3670), because why not! 
-If you are not familiar with it, a good place to start is [here](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/).
+Boost.DI uses C++ [template metaprogramming](https://en.wikipedia.org/wiki/Template_metaprogramming) to implement its functionality. If you are not familiar with it, take a look [here](https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/).
 
 ### Dependency Injection
 Resolves dependencies during compilation sounds great as an optimization. The biggest problem with DI libraries in C# is performance.  
 Just take a look at [IOC/DI library benchmarks](https://github.com/danielpalme/IocPerformance#basic-features)! 
 > In case you are not familiar with DI, a good place to start reading *what* it is and *why* it is needed is those [slides from a conference talk](https://boost-experimental.github.io/di/cppcon-2018/#/). 
 
-Everything seems great in "hello world"-ish sample code, I thought, wondering if actually using it would be as easy as it seems. Perhaps if I had better C++ skills, because after a short while I ran into an issue. I came up with the following test code that *should* have worked.
+Everything seems great in "hello world"-ish sample code I found at Boost.DI repository, but I wondered if actually using it would be as easy as it seems. Probably because its been a while since I wrote C++, I quickly ran into an issue. I came up with the following test code that *should* have worked.
 ```c++ 
 #include "di.hpp"
 #include <string>
@@ -34,48 +33,48 @@ namespace di = boost::di;
 class igreeter
 {
 public:
-	virtual void greet() = 0;
+    virtual void greet() = 0;
 };
 
 class greeter : igreeter
 {
 private:
-	std::string message_;
+    std::string message_;
 
 public:
-	greeter(std::string message)
-		: message_(std::move(message))
-	{
-	}
-	virtual void greet() override { std::cout << message_ << std::endl; }
+    greeter(std::string message)
+        : message_(std::move(message))
+    {
+    }
+    virtual void greet() override { std::cout << message_ << std::endl; }
 };
 
 class greeting_provider
 {
 private:
-	igreeter& greeter_;
+    igreeter& greeter_;
 public:
-	greeting_provider(igreeter& greeter)
-		: greeter_(greeter)
-	{
-	}
-	void greet() const { greeter_.greet(); }
+    greeting_provider(igreeter& greeter)
+        : greeter_(greeter)
+    {
+    }
+    void greet() const { greeter_.greet(); }
 };
 
 int main()
 {
    //define how to resolve dependencies
-	const auto injector = make_injector
-	                      (
-							  di::bind<igreeter>.to<greeter>(),
-							  di::bind<greeting_provider>().to<greeting_provider>(),
-							  di::bind<std::string>().to("Hello World!")
-						  );
+    const auto injector = make_injector
+                          (
+                              di::bind<igreeter>.to<greeter>(),
+                              di::bind<greeting_provider>().to<greeting_provider>(),
+                              di::bind<std::string>().to("Hello World!")
+                          );
     //resolve all dependencies and construct an object
-	const auto provider = injector.create<greeting_provider>();
+    const auto provider = injector.create<greeting_provider>();
     provider.greet();
     
-	return 0;
+    return 0;
 }
 
 ```
@@ -87,14 +86,14 @@ After fiddling around with code, I solved it. Apparently, because of the arcane 
 class greeter : public igreeter //made the inheritance 'public' *facepalm*
 {
 private:
-	std::string message_;
+    std::string message_;
 
 public:
-	greeter(std::string message)
-		: message_(std::move(message))
-	{
-	}
-	virtual void greet() override { std::cout << message_ << std::endl; }
+    greeter(std::string message)
+        : message_(std::move(message))
+    {
+    }
+    virtual void greet() override { std::cout << message_ << std::endl; }
 };
 ```
 *It actually worked!*
@@ -108,29 +107,30 @@ auto msg = [] {}; //this is parameter 'name'
 class greeter : public igreeter
 {
 private:
-	std::string message_;
+    std::string message_;
 
 public:
     //specify that the first parameter has the name 'msg'
-	BOOST_DI_INJECT_TRAITS((named = msg) std::string);
-	greeter(std::string message)
-		: message_(std::move(message))
-	{
-	}
-	virtual void greet() override { std::cout << message_ << std::endl; }
+    BOOST_DI_INJECT_TRAITS((named = msg) std::string);
+    greeter(std::string message)
+        : message_(std::move(message))
+    {
+    }
+    virtual void greet() override { std::cout << message_ << std::endl; }
 };
 ```
 
 And then, a minor change to dependency registration code:
 ```c++
-const auto injector = make_injector
-                      (
-                         di::bind<igreeter>.to<greeter>(),
-                         di::bind<greeting_provider>().to<greeting_provider>(),
-
-                         //this is a *named* parameter now
-                         di::bind<std::string>().named(msg).to("Hello World!")
-                      );
+const auto injector = 
+  make_injector
+  (
+    di::bind<igreeter>.to<greeter>(),
+    di::bind<greeting_provider>().to<greeting_provider>(),
+    
+    //this is a *named* parameter now
+    di::bind<std::string>().named(msg).to("Hello World!")
+  );
 ```
 
 
