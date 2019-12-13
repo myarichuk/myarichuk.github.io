@@ -1,3 +1,4 @@
+---
 title: 'Setting up the blog, a meta-post!'
 tags:
   - Hexo.io
