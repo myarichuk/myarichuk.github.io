@@ -39,13 +39,28 @@ Now, seeing that OpenCV uses CMake, I assumed that it *should* work. And then CM
 1> [CMake] 
 1> [CMake]   which is prefixed in the build directory.
 ```
+> If you happen to know why does this error happen, do let me know. I'd really appreciate that!
 
 This is as cryptic as it can be, worse yet, few people actually encountered this, and those who did made the error seem even more cryptic than it *should* be.
 For example, [this](https://cmake.org/pipermail/cmake-developers/2013-March/018513.html) seems related, but it didn't help.  
 And [this guy](https://cmake.org/pipermail/cmake/2016-June/063717.html) never received an answer to his valid question - why?!  
-Now, I am not the first one to come up with such idea - [this guy](https://answers.opencv.org/question/217218/how-to-link-with-opencv-as-cmake-subdirectory/) thought of it first, but also, surprisingly never got an answer.  
+Now, I am not the first one to come up with such idea - [this guy](https://answers.opencv.org/question/217218/how-to-link-with-opencv-as-cmake-subdirectory/) thought of it first, but also, surprisingly never got an answer.   
+
+After some investigation, I reached the conculsion that ``find_package`` in the other CMake subproject was to blame for this error - probably I missed something very obvious. The problem is - I have no idea *what* did I miss.  
+This is how my subproject CMake looked like:
+```cmake
+cmake_minimum_required (VERSION 3.13)
+
+add_executable (<app name> <source files>)
+
+find_package(OpenCV REQUIRED) #this is why the error happened
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+# ... the rest of CMake
+```
+
 
 Overall, after working for a few month with CMake (and being frustrated most of that time), I think it should require less arcane talents to properly handle CMake scripting. It is an excellent idea that more often than not works, but often requires crazy amount of time to figure out why things *don't work*.
 
 Thus, the moral of this story can be summed up as:
-![meme.jpg]
+![](meme.jpg)
