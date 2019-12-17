@@ -16,7 +16,7 @@ cover: /2019/12/17/cryptic-cmake-errors/cover.png
 I like CMake. I really do. But sometimes... it is frustrating.
 The samples found online are understandable and easy to follow and everything compiles fine until you try something non-trivial. 
 Like having an external project compile as part of your own so including and linking can be done easier.  
-I have created a new CMake project, then added sources of OpenCV with as a git submodule.  
+I have created a new CMake project, then added sources of [OpenCV](https://github.com/opencv/opencv) with as a git submodule.  
 The resulting CMake file looked like this:
 
 ```cmake
