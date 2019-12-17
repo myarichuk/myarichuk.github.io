@@ -43,7 +43,7 @@ Now, seeing that OpenCV uses CMake, I assumed that it *should* work. And then CM
 
 This is as cryptic as it can be, worse yet, few people actually encountered this, and those who did made the error seem even more cryptic than it *should* be.
 For example, [this](https://cmake.org/pipermail/cmake-developers/2013-March/018513.html) seems related, but it didn't help.  
-And [this guy](https://cmake.org/pipermail/cmake/2016-June/063717.html) never received an answer to his valid question - why?!  
+And [this guy](https://cmake.org/pipermail/cmake/2016-June/063717.html) never received an answer to his valid question.  
 Now, I am not the first one to come up with such idea - [this guy](https://answers.opencv.org/question/217218/how-to-link-with-opencv-as-cmake-subdirectory/) thought of it first, but also, surprisingly never got an answer.   
 
 After some investigation, I reached the conculsion that ``find_package`` in the other CMake subproject was to blame for this error - probably I missed something very obvious. The problem is - I have no idea *what* did I miss.  
