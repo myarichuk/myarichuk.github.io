@@ -8,6 +8,7 @@ tags:
   - Programming
 categories:
   - Programming
+  - C++
 author: Michael Yarichuk  
 top_img: top.jpg
 cover: /2019/12/07/cpp-di-metaprogramming/cover.jpg

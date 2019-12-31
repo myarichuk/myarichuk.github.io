@@ -7,6 +7,7 @@ tags:
   - WTF
 categories:
   - Programming
+  - C++
   - WTF
 author: Michael Yarichuk
 top_img: https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg

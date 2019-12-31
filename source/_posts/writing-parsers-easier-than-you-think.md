@@ -254,7 +254,58 @@ Now, lets take a look at the code ANTLR actually generates. I think this can be 
 
  //more code for the rule...
 ```
+That scary bunch of code looks a bit complex, but if you look closely it is rather simple (though still ugly!).
+First, we enter the rule and set the state machine to the inital state of the particular rule
+```cs
+      EnterRecursionRule(_localctx, 2, RULE_expression, _p);
+      int _la;
+      try {
+         int _alt;
+         EnterOuterAlt(_localctx, 1);
+         {
+         State = 37; //initial state of the state machine
+         _errHandler.Sync(this);
+```
 
+Then we use the next token in the stream to select the "sub-rule" we have at this particular point of the source code we are parsing
+```cs
+ switch (_input.La(1)) {
+     //...
+```
+
+Then, if we have an INTEGER or a FLOAT token, we switch the current context to the "sub-rule" context, 
+```cs
+   case INTEGER: 
+         case FLOAT:
+            {
+			//notice that the context is the '#NumberExpression' we had in the rule definition
+            _localctx = new NumberExpressionContext(_localctx);
+```
+
+After switching the context, we cache the next character and "consume" the token from lexer stream (consuming means we mark the token as parsed, add it to resulting AST and continue)
+```cs
+
+            State = 8; //set ATN state for this "sub-rule"
+            _la = _input.La(1); //cache the next token in lexer stream
+
+            //do some error handling in case the syntax is wrong
+            //note how we try to recover so despite syntax errors we parse ALL of the source code
+            if ( !(_la==INTEGER || _la==FLOAT) ) {
+            _errHandler.RecoverInline(this);
+            } else {
+               if (_input.La(1) == TokenConstants.Eof) {
+                  matchedEOF = true;
+               }
+
+                //register match for the "sub-rule" --> this essentially adds node to AST
+               _errHandler.ReportMatch(this);
+
+               //mark the token as consumed and remove from lexer's token stream
+               Consume();
+            }
+```
+Well... thats it! Roughly, all rules are parsed in this way, the only thing that differs is how next rules for the state machine are predicted (ANTLR has different [prediction modes](https://www.antlr.org/api/Java/org/antlr/v4/runtime/atn/PredictionMode.html) that affect ambiguity resolution, among other things) and how errors are treated (see error handling strategy link below).  
+  
 Now, the nice thing in ANTLR generated parsers is their ability to continue parsing even if the input is partially incorrect. The method ``Parser::Match()`` (which is used in grammar rule parsing) illustrates this well. Notice how it registers the error, tries to recover and returns *bad token* so the parsing can continue.  
 > This behavior can be changed by implementing different [error handling strategies](https://www.antlr.org/api/Java/org/antlr/v4/runtime/ANTLRErrorStrategy.html) but this is out of the scope of this post.
 ```cs
