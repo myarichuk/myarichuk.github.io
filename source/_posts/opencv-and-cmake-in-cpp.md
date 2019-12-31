@@ -369,5 +369,18 @@ That finally got OpenCV found by the CMake
 1> CMake generation finished.
 ```
 
-That was it! Finally, the project worked.
+That was it! Finally, the project worked. I was able to compile and run very basic testing code:
+```c++
+#include <iostream>
+#include <opencv2/imgcodecs.hpp>
+
+using namespace std;
+
+int main()
+{
+	const auto img = cv::imread("e:\\Capture.JPG");
+	cout << "image size: " << img.cols << "x" << img.rows << endl;
+	return 0;
+}
+```
 You can download the full project from [its repository](https://github.com/myarichuk/OpenCV.CMake).
