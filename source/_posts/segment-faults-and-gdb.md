@@ -35,8 +35,8 @@ int main()
 Now, let's compile this and use GDB to find where the segfault happens:
 > note that ``a.out`` is an executable compiled from *segmentFaultThrower.c*
 ```bash
-$ gcc segmentFaultThrower.c
-$ gdb --args ./a.out
+gcc segmentFaultThrower.c
+gdb --args ./a.out
 ```
 
 Running GDB with such parameters will yield the following output
