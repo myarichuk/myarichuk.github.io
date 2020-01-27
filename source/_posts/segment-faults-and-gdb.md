@@ -1,5 +1,5 @@
 ---
-title: Segmentation faults when using P/Invoke does not necessarily mean null pointer references
+title: Segmentation faults when using P/Invoke = pointer issues? Not necessarily
 date: 2020-01-26T23:28:27.378Z
 categories:
   - Debugging
