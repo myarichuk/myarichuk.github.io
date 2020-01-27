@@ -14,7 +14,7 @@ top_img: https://upload.wikimedia.org/wikipedia/commons/e/e3/GDB-screenshot.gif
 cover: https://upload.wikimedia.org/wikipedia/commons/c/cc/Gdb_archer_fish.svg
 ---
 When debugging new 32-bit [pager](https://en.wikipedia.org/wiki/Paging) for [RavenDB](https://ravendb.net/), which has platform specific functionality implemented in C and P/Invoked from C# code, I ran into an issue: when starting, RavenDB was throwing a segmentation fault and crashing. Since the C# code didn't change much, my immediate suspect was some sort of pointer issue in C code, such as trying to dereference a *null* pointer. 
-And then, there was another issue: I don't have a lot of experience in Linux. After some googling, I found how I could try and find where the exception was being thrown.
+And then, there was another issue: I don't have a lot of experience in Linux, so I wasn't sure how to investigate segfaults. After some googling and experimenting, I found how.
 
 ## GDB is awesome for handling segfaults
 Apparently, the [GNU Debugger](https://en.wikipedia.org/wiki/GNU_Debugger) or GDB is very good at tracing such issues. Let's see how we can find a segfault source in a small example.  
