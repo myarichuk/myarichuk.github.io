@@ -17,7 +17,7 @@ When debugging new 32-bit [pager](https://en.wikipedia.org/wiki/Paging) for [Rav
 And then, there was another issue: I don't have a lot of experience in Linux. After some googling, I found how I could try and find where the exception was being thrown.
 
 ## GDB is awesome for handling segfaults
-Apparently, the GNU Debugger or GDB is very good at tracing such issues. Let's see how we can find a segfault source in a small example.  
+Apparently, the [GNU Debugger](https://en.wikipedia.org/wiki/GNU_Debugger) or GDB is very good at tracing such issues. Let's see how we can find a segfault source in a small example.  
 Consider the following code. 
 ```cpp
 void throw_segment_fault()
