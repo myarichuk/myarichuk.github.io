@@ -17,6 +17,7 @@
     "npm": "6.4.1"
   },
   "dependencies": {
+    "cheerio": "^0.22.0",
     "hexo": "^4.2.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
