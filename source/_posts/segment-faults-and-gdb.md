@@ -120,7 +120,7 @@ In the C part, ``rvn_mmap_file()`` signature looks like this:
 ```cpp
 EXPORT int32_t rvn_mmap_file(int64_t sz, int64_t flags, void *handle, int64_t offset, void **addr, int32_t *detailed_error_code)
 ```
-Where ``int64_t`` is typedef for ``long long`` and ``int32_t`` is simply typedef for ``int``.  
+>In this case, ``int64_t`` is a typedef for ``long long`` and ``int32_t`` is a typedef for ``int``.  
   
 The first thing I noticed is that the ``handle`` parameter value is 0 (which means ``null`` pointer) and the ``offset`` parameter has unreasonably large value. 
 In C# code, by the point the ``rvn_mmap_file()`` is invoked, ``_handle`` is guaranteed to have a value (otherwise the code would have failed earlier). Together with *corrupt stack* notification from GDB while executing the ``bt`` command, I suspected that some offsets are wrong, since the segfault happens when invoking ``rvn_mmap_file()`` itself. 
