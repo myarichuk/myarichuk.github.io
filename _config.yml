@@ -13,6 +13,11 @@ keywords:
   - .Net Core
   - Tech
   - Software Development
+  - Debugging
+  - WinDBG
+  - GDB
+  - Windows
+  - Linux
 
 author: Michael Yarichuk
 language: en
