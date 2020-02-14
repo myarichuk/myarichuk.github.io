@@ -12,7 +12,7 @@ author: Michael Yarichuk
 top_img: WinDbg.png
 cover: /2020/02/12/setting-up-windbg/WinDbg_256.png
 ---
-When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing when to begin. My google-fu yielded mixed results - I had to sift through lots of information, sometimes incorrect, sometimes outdated, only after some experimentation, I was able to actually understand what was going on.
+When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded mixed results - I had to sift through lots of information, sometimes incorrect, sometimes outdated, only after some experimentation, I was able to actually understand what was going on.
 Though, in a hindsight, WinDBG is much less complex than it seemed in the first place. 
 
 ## A word (or three) on WinDBG
