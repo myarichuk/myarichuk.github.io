@@ -90,7 +90,7 @@ And if you took the memory dump from .Net Core process, the command would be sli
 
 However, there is a very annoying gotcha: in order to properly analyze a .Net memory dump, loaded ``sos.dll`` must match the exact version of .Net the process ran under (because ``sos.dll`` is built as part of the framework)
 
-In case of version mismatch, you will see an error like this:
+In case of version mismatch, you may see an error like this:
 ```dbgcommand
 0:037> !clrstack
 The version of SOS does not match the version of CLR you are debugging.  Please load the matching version of SOS for the version of CLR you are debugging.
@@ -99,6 +99,16 @@ SOS Version: 4.0.30319.235
 ```
 
 If you have this problem, you can either fetch the correct ``sos.dll`` from the machine the dump was taken on or use an undocumented behavior described in an awesome blog post: [Automatically Load the Right SOS for the Minidump](https://www.wintellect.com/automatically-load-the-right-sos-for-the-minidump/)
+
+## SOSEX extension
+There is a very useful extension that provides many convenience debugger functions - SOSEX. It can be downloaded from the [blog of its creator](http://www.stevestechspot.com/SOSEXV40NowAvailable.aspx).
+
+After you download, unzip the ``dll`` to some folder, then run the following command in WinDBG (after loading SOS plugin, of course)
+```dbgcommand
+.load e:\sosex_64\sosex
+```
+>Note that the ``dll`` filename is written *without* extension. Also, the "old" WinDBG cannot handle whitespaces in the path well, so you should either use the WinDBG Preview or extract the SOSEX plugin into a path without whitespaces.
+
 
 ## Conclusion
 This is the kind of post I wish I had when I started using WinDBG. Hopefully, you will find it useful.
