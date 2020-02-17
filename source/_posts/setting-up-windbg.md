@@ -39,7 +39,10 @@ First, we need to properly setup PDB file sources. The idea is to provide a loca
 > If you are not sure *what* PDB files are, take a look at the article "[PDB Files: What Every Developer Must Know](https://www.wintellect.com/pdb-files-what-every-developer-must-know)". 
 
 In order to configure PDB sources, you need to specify them in a symbol server search path format. This can be done either in WinDBG GUI or by setting `` _NT_SYMBOL_PATH`` environment variable.
-For example, on my dev machine, it looks like this: ``cache*e:\Symbols;srv*e:\Symbols*https://msdl.microsoft.com/download/symbols``.
+For example, on my dev machine, it looks like this:
+```dbgcommand
+cache*e:\Symbols;srv*e:\Symbols*https://msdl.microsoft.com/download/symbols
+```
 
 The format is ``cache*[local cache folder 1]*[local cache folder 2];srv*[local cache folder]*[symbol server path 1]*[symbol server path 2]* ... ``
 
