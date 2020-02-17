@@ -44,7 +44,7 @@ For example, on my dev machine, it looks like this:
 cache*e:\Symbols;srv*e:\Symbols*https://msdl.microsoft.com/download/symbols
 ```
 
-The format is ``cache*[local cache folder 1]*[local cache folder 2];srv*[local cache folder]*[symbol server path 1]*[symbol server path 2]* ... ``
+The format is ``cache*[local cache folder 1]*[local cache folder 2];srv*[local cache folder]*[symbol server path]``
 
 What if symbols are missing or there is an issue? In this case, use ``!sym noisy on`` command to see what symbols are missing and where WinDBG tries to look for them - after this command, each operation that requires symbols would print information on where they were found.
 Notice how after executing a ``!threads`` command, WinDBG outputs where did if looks for .Net Core symbols.
