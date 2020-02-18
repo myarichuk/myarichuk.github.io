@@ -139,7 +139,7 @@ For C#, I got:
 | Iterate2DArrayColumnFirst | 16384 | 5,995,155,895.9 ns | 324,258,680.47 ns | 945,877,790.80 ns | 5,567,680,450.0 ns |    150,143,526 |
 |    Iterate2DArrayRowFirst | 16384 |   820,319,993.3 ns |   5,415,915.82 ns |   5,066,051.02 ns |   818,728,000.0 ns |      3,783,339 |
 ```
->Notice the the last ``CacheMisses/Op`` column - it highlights the effect of data locality on performance
+>Notice the last ``CacheMisses/Op`` column - it highlights the effect of data locality on performance
 
 For C++, I got:
 ```results
