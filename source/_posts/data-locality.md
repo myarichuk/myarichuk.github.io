@@ -124,7 +124,7 @@ BENCHMARK_MAIN();
 ```
 
 ## The Results
-I got... interesting results.
+The results were more interesting than I anticipated.
 
 For C#, I got:
 ```results
@@ -156,7 +156,7 @@ benchmark_array2d_row_first/4096       13954918 ns   13750000 ns         50
 benchmark_array2d_row_first/16384     213235700 ns  213541667 ns          3
 ```
 
-Unsurprisingly, for "row-first" iteration I got much better results, because the memory access in this case is sequential, thus allowing much less cache misses, as can be seen from C# benchmark (really awesome feature of BenchmarkDotNet!)
+Unsurprisingly, for "row-first" iterations the performance was much better, because the memory access in this case is sequential, thus allowing much less cache misses, as can be seen from C# benchmark (really awesome feature of BenchmarkDotNet!)
 What *did* surprise me is how much faster the sequential memory access in fact is, even for such a simple use-case. For 16384x16384 arrays, in C# it is x7 running time improvement and for C++ it is approximately x22 improvement!
   
 Also, the run-time difference between C++ and C# in case of row-first iteration for 16384x16384 arrays is almost x3 - much more than I expected. Overall, this was an interesting experiment that proved to me the value of Entity-Component-System as a performance optimization.
