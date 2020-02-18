@@ -159,4 +159,6 @@ benchmark_array2d_row_first/16384     213235700 ns  213541667 ns          3
 Unsurprisingly, for "row-first" iterations the performance was much better, because the memory access in this case is sequential, thus allowing much less cache misses, as can be seen from C# benchmark (really awesome feature of BenchmarkDotNet!)
 What *did* surprise me is how much faster the sequential memory access in fact is, even for such a simple use-case. For 16384x16384 arrays, in C# it is x7 running time improvement and for C++ it is approximately x22 improvement!
   
-Also, the run-time difference between C++ and C# in case of row-first iteration for 16384x16384 arrays is almost x3 - much more than I expected. Overall, this was an interesting experiment that proved to me the value of Entity-Component-System as a performance optimization.
+Also, the run-time difference between C++ and C# in case of row-first iteration for 16384x16384 arrays is almost x3 - much more than I expected. Overall, this was an interesting experiment that proved to me the value of Entity-Component-System as a performance optimization. Next step would probably be to test how much C#'s array boundary checks affect the performance and check if C++ code benefits from automatic vectorization (which it probably does!)
+
+> If you are interested to play around with the code, you can find it in [its repository](https://github.com/myarichuk/DataLocalityBenchmarks).
