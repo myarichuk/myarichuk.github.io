@@ -1,5 +1,5 @@
 ---
-title: Is it faster to access array with pointer arithmetics?
+title: Is it faster to access arrays with pointer arithmetics?
 date: 2020-02-23T08:39:23+02:00
 tags:
   - C#
