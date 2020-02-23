@@ -82,4 +82,4 @@ I expected pointer access to be slightly faster, but apparently,it is not so (an
 
 
 ## Conculsion
-Probably there is more to it, and next I intend to take a look at boundary checks of .Net - how and when the JITter removes/optimizes them (which *should* happen in some cases, according to SO answers like [such as this one](https://stackoverflow.com/a/29269531/320103))
+Most likely there is more to it, and next I intend to take a look at boundary checks of .Net - how and when the JITter removes/optimizes them (which *should* happen in some cases, according to SO answers like [such as this one](https://stackoverflow.com/a/29269531/320103)). Is it possible that the boundary checks were optimized-away in this case?
