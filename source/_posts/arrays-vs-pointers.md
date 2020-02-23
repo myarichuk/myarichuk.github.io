@@ -1,5 +1,5 @@
 ---
-title: arrays-vs-pointers
+title: Is it faster to access array with pointer arithmetics?
 date: 2020-02-23T08:39:23+02:00
 tags:
   - C#
@@ -8,14 +8,14 @@ tags:
 categories:
   - Programming
 author: Michael Yarichuk
-top_img: benchmarkdotnet.png
+top_img: /2020/02/17/data-locality/benchmarkdotnet.png
 cover: /2020/02/23/arrays-vs-pointers/array.svg
 ---
-After seeing the results of my [previous post](/2020/02/17/data-locality/) where I tested performance impact of data locality, one of my collegues theorized that perhaps the huge difference between C++ and C# performance (assuming adjacent memory iteration) is due to boundary checks of C# arrays - he said that if I would use pointers to access arrays, the code will be much faster.
+After seeing the results of my [previous post](/2020/02/17/data-locality/) where I tested performance impact of data locality, one of my collegues theorized that perhaps the huge difference between C++ and C# performance (assuming adjacent memory iteration) is due to boundary checks of C# arrays - he said that if I would use pointers to access arrays, the code will be much faster. I was curious if he was right, so I tested it.
 
 
 ## The test
-I used the following test to try and see how much performance usage of pointers would yield.
+I used the following test to try and see how much performance usage of pointers over simple C# arrays would yield.
 
 ```cs
 [DisassemblyDiagnoser(printSource: true, printDiff: true, printIL: true)]
@@ -51,7 +51,8 @@ public class Program
 ```
 
 ## The Results
-The results were a bit surprising. Apparently, pointer access is not much faster (and sometimes a tiny bit slower!) than using arrays as they are.
+The results were a bit surprising (at least to me!)
+I expected pointer access to be slightly faster, but apparently,it is not so (and sometimes pointer usage is a bit slower!)
 
 |              Method |  Size |         Mean |        Error |       StdDev |      Median | Ratio | RatioSD |
 |-------------------- |------ |-------------:|-------------:|-------------:|------------:|------:|--------:|
