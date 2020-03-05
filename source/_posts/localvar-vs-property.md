@@ -13,8 +13,8 @@ author: Michael Yarichuk
 top_img: benchmarkdotnet.png
 cover: /2020/03/03/localvar-vs-property/code_analysis.jpg
 ---
-Can the benchmark that compares array iteration vs. pointer based iteration be optimized further? Yep.
-In a post I wrote earlier about [performance comparison between array access with pointers and the usual C#'s  way](http://www.graymatterdeveloper.com/2020/02/23/arrays-vs-pointers/), I saw an interesting comment that suggested a way to squeeze some more performance out of the scenario. 
+Can the benchmark that compares array iteration vs. pointer based iteration be optimized further? Yep!    
+In a post I wrote earlier about [performance comparison between array access with pointers and the usual C#'s  way](http://www.graymatterdeveloper.com/2020/02/23/arrays-vs-pointers/), I saw an interesting comment that suggested a way to squeeze some more performance out of the scenario.
 Using a local variable instead of a call to a property (which is in fact a method call) made sense, though I wondered, just how *much* of a performance boost it would provide.
 So I decided to test it. The results turned out to be very... interesting. But before taking a look at the results, here is the test code: 
 
@@ -73,7 +73,7 @@ public class Program
         fixed (long* ptr = Array)
         {
             var size = Size;
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++) 
                 *(ptr + i) = i;
         }
     }
@@ -134,4 +134,4 @@ Here are the results of the test:
 |            IterateArrayWithPtr | 65536 |  89,072.4 ns | 17,466.58 ns | 50,950.85 ns |  75,300.0 ns |  1.16 |    0.48 |
 |    IterateArrayWithPtrLocalVar | 65536 |  83,553.0 ns | 15,204.40 ns | 44,830.51 ns |  96,700.0 ns |  1.08 |    0.33 |
 
-Tsing a local variable for the ``for`` loop *tends* to be faster, but not by much. Single-digit percentages at best. Notice that it doesn't happen in all cases. Test case for 256 items is too fast for accurate measurement, so we can discard it. There is also a couple of cases where usage of local variable is less performant than using a property, which is a bit surprising and probably warrants some more investigation - I'd expect the results to be more consistent.
+Using a local variable for the ``for`` loop *tends* to be faster, but not by much. Single-digit percentages at best. But notice that it doesn't happen in all cases. The case for 256 items is too fast for accurate measurement, so we can discard it. There is also a couple of cases where usage of local variable is less performant than using a property, which is a bit surprising and probably warrants some more investigation - I'd expect the results to be more consistent.
