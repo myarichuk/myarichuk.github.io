@@ -215,7 +215,8 @@ m_ChunkChars = new char[capacity];
 Interestingly enough, in the ``Append()`` method, if there is not enough capacity of ``m_ChunkChars``, the ``StringBuilder`` will allocate new buffer char array in ``ExpandByABlock()`` method (which can be seen [here](https://github.com/microsoft/referencesource/blob/master/mscorlib/system/text/stringbuilder.cs#L1962)).
 
 So, in order to see the best performance out of the ``StringBuilder`` I changed its test method to supply the resulting string length and re-run the test.
-Here are the results.
+Here are the results.  
+
 |              Method | ListSize |      Mean |     Error |    StdDev |    Median | Gen 0 | Gen 1 | Gen 2 | Allocated |
 |-------------------- |--------- |----------:|----------:|----------:|----------:|------:|------:|------:|----------:|
 |    **StringCreateJoin** |        **3** |  **1.505 μs** | **0.0962 μs** | **0.2501 μs** |  **1.400 μs** |     **-** |     **-** |     **-** |      **48 B** |
@@ -236,6 +237,7 @@ Here are the results.
 | StringConcatenation |      100 | 13.838 μs | 0.6251 μs | 1.7425 μs | 13.400 μs |     - |     - |     - |   84744 B |
 |         ZStringJoin |      100 | 10.792 μs | 0.1016 μs | 0.0793 μs | 10.800 μs |     - |     - |     - |     824 B |
 |   StringBuilderJoin |      100 |  3.914 μs | 0.4024 μs | 1.1739 μs |  4.100 μs |     - |     - |     - |    1696 B |
+
 
 This change did make a difference, especially for large size of the list to concatenate (because if the ``m_ChunkChars`` is initialized to proper length, the ``StringBuilder`` doesn't need to make additional allocations to grow its buffer)
 Plain old string concatenation unsurprisingly makes lots of allocations, but for small amount of strings it is really fast.
