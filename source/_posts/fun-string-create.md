@@ -12,7 +12,7 @@ top_img: http://www.graymatterdeveloper.com/2020/02/17/data-locality/benchmarkdo
 cover: /2020/04/09/fun-string-create/string.svg
 ---
 Strings are immutable in C#, this is a common knowledge. Unless you use pointers in unsafe blocks, that is.  Apparently, there is another way of making strings mutable.  
-When I discovered ``string.Create()``, a not-so-new but for some reason overlooked (by me at least!) [method](https://docs.microsoft.com/en-us/dotnet/api/system.string.create?view=netcore-3.1) that was added since .Net Core 2.2 and Netstandard 2.1, I was really curious how it works, so naturally I looked at relevant .Net Core source code.
+When I discovered ``string.Create()``, a not-so-new but for some reason overlooked (by me at least!) [method](https://docs.microsoft.com/en-us/dotnet/api/system.string.create?view=netcore-3.1) that was added since .Net Core 2.2 and Netstandard 2.1, I was really curious how it works (and how well it works too), so I looked at relevant .Net Core source code.
 
 ```cs
 public static string Create<TState>(int length, TState state, SpanAction<char, TState> action)
