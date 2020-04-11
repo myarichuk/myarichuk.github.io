@@ -301,3 +301,5 @@ public string JoinStringCreate(List<string> strings, string separator = null)
 ```
 
 Overall, I can say that this was an interesting excercise in micro-optimizations!
+Also, my two attempts at string concatenation are not guaranteed to handle any characters than utf8. .Net's ``StringBuilder`` uses ``wstrcpy()`` to copy strings around into the buffer, which properly handles wide characters (reference to the source code [here](https://github.com/microsoft/referencesource/blob/master/mscorlib/system/text/stringbuilder.cs#L356))
+Since I use ``sizeof(char), I believe that my code should work for UTF16 characters as well, but I haven't tested it.
