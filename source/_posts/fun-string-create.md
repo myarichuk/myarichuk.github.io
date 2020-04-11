@@ -190,14 +190,12 @@ The tests results were a bit surprising.
 | StringConcatenation |        3 |  1.196 μs | 0.0576 μs | 0.1497 μs |  1.200 μs |     - |     - |     - |     160 B |
 |         ZStringJoin |        3 |  2.619 μs | 0.2829 μs | 0.8118 μs |  2.200 μs |     - |     - |     - |      48 B |
 |   StringBuilderJoin |        3 |  1.154 μs | 0.0674 μs | 0.1728 μs |  1.050 μs |     - |     - |     - |     152 B |
-|-------------------- |--------- |----------:|----------:|----------:|----------:|------:|------:|------:|----------:|
 |    **StringCreateJoin** |       **25** |  **2.224 μs** | **0.2860 μs** | **0.8206 μs** |  **1.700 μs** |     **-** |     **-** |     **-** |     **224 B** |
 |       StringPtrJoin |       25 |  2.277 μs | 0.3194 μs | 0.9366 μs |  1.700 μs |     - |     - |     - |     224 B |
 |   RegularStringJoin |       25 |  3.296 μs | 0.3298 μs | 0.9302 μs |  2.800 μs |     - |     - |     - |     264 B |
 | StringConcatenation |       25 |  2.529 μs | 0.0487 μs | 0.0891 μs |  2.500 μs |     - |     - |     - |    6144 B |
 |         ZStringJoin |       25 |  4.727 μs | 0.3210 μs | 0.8949 μs |  4.300 μs |     - |     - |     - |     224 B |
 |   StringBuilderJoin |       25 |  2.632 μs | 0.3303 μs | 0.9531 μs |  2.050 μs |     - |     - |     - |     768 B |
-|-------------------- |--------- |----------:|----------:|----------:|----------:|------:|------:|------:|----------:|
 |    **StringCreateJoin** |      **100** |  **2.875 μs** | **0.0579 μs** | **0.0452 μs** |  **2.900 μs** |     **-** |     **-** |     **-** |     **824 B** |
 |       StringPtrJoin |      100 |  4.034 μs | 0.4147 μs | 1.1964 μs |  4.200 μs |     - |     - |     - |     824 B |
 |   RegularStringJoin |      100 |  4.677 μs | 0.0791 μs | 0.1561 μs |  4.700 μs |     - |     - |     - |    2320 B |
@@ -226,14 +224,12 @@ Here are the results.
 | StringConcatenation |        3 |  1.524 μs | 0.2490 μs | 0.7062 μs |  1.200 μs |     - |     - |     - |     160 B |
 |         ZStringJoin |        3 |  3.125 μs | 0.3665 μs | 1.0515 μs |  2.800 μs |     - |     - |     - |      48 B |
 |   StringBuilderJoin |        3 |  1.743 μs | 0.2516 μs | 0.7219 μs |  1.350 μs |     - |     - |     - |     144 B |
-|-------------------- |--------- |----------:|----------:|----------:|----------:|------:|------:|------:|----------:|
 |    **StringCreateJoin** |       **25** |  **2.337 μs** | **0.3120 μs** | **0.8902 μs** |  **1.800 μs** |     **-** |     **-** |     **-** |     **224 B** |
 |       StringPtrJoin |       25 |  2.268 μs | 0.3398 μs | 0.9805 μs |  1.700 μs |     - |     - |     - |     224 B |
 |   RegularStringJoin |       25 |  4.023 μs | 0.6376 μs | 1.8293 μs |  3.400 μs |     - |     - |     - |     264 B |
 | StringConcatenation |       25 |  3.078 μs | 0.3658 μs | 1.0437 μs |  2.600 μs |     - |     - |     - |    6144 B |
 |         ZStringJoin |       25 |  5.118 μs | 0.4363 μs | 1.2449 μs |  4.650 μs |     - |     - |     - |     224 B |
 |   StringBuilderJoin |       25 |  2.474 μs | 0.3755 μs | 1.0894 μs |  1.800 μs |     - |     - |     - |     496 B |
-|-------------------- |--------- |----------:|----------:|----------:|----------:|------:|------:|------:|----------:|
 |    **StringCreateJoin** |      **100** |  **4.506 μs** | **0.4507 μs** | **1.3217 μs** |  **4.500 μs** |     **-** |     **-** |     **-** |     **824 B** |
 |       StringPtrJoin |      100 |  3.969 μs | 0.3715 μs | 1.0778 μs |  4.000 μs |     - |     - |     - |     824 B |
 |   RegularStringJoin |      100 |  6.362 μs | 0.4833 μs | 1.3472 μs |  6.100 μs |     - |     - |     - |    2320 B |
@@ -302,4 +298,4 @@ public string JoinStringCreate(List<string> strings, string separator = null)
 
 Overall, I can say that this was an interesting excercise in micro-optimizations!
 Also, my two attempts at string concatenation are not guaranteed to handle any characters than utf8. .Net's ``StringBuilder`` uses ``wstrcpy()`` to copy strings around into the buffer, which properly handles wide characters (reference to the source code [here](https://github.com/microsoft/referencesource/blob/master/mscorlib/system/text/stringbuilder.cs#L356))
-Since I use ``sizeof(char), I believe that my code should work for UTF16 characters as well, but I haven't tested it.
+Since I use ``sizeof(char)``, I believe that my code should work for UTF16 characters as well, but I haven't tested it.
