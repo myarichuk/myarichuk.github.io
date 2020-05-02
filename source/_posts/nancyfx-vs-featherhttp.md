@@ -61,13 +61,13 @@ class Program
 ```
 > I really LOVED the syntax of FeatherHttp - really concise and low-ceremonly. It is even shorter than NancyFx!
 
-The next step was to actually run the benchmark tool - *wrk*. I ran the following command for both of the services, which were compiled using .Net Core 3.1
+The next step was to actually do the benchmarking. I ran the following command for both of the services, which were compiled using .Net Core 3.1
 ```bash
 wrk -c500 -t4 -d30s -R2000 http://localhost:5000/
 ```
+> Those parameters mean - open 500 connections, try to maintain 2000 req/sec over 30 seconds and use 4 threads for concurrent requests
 
-I got the following results.  
-1. For NancyFx I got
+**For NancyFx I got:**
 ```command
 Running 30s test @ http://localhost:5000/
   4 threads and 500 connections
@@ -84,7 +84,7 @@ Requests/sec:   1726.33
 Transfer/sec:     46.60MB
 ```
 
-2. For FeatherHttp I got
+**And for FeatherHttp I got:**
 ```command
 Running 30s test @ http://localhost:5000/
   4 threads and 500 connections
@@ -101,7 +101,7 @@ Requests/sec:   1946.75
 Transfer/sec:    188.21KB
 ```
 
-The numbers mean that FeatherHttp is a winner by a slight margin. Though, 10% more throughput is hardly a small number, if handling of high number of requests/sec is needed.  
+The numbers mean that FeatherHttp is a winner by only a small margin. Though, during high workloads, 10% improvement in throughput could be significant. 
 Note that this is a very basic comparison of performance capabilities of both frameworks. First, despite it's relatively complete API, FeatherHttp is at an alpha stage, so its performance might change in the future, for better or for worse.  
 Second, and more importantly, a true performance benchmark would involve comparing the speed of routing algorithm, memory allocations per request and per use of various features and more.
   
