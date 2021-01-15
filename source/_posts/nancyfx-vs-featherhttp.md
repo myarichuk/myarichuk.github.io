@@ -11,7 +11,7 @@ categories:
   - Programming
 author: Michael Yarichuk
 top_img: top.jpg
-cover: https://httpwg.org/asset/http.svg
+cover: /2020/04/25/nancyfx-vs-featherhttp/HTTP_logo.svg
 ---
 
 As a long time fan of the lightweight syntax of the awesome [NancyFx web framework](http://nancyfx.org/), I was really curious when I stumbled upon [FeatherHttp](https://github.com/featherhttp/framework), a new low-ceremony framework for building web services in .Net Core applications.  
