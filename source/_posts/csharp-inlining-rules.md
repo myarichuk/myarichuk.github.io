@@ -8,7 +8,7 @@ categories:
   - Programming
 author: Michael Yarichuk
 top_img: benchmarkdotnet.png
-cover: https://upload.wikimedia.org/wikipedia/commons/7/7a/C_Sharp_logo.svg
+cover: /2020/03/07/csharp-inlining-rules/csharp.png
 ---
 The Twitter sometimes can serve as a place of unexpected insights and very interesting technical questions! For example, the question asked in a tweet here: https://twitter.com/EgorBo/status/1236324907723771904
 
