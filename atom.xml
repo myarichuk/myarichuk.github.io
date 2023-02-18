@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myarichuk.github.io/repository/"/>
-  <updated>2020-04-25T09:28:54.000Z</updated>
+  <updated>2023-02-18T23:14:51.363Z</updated>
   <id>https://myarichuk.github.io/repository/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>From Inheritance Hell to Component Heaven, ECS Pattern</title>
+    <link href="https://myarichuk.github.io/repository/2023/02/18/ecs-intro/"/>
+    <id>https://myarichuk.github.io/repository/2023/02/18/ecs-intro/</id>
+    <published>2023-02-18T23:14:51.363Z</published>
+    <updated>2023-02-18T23:14:51.363Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;All-you-need-is-love-and-Object-Oriented-right-Right&quot;&gt;&lt;a href=&quot;#All-you-need-is-love-and-Object-Oriented-right-Right&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://myarichuk.github.io/repository/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+    
+      <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+    
+      <category term="Entity Component System" scheme="https://myarichuk.github.io/repository/tags/Entity-Component-System/"/>
+    
+      <category term="Design Patterns" scheme="https://myarichuk.github.io/repository/tags/Design-Patterns/"/>
+    
+  </entry>
   
   <entry>
     <title>NancyFx vs. FeatherHttp</title>
@@ -658,41 +693,6 @@
       <category term="Microservices" scheme="https://myarichuk.github.io/repository/tags/Microservices/"/>
     
       <category term="Architecture" scheme="https://myarichuk.github.io/repository/tags/Architecture/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Middleware implementation in ASP.Net Core is weird</title>
-    <link href="https://myarichuk.github.io/repository/2019/11/27/weird-aspnetcore-middleware/"/>
-    <id>https://myarichuk.github.io/repository/2019/11/27/weird-aspnetcore-middleware/</id>
-    <published>2019-11-27T08:21:44.000Z</published>
-    <updated>2019-11-27T08:21:44.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;This might seem like a clickbait-y article, but… it really looks this way! Allow me to explain.&lt;br&gt;For one of my pet projects, I
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
-    
-      <category term="C#" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
-    
-      <category term="ASP.Net" scheme="https://myarichuk.github.io/repository/categories/Programming/C/ASP-Net/"/>
-    
-    
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
-    
-      <category term="ASP.Net Core" scheme="https://myarichuk.github.io/repository/tags/ASP-Net-Core/"/>
-    
-      <category term="Middleware" scheme="https://myarichuk.github.io/repository/tags/Middleware/"/>
     
   </entry>
   

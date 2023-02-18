@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://myarichuk.github.io/repository/2023/02/18/ecs-intro/</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://myarichuk.github.io/repository/2020/04/25/nancyfx-vs-featherhttp/</loc>
     
     <lastmod>2020-04-25</lastmod>
@@ -345,6 +354,20 @@
   </url>
   
   <url>
+    <loc>https://myarichuk.github.io/repository/tags/Entity-Component-System/</loc>
+    <lastmod>2023-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myarichuk.github.io/repository/tags/Design-Patterns/</loc>
+    <lastmod>2023-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://myarichuk.github.io/repository/tags/MassTransit/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -516,6 +539,13 @@
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/Parsers/</loc>
+    <lastmod>2023-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myarichuk.github.io/repository/categories/Programming/Design-Patterns/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
