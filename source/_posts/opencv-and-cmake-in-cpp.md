@@ -10,7 +10,7 @@ categories:
   - C++
 author: Michael Yarichuk
 top_img: https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg
-cover: /2019/12/17/cryptic-cmake-errors/cover.png
+cover: url(/2019/12/17/cryptic-cmake-errors/cover.png)
 ---
 In theory, configuring a popular library like OpenCV in CMake should be easy. In practice, sadly, it is anything BUT easy. Why? Let me show you...
 > Note that I am not very knowledgeable in CMake, so it is possible I am doing something stupid. If so, it is even worse - as far as I understand the intent behind CMake, it should make developers lives easier, not harder.

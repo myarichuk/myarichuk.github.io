@@ -10,8 +10,8 @@ categories:
   - Programming
   - C++
 author: Michael Yarichuk
-top_img: benchmarkdotnet.png
-cover: https://upload.wikimedia.org/wikipedia/en/0/08/CachePrefetching_StreamBuffers.png
+top_img: /2020/02/17/data-locality/benchmarkdotnet.png
+cover: /2020/02/17/data-locality/cover.png
 ---
 In gamedev articles about Entity-Component-System, data locality is often mentioned as a big reason to use such design pattern. The underlying data structures of the ECS are cache friendly, thus allowing much better performance for iterations of large amount of game objects.
 I knew that cache-friendly usage of memory (sequential memory access, for example) would yield better performance, but I was curious, how much better it would be?

@@ -8,7 +8,7 @@ categories:
   - Meta
 author: Michael Yarichuk
 top_img: heroku-logo.png
-cover: /2019/11/21/heroku-hexo/heroku-logo.png
+cover: url(/2019/11/21/heroku-hexo/heroku-logo.png)
 ---
 
 When trying to set up my blog to be hosted in Heroku, I set up it so I can push int Github repo, then Heroku will pull the code and deploy it. Locally it seemed to work fine with Hexo's server, so I was a bit surprised when my blog failed. Heroku logs have shown the following:

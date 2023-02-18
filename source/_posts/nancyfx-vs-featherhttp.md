@@ -1,6 +1,4 @@
----
 title: NancyFx vs. FeatherHttp
-date: 2020-04-25T12:28:54+03:00
 tags:
   - C#
   - Programming
@@ -10,16 +8,17 @@ tags:
 categories:
   - Programming
 author: Michael Yarichuk
-top_img: top.jpg
+top_img: /2020/04/25/nancyfx-vs-featherhttp/top.jpg
 cover: /2020/04/25/nancyfx-vs-featherhttp/HTTP_logo.svg
+date: 2020-04-25 09:28:54
 ---
-
 As a long time fan of the lightweight syntax of the awesome [NancyFx web framework](http://nancyfx.org/), I was really curious when I stumbled upon [FeatherHttp](https://github.com/featherhttp/framework), a new low-ceremony framework for building web services in .Net Core applications.  
   
 Naturally, I was curious not only about the syntax but about the performance as well. So I decided to compare their raw performance, using the awesome [wrk2 tool](https://github.com/giltene/wrk2).
 As a first step, I created two HTTP servers with one endpoint that does the same work in both cases.
 
-1. NancyFx server code looks like this:
+NancyFx server code looks like this:  
+
 ```cs
 public class HelloWorldModule : NancyModule
 {
@@ -44,7 +43,8 @@ internal class Startup
 }
 ```
 
-2. And FeatherHttp server code looks like this:
+And FeatherHttp server code looks like this:  
+
 ```cs
 class Program
 {
@@ -61,7 +61,8 @@ class Program
 ```
 > I really LOVED the syntax of FeatherHttp - really concise and low-ceremonly. It is even shorter than NancyFx!
 
-The next step was to actually do the benchmarking. I ran the following command for both of the services, which were compiled using .Net Core 3.1
+The next step was to actually do the benchmarking. I ran the following command for both of the services, which were compiled using .Net Core 3.1  
+
 ```bash
 wrk -c500 -t4 -d30s -R2000 http://localhost:5000/
 ```

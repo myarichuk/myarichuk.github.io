@@ -7,12 +7,13 @@ tags:
 categories:
   - Programming
 author: Michael Yarichuk
-top_img: benchmarkdotnet.png
+top_img: /2020/02/17/data-locality/benchmarkdotnet.png
 cover: /2020/03/07/csharp-inlining-rules/csharp.png
 ---
 The Twitter sometimes can serve as a place of unexpected insights and very interesting technical questions! For example, the question asked in a tweet here: https://twitter.com/EgorBo/status/1236324907723771904
 
-Apparently, in the following code, C# compiler will inline ``Test1`` and not ``Test2``
+Apparently, in the following code, C# compiler will inline ``Test1`` and not ``Test2``  
+
 ```cs
 using System;
 public static class C

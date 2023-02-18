@@ -8,7 +8,7 @@ categories:
 author: Michael Yarichuk
 date: 2019-11-18 08:28:00
 top_img: hexo-logo.jpeg
-cover: /2019/11/18/setting-up/hexo-logo.png
+cover: url(/2019/11/18/setting-up/hexo-logo.png)
 ---
 
 After taking a look at a couple of more "mainstream" blogging systems, I was looking for a way to do some blogging and not deal with over-engineered systems that are bloated with unnecessary features. I didn't want to spend time in understanding the details required to actually tweak those systems and customize them to my liking.

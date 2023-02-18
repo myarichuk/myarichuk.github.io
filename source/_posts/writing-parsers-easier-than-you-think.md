@@ -8,6 +8,7 @@ tags:
 categories:
   - Programming
   - Parsers
+top_img: /2019/11/21/antlr-error-handling/antlr.jpg
 cover: /2019/11/21/antlr-error-handling/antlr.jpg
 ---
 

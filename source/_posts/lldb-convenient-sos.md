@@ -10,7 +10,7 @@ tags:
  - LLDB
  - Linux
 top_img: lldb.png
-cover: /2020/02/18/lldb-convenient-sos/commandline.svg
+cover: url(/2020/02/18/lldb-convenient-sos/commandline.svg)
 ---
 I don't have much experience in using [LLDB](https://lldb.llvm.org/) to debug .Net Core, so when I stumbled upon this little gem while looking at [dotnet/diagnostics GitHub repository](https://github.com/dotnet/diagnostics/tree/master/src/Tools), I was instantly curious to try it: up to this point, in order to load the [SOS plugin](https://docs.microsoft.com/en-us/dotnet/framework/tools/sos-dll-sos-debugging-extension), I had to manually look up its folder, then specify it inside LLDB (via the ``load plugin`` command).
 This tool, however, should configure LLDB to load SOS plugin automatically!

@@ -9,7 +9,7 @@ categories:
   - Programming
 author: Michael Yarichuk
 top_img: /2020/02/17/data-locality/benchmarkdotnet.png
-cover: /2020/02/23/arrays-vs-pointers/array.svg
+cover: url(/2020/02/23/arrays-vs-pointers/array.svg)
 ---
 After seeing the results of my [previous post](/2020/02/17/data-locality/) where I tested performance impact of data locality, one of my collegues theorized that perhaps the huge difference between C++ and C# performance (assuming adjacent memory iteration) is due to boundary checks of C# arrays - he said that if I would use pointers to access arrays, the code will be much faster. I was curious if he was right, so I tested it.
 

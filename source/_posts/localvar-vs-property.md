@@ -10,7 +10,7 @@ categories:
   - Programming
   - C++
 author: Michael Yarichuk
-top_img: benchmarkdotnet.png
+top_img: /2020/02/17/data-locality/benchmarkdotnet.png
 cover: /2020/03/03/localvar-vs-property/code_analysis.jpg
 ---
 Can the benchmark that compares array iteration vs. pointer based iteration be optimized further? Yep!    

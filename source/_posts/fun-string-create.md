@@ -8,7 +8,7 @@ tags:
 categories:
   - Programming
 author: Michael Yarichuk
-top_img: http://www.graymatterdeveloper.com/2020/02/17/data-locality/benchmarkdotnet.png
+top_img: /2020/02/17/data-locality/benchmarkdotnet.png
 cover: /2020/04/09/fun-string-create/string.svg
 ---
 Strings are immutable in C#, this is a common knowledge. Unless you use pointers in unsafe blocks, that is.  Apparently, there is another way of making strings mutable.  

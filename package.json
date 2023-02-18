@@ -1,6 +1,6 @@
 {
   "name": "graymatter-developer-site",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "build": "rm -rf package-lock.json && hexo generate",
@@ -11,15 +11,16 @@
     "test": "hexo generate && hexo server"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.4.2"
   },
   "engines": {
-    "node": "10.15.3",
-    "npm": "6.4.1"
+    "node": "16.14.0",
+    "npm": "9.5.0"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "hexo": "^4.2.0",
+    "hexo": "^5.2.0",
+    "hexo-admin": "^2.3.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-archive": "^1.0.0",
@@ -32,8 +33,8 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-njucks": "^1.0.0",
-    "hexo-renderer-pug": "^1.0.0",
-    "hexo-renderer-stylus": "^1.1.0",
+    "hexo-renderer-pug": "^3.0.0",
+    "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^1.0.0",
     "hexo-wordcount": "^6.0.1"
   }

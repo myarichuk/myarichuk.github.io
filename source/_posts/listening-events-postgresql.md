@@ -10,7 +10,7 @@ categories:
   - Programming
   - Databases
 author: Michael Yarichuk
-cover: /2019/12/02/listening-events-postgresql/post_icon.jpg
+cover: url(/2019/12/02/listening-events-postgresql/post_icon.jpg)
 top_img: top.jpg
 ---
 ### To poll or not to poll?  

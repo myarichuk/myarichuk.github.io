@@ -11,7 +11,7 @@ categories:
   - WTF
 author: Michael Yarichuk
 top_img: https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg
-cover: /2019/12/17/rarely-used-task-continuation/cover.jpg
+cover: url(/2019/12/17/rarely-used-task-continuation/cover.jpg)
 ---
 What do you think would happen if you run this code? Can you guess *without* actually running it?  
 Now try running it and see what happens. It might actually surprise you...  

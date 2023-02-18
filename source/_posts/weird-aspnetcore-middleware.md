@@ -11,7 +11,7 @@ tags:
  - Middleware
 author: Michael Yarichuk
 top_img: nancy_middleware_code.jpg
-cover: /2019/11/27/weird-aspnetcore-middleware/nancy_middleware_code.jpg
+cover: url(/2019/11/27/weird-aspnetcore-middleware/nancy_middleware_code.jpg)
 ---
 This might seem like a clickbait-y article, but... it really looks this way! Allow me to explain.  
 For one of my pet projects, I considered implementing REST endpoints using [Nancy](http://nancyfx.org/), a nice and low ceremony web framework that I like.  

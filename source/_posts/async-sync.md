@@ -10,7 +10,7 @@ categories:
   - Programming
   - Debugging
 author: Michael Yarichuk
-top_img: top.jpg
+top_img: /2019/12/05/async-sync/top.jpg
 cover: /2019/12/05/async-sync/cover.jpg
 ---
 

@@ -10,8 +10,8 @@ categories:
   - C++
   - WTF
 author: Michael Yarichuk
-top_img: https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg
-cover: /2019/12/17/cryptic-cmake-errors/cover.png
+top_img: url(https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg)
+cover: url(/2019/12/17/cryptic-cmake-errors/cover.png)
 
 ---
 I like CMake. I really do. But sometimes... it is frustrating.

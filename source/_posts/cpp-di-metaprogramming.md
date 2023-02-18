@@ -10,7 +10,7 @@ categories:
   - Programming
   - C++
 author: Michael Yarichuk  
-top_img: top.jpg
+top_img: /2019/12/07/cpp-di-metaprogramming/top.jpg
 cover: /2019/12/07/cpp-di-metaprogramming/cover.jpg
 ---
 I stumbled upon [Boost.DI](https://boost-experimental.github.io/di/index.html) by accident and was instantly intrigued: for a developer used to C#, dependency injection during compilation time sounds crazy.
