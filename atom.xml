@@ -5,9 +5,9 @@
   <subtitle>My semi random thoughts about tech</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://myarichuk.github.io/repository/"/>
-  <updated>2023-02-19T05:40:19.304Z</updated>
-  <id>https://myarichuk.github.io/repository/</id>
+  <link href="https://www.graymatterdeveloper.com/"/>
+  <updated>2023-02-19T06:01:05.919Z</updated>
+  <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
     <name>Michael Yarichuk</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>From Inheritance Hell to Component Heaven, ECS Pattern</title>
-    <link href="https://myarichuk.github.io/repository/2023/02/19/ecs-intro/"/>
-    <id>https://myarichuk.github.io/repository/2023/02/19/ecs-intro/</id>
-    <published>2023-02-19T05:40:19.304Z</published>
-    <updated>2023-02-19T05:40:19.304Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/02/19/ecs-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/02/19/ecs-intro/</id>
+    <published>2023-02-19T06:01:05.919Z</published>
+    <updated>2023-02-19T06:01:05.919Z</updated>
     
     <summary type="html">
     
@@ -36,25 +36,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://myarichuk.github.io/repository/categories/Programming/Design-Patterns/"/>
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="Entity Component System" scheme="https://myarichuk.github.io/repository/tags/Entity-Component-System/"/>
+      <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
     
-      <category term="Design Patterns" scheme="https://myarichuk.github.io/repository/tags/Design-Patterns/"/>
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
   </entry>
   
   <entry>
     <title>NancyFx vs. FeatherHttp</title>
-    <link href="https://myarichuk.github.io/repository/2020/04/25/nancyfx-vs-featherhttp/"/>
-    <id>https://myarichuk.github.io/repository/2020/04/25/nancyfx-vs-featherhttp/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/04/25/nancyfx-vs-featherhttp/"/>
+    <id>https://www.graymatterdeveloper.com/2020/04/25/nancyfx-vs-featherhttp/</id>
     <published>2020-04-25T09:28:54.000Z</published>
     <updated>2020-04-25T09:28:54.000Z</updated>
     
@@ -71,25 +71,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="REST" scheme="https://myarichuk.github.io/repository/tags/REST/"/>
+      <category term="REST" scheme="https://www.graymatterdeveloper.com/tags/REST/"/>
     
-      <category term="Framework" scheme="https://myarichuk.github.io/repository/tags/Framework/"/>
+      <category term="Framework" scheme="https://www.graymatterdeveloper.com/tags/Framework/"/>
     
   </entry>
   
   <entry>
     <title>More efficient string concatenation with string.Create()</title>
-    <link href="https://myarichuk.github.io/repository/2020/04/09/fun-string-create/"/>
-    <id>https://myarichuk.github.io/repository/2020/04/09/fun-string-create/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/04/09/fun-string-create/"/>
+    <id>https://www.graymatterdeveloper.com/2020/04/09/fun-string-create/</id>
     <published>2020-04-09T22:17:31.000Z</published>
     <updated>2020-04-09T22:17:31.000Z</updated>
     
@@ -106,21 +106,21 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
+      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://myarichuk.github.io/repository/tags/Optimization/"/>
+      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
   </entry>
   
   <entry>
     <title>Reasons for C# inlining are (a bit) more complex than you think.</title>
-    <link href="https://myarichuk.github.io/repository/2020/03/07/csharp-inlining-rules/"/>
-    <id>https://myarichuk.github.io/repository/2020/03/07/csharp-inlining-rules/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/03/07/csharp-inlining-rules/"/>
+    <id>https://www.graymatterdeveloper.com/2020/03/07/csharp-inlining-rules/</id>
     <published>2020-03-07T15:37:36.000Z</published>
     <updated>2020-03-07T15:37:36.000Z</updated>
     
@@ -137,19 +137,19 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Optimization" scheme="https://myarichuk.github.io/repository/tags/Optimization/"/>
+      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
   </entry>
   
   <entry>
     <title>Local variables vs properties. No suprises here?</title>
-    <link href="https://myarichuk.github.io/repository/2020/03/03/localvar-vs-property/"/>
-    <id>https://myarichuk.github.io/repository/2020/03/03/localvar-vs-property/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/03/03/localvar-vs-property/"/>
+    <id>https://www.graymatterdeveloper.com/2020/03/03/localvar-vs-property/</id>
     <published>2020-03-03T18:02:14.000Z</published>
     <updated>2020-03-03T18:02:14.000Z</updated>
     
@@ -166,25 +166,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
+      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://myarichuk.github.io/repository/tags/Optimization/"/>
+      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Is it faster to access arrays with pointer arithmetics?</title>
-    <link href="https://myarichuk.github.io/repository/2020/02/23/arrays-vs-pointers/"/>
-    <id>https://myarichuk.github.io/repository/2020/02/23/arrays-vs-pointers/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/02/23/arrays-vs-pointers/"/>
+    <id>https://www.graymatterdeveloper.com/2020/02/23/arrays-vs-pointers/</id>
     <published>2020-02-23T06:39:23.000Z</published>
     <updated>2020-02-23T06:39:23.000Z</updated>
     
@@ -201,21 +201,21 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
+      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://myarichuk.github.io/repository/tags/Optimization/"/>
+      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
   </entry>
   
   <entry>
     <title>Easy way to configure SOS in LLDB</title>
-    <link href="https://myarichuk.github.io/repository/2020/02/18/lldb-convenient-sos/"/>
-    <id>https://myarichuk.github.io/repository/2020/02/18/lldb-convenient-sos/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/02/18/lldb-convenient-sos/"/>
+    <id>https://www.graymatterdeveloper.com/2020/02/18/lldb-convenient-sos/</id>
     <published>2020-02-18T18:48:13.000Z</published>
     <updated>2020-02-18T18:48:13.000Z</updated>
     
@@ -232,25 +232,25 @@
     </summary>
     
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/categories/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
-      <category term="Post-mortem" scheme="https://myarichuk.github.io/repository/categories/Debugging/Post-mortem/"/>
+      <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/tags/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="LLDB" scheme="https://myarichuk.github.io/repository/tags/LLDB/"/>
+      <category term="LLDB" scheme="https://www.graymatterdeveloper.com/tags/LLDB/"/>
     
-      <category term="Linux" scheme="https://myarichuk.github.io/repository/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Sequential memory access is... faster?</title>
-    <link href="https://myarichuk.github.io/repository/2020/02/17/data-locality/"/>
-    <id>https://myarichuk.github.io/repository/2020/02/17/data-locality/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/02/17/data-locality/"/>
+    <id>https://www.graymatterdeveloper.com/2020/02/17/data-locality/</id>
     <published>2020-02-17T17:31:11.000Z</published>
     <updated>2020-02-17T17:31:11.000Z</updated>
     
@@ -267,25 +267,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
+      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://myarichuk.github.io/repository/tags/Optimization/"/>
+      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Nice little gotcha when loading SOS after launching .Net executable</title>
-    <link href="https://myarichuk.github.io/repository/2020/02/14/windbg-launch-net-executable/"/>
-    <id>https://myarichuk.github.io/repository/2020/02/14/windbg-launch-net-executable/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/02/14/windbg-launch-net-executable/"/>
+    <id>https://www.graymatterdeveloper.com/2020/02/14/windbg-launch-net-executable/</id>
     <published>2020-02-14T17:55:15.000Z</published>
     <updated>2020-02-14T17:55:15.000Z</updated>
     
@@ -302,23 +302,23 @@
     </summary>
     
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/categories/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/tags/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="WinDBG" scheme="https://myarichuk.github.io/repository/tags/WinDBG/"/>
+      <category term="WinDBG" scheme="https://www.graymatterdeveloper.com/tags/WinDBG/"/>
     
-      <category term=".Net" scheme="https://myarichuk.github.io/repository/tags/Net/"/>
+      <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
     
-      <category term="Gotcha" scheme="https://myarichuk.github.io/repository/tags/Gotcha/"/>
+      <category term="Gotcha" scheme="https://www.graymatterdeveloper.com/tags/Gotcha/"/>
     
   </entry>
   
   <entry>
     <title>Setting up WinDBG for analyzing memory dumps</title>
-    <link href="https://myarichuk.github.io/repository/2020/02/12/setting-up-windbg/"/>
-    <id>https://myarichuk.github.io/repository/2020/02/12/setting-up-windbg/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/"/>
+    <id>https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/</id>
     <published>2020-02-12T23:25:23.000Z</published>
     <updated>2020-02-12T23:25:23.000Z</updated>
     
@@ -335,23 +335,23 @@
     </summary>
     
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/categories/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
-      <category term="Post-mortem" scheme="https://myarichuk.github.io/repository/categories/Debugging/Post-mortem/"/>
+      <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
     
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/tags/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="WinDBG" scheme="https://myarichuk.github.io/repository/tags/WinDBG/"/>
+      <category term="WinDBG" scheme="https://www.graymatterdeveloper.com/tags/WinDBG/"/>
     
-      <category term=".Net" scheme="https://myarichuk.github.io/repository/tags/Net/"/>
+      <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
     
   </entry>
   
   <entry>
     <title>Segmentation faults when using P/Invoke = pointer issues? Not necessarily</title>
-    <link href="https://myarichuk.github.io/repository/2020/01/26/segment-faults-and-gdb/"/>
-    <id>https://myarichuk.github.io/repository/2020/01/26/segment-faults-and-gdb/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/01/26/segment-faults-and-gdb/"/>
+    <id>https://www.graymatterdeveloper.com/2020/01/26/segment-faults-and-gdb/</id>
     <published>2020-01-26T23:28:27.378Z</published>
     <updated>2020-01-26T23:28:27.378Z</updated>
     
@@ -368,25 +368,25 @@
     </summary>
     
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/categories/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
-      <category term="Post-mortem" scheme="https://myarichuk.github.io/repository/categories/Debugging/Post-mortem/"/>
+      <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/tags/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="Linux" scheme="https://myarichuk.github.io/repository/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
     
-      <category term="Gdb" scheme="https://myarichuk.github.io/repository/tags/Gdb/"/>
+      <category term="Gdb" scheme="https://www.graymatterdeveloper.com/tags/Gdb/"/>
     
   </entry>
   
   <entry>
     <title>Hunter, C++ package management made easy</title>
-    <link href="https://myarichuk.github.io/repository/2020/01/01/hunter-cpp-package-manager/"/>
-    <id>https://myarichuk.github.io/repository/2020/01/01/hunter-cpp-package-manager/</id>
+    <link href="https://www.graymatterdeveloper.com/2020/01/01/hunter-cpp-package-manager/"/>
+    <id>https://www.graymatterdeveloper.com/2020/01/01/hunter-cpp-package-manager/</id>
     <published>2020-01-01T14:35:18.677Z</published>
     <updated>2020-01-01T14:35:18.677Z</updated>
     
@@ -403,25 +403,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="CMake" scheme="https://myarichuk.github.io/repository/tags/CMake/"/>
+      <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
-      <category term="Package Management" scheme="https://myarichuk.github.io/repository/tags/Package-Management/"/>
+      <category term="Package Management" scheme="https://www.graymatterdeveloper.com/tags/Package-Management/"/>
     
-      <category term="OpenCV" scheme="https://myarichuk.github.io/repository/tags/OpenCV/"/>
+      <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
     
   </entry>
   
   <entry>
     <title>OpenCV + Visual Studio + CMake = Adventure time</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/25/opencv-and-cmake-in-cpp/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/25/opencv-and-cmake-in-cpp/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/25/opencv-and-cmake-in-cpp/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/25/opencv-and-cmake-in-cpp/</id>
     <published>2019-12-25T21:57:38.448Z</published>
     <updated>2019-12-25T21:57:38.448Z</updated>
     
@@ -438,23 +438,23 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="CMake" scheme="https://myarichuk.github.io/repository/tags/CMake/"/>
+      <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
-      <category term="OpenCV" scheme="https://myarichuk.github.io/repository/tags/OpenCV/"/>
+      <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
     
   </entry>
   
   <entry>
     <title>Hello ANTLR (writing parsers is easier than you think!)</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/25/writing-parsers-easier-than-you-think/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/25/writing-parsers-easier-than-you-think/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/25/writing-parsers-easier-than-you-think/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/25/writing-parsers-easier-than-you-think/</id>
     <published>2019-12-25T08:21:44.000Z</published>
     <updated>2019-12-25T08:21:44.000Z</updated>
     
@@ -471,23 +471,23 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Parsers" scheme="https://myarichuk.github.io/repository/categories/Programming/Parsers/"/>
+      <category term="Parsers" scheme="https://www.graymatterdeveloper.com/categories/Programming/Parsers/"/>
     
     
-      <category term="ANTLR" scheme="https://myarichuk.github.io/repository/tags/ANTLR/"/>
+      <category term="ANTLR" scheme="https://www.graymatterdeveloper.com/tags/ANTLR/"/>
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Parsers" scheme="https://myarichuk.github.io/repository/tags/Parsers/"/>
+      <category term="Parsers" scheme="https://www.graymatterdeveloper.com/tags/Parsers/"/>
     
   </entry>
   
   <entry>
     <title>Even simple stuff, like C# TPL can surprise you!</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/17/rarely-used-task-continuation/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/17/rarely-used-task-continuation/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/17/rarely-used-task-continuation/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/17/rarely-used-task-continuation/</id>
     <published>2019-12-17T20:27:10.288Z</published>
     <updated>2019-12-17T20:27:10.288Z</updated>
     
@@ -504,25 +504,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="WTF" scheme="https://myarichuk.github.io/repository/categories/Programming/WTF/"/>
+      <category term="WTF" scheme="https://www.graymatterdeveloper.com/categories/Programming/WTF/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="WTF" scheme="https://myarichuk.github.io/repository/tags/WTF/"/>
+      <category term="WTF" scheme="https://www.graymatterdeveloper.com/tags/WTF/"/>
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/tags/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="TPL" scheme="https://myarichuk.github.io/repository/tags/TPL/"/>
+      <category term="TPL" scheme="https://www.graymatterdeveloper.com/tags/TPL/"/>
     
   </entry>
   
   <entry>
     <title>Yet Another (Cryptic) CMake Error</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/17/cryptic-cmake-errors/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/17/cryptic-cmake-errors/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/17/cryptic-cmake-errors/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/17/cryptic-cmake-errors/</id>
     <published>2019-12-17T19:19:41.567Z</published>
     <updated>2019-12-17T19:19:41.567Z</updated>
     
@@ -539,25 +539,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
-      <category term="WTF" scheme="https://myarichuk.github.io/repository/categories/Programming/C/WTF/"/>
+      <category term="WTF" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/WTF/"/>
     
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="CMake" scheme="https://myarichuk.github.io/repository/tags/CMake/"/>
+      <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
-      <category term="WTF" scheme="https://myarichuk.github.io/repository/tags/WTF/"/>
+      <category term="WTF" scheme="https://www.graymatterdeveloper.com/tags/WTF/"/>
     
   </entry>
   
   <entry>
     <title>Adventures of a C# dev in C++ land - dependency injection</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/07/cpp-di-metaprogramming/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/07/cpp-di-metaprogramming/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/07/cpp-di-metaprogramming/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/07/cpp-di-metaprogramming/</id>
     <published>2019-12-07T01:15:48.000Z</published>
     <updated>2019-12-07T01:15:48.000Z</updated>
     
@@ -574,25 +574,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/categories/Programming/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="C++" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="IOC/DI" scheme="https://myarichuk.github.io/repository/tags/IOC-DI/"/>
+      <category term="IOC/DI" scheme="https://www.graymatterdeveloper.com/tags/IOC-DI/"/>
     
-      <category term="C++ Templates" scheme="https://myarichuk.github.io/repository/tags/C-Templates/"/>
+      <category term="C++ Templates" scheme="https://www.graymatterdeveloper.com/tags/C-Templates/"/>
     
   </entry>
   
   <entry>
     <title>Synchronization primitives + async/await = trouble</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/05/async-sync/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/05/async-sync/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/05/async-sync/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/05/async-sync/</id>
     <published>2019-12-05T08:38:06.000Z</published>
     <updated>2019-12-05T08:38:06.000Z</updated>
     
@@ -609,25 +609,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Debugging" scheme="https://myarichuk.github.io/repository/categories/Programming/Debugging/"/>
+      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Programming/Debugging/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Async" scheme="https://myarichuk.github.io/repository/tags/Async/"/>
+      <category term="Async" scheme="https://www.graymatterdeveloper.com/tags/Async/"/>
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="Multithreading" scheme="https://myarichuk.github.io/repository/tags/Multithreading/"/>
+      <category term="Multithreading" scheme="https://www.graymatterdeveloper.com/tags/Multithreading/"/>
     
   </entry>
   
   <entry>
     <title>Listening to data changes in PostgreSQL and C#</title>
-    <link href="https://myarichuk.github.io/repository/2019/12/02/listening-events-postgresql/"/>
-    <id>https://myarichuk.github.io/repository/2019/12/02/listening-events-postgresql/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/12/02/listening-events-postgresql/"/>
+    <id>https://www.graymatterdeveloper.com/2019/12/02/listening-events-postgresql/</id>
     <published>2019-12-02T09:23:25.000Z</published>
     <updated>2019-12-02T09:23:25.000Z</updated>
     
@@ -644,25 +644,25 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Databases" scheme="https://myarichuk.github.io/repository/categories/Programming/Databases/"/>
+      <category term="Databases" scheme="https://www.graymatterdeveloper.com/categories/Programming/Databases/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="PostgreSQL" scheme="https://myarichuk.github.io/repository/tags/PostgreSQL/"/>
+      <category term="PostgreSQL" scheme="https://www.graymatterdeveloper.com/tags/PostgreSQL/"/>
     
-      <category term="SQL" scheme="https://myarichuk.github.io/repository/tags/SQL/"/>
+      <category term="SQL" scheme="https://www.graymatterdeveloper.com/tags/SQL/"/>
     
-      <category term="Event-handling" scheme="https://myarichuk.github.io/repository/tags/Event-handling/"/>
+      <category term="Event-handling" scheme="https://www.graymatterdeveloper.com/tags/Event-handling/"/>
     
   </entry>
   
   <entry>
     <title>Hello World with multiple microservices</title>
-    <link href="https://myarichuk.github.io/repository/2019/11/28/hello-world-microservices/"/>
-    <id>https://myarichuk.github.io/repository/2019/11/28/hello-world-microservices/</id>
+    <link href="https://www.graymatterdeveloper.com/2019/11/28/hello-world-microservices/"/>
+    <id>https://www.graymatterdeveloper.com/2019/11/28/hello-world-microservices/</id>
     <published>2019-11-28T10:21:23.000Z</published>
     <updated>2019-11-28T10:21:23.000Z</updated>
     
@@ -679,20 +679,20 @@
     </summary>
     
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/categories/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Architecture" scheme="https://myarichuk.github.io/repository/categories/Programming/Architecture/"/>
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/categories/Programming/Architecture/"/>
     
     
-      <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="MassTransit" scheme="https://myarichuk.github.io/repository/tags/MassTransit/"/>
+      <category term="MassTransit" scheme="https://www.graymatterdeveloper.com/tags/MassTransit/"/>
     
-      <category term="Microservices" scheme="https://myarichuk.github.io/repository/tags/Microservices/"/>
+      <category term="Microservices" scheme="https://www.graymatterdeveloper.com/tags/Microservices/"/>
     
-      <category term="Architecture" scheme="https://myarichuk.github.io/repository/tags/Architecture/"/>
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
   </entry>
   
