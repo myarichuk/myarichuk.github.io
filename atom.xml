@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myarichuk.github.io/repository/"/>
-  <updated>2023-02-18T23:14:51.363Z</updated>
+  <updated>2023-02-19T05:40:19.304Z</updated>
   <id>https://myarichuk.github.io/repository/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>From Inheritance Hell to Component Heaven, ECS Pattern</title>
-    <link href="https://myarichuk.github.io/repository/2023/02/18/ecs-intro/"/>
-    <id>https://myarichuk.github.io/repository/2023/02/18/ecs-intro/</id>
-    <published>2023-02-18T23:14:51.363Z</published>
-    <updated>2023-02-18T23:14:51.363Z</updated>
+    <link href="https://myarichuk.github.io/repository/2023/02/19/ecs-intro/"/>
+    <id>https://myarichuk.github.io/repository/2023/02/19/ecs-intro/</id>
+    <published>2023-02-19T05:40:19.304Z</published>
+    <updated>2023-02-19T05:40:19.304Z</updated>
     
     <summary type="html">
     
@@ -76,9 +76,9 @@
     
       <category term="C#" scheme="https://myarichuk.github.io/repository/tags/C/"/>
     
-      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
-    
       <category term="Programming" scheme="https://myarichuk.github.io/repository/tags/Programming/"/>
+    
+      <category term="Performance" scheme="https://myarichuk.github.io/repository/tags/Performance/"/>
     
       <category term="REST" scheme="https://myarichuk.github.io/repository/tags/REST/"/>
     

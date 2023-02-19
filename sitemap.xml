@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://myarichuk.github.io/repository/2023/02/18/ecs-intro/</loc>
+    <loc>https://myarichuk.github.io/repository/2023/02/19/ecs-intro/</loc>
     
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -256,7 +256,7 @@
 
   <url>
     <loc>https://myarichuk.github.io/repository</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -264,259 +264,259 @@
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/ANTLR/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/C/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Parsers/</loc>
-    <lastmod>2023-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myarichuk.github.io/repository/tags/Performance/</loc>
-    <lastmod>2023-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myarichuk.github.io/repository/tags/Optimization/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Async/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Programming/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Multithreading/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myarichuk.github.io/repository/tags/Performance/</loc>
+    <lastmod>2023-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myarichuk.github.io/repository/tags/Optimization/</loc>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/C/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/IOC-DI/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/C-Templates/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/CMake/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/WTF/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Entity-Component-System/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Design-Patterns/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/MassTransit/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Microservices/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Architecture/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Hexo-io/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Blog/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Package-Management/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/OpenCV/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/PostgreSQL/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/SQL/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Event-handling/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Debugging/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/LLDB/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Linux/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/REST/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Framework/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/TPL/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Gdb/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/WinDBG/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Net/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/ASP-Net-Core/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Middleware/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/tags/Gotcha/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -525,98 +525,98 @@
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/C/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/Parsers/</loc>
-    <lastmod>2023-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://myarichuk.github.io/repository/categories/Programming/Design-Patterns/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/Debugging/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://myarichuk.github.io/repository/categories/Programming/Design-Patterns/</loc>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/Architecture/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Meta/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/Databases/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Debugging/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/C/WTF/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/WTF/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/C/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Debugging/Post-mortem/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://myarichuk.github.io/repository/categories/Programming/C/ASP-Net/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
