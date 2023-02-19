@@ -594,13 +594,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/</loc>
-    <lastmod>2023-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/categories/Programming/WTF/</loc>
     <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -609,6 +602,13 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/categories/Programming/C/</loc>
+    <lastmod>2023-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/</loc>
     <lastmod>2023-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
