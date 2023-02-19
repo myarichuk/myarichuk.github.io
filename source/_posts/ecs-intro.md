@@ -1,5 +1,5 @@
 ---
-title: From Inheritance Hell to Component Heaven, ECS Pattern
+title: From Inheritance Hell to Component Heaven, the ECS Pattern
 tags:
   - C#
   - Entity Component System
