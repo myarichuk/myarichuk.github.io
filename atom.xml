@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Graymatter Developer</title>
   
-  <subtitle>Hi! My name is Michael. And I like coding.</subtitle>
+  <subtitle>Hi! My name is Michael. Sometimes, I write code :)</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-02-19T12:00:03.822Z</updated>
+  <updated>2023-02-19T12:14:45.413Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>From Inheritance Hell to Component Heaven, ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/02/19/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/02/19/ecs-intro/</id>
-    <published>2023-02-19T12:00:03.822Z</published>
-    <updated>2023-02-19T12:00:03.822Z</updated>
+    <published>2023-02-19T12:14:45.413Z</published>
+    <updated>2023-02-19T12:14:45.413Z</updated>
     
     <summary type="html">
     
