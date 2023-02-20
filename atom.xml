@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Graymatter Developer</title>
   
-  <subtitle>Hi! My name is Michael. Sometimes, I write code :)</subtitle>
+  <subtitle>My semi random thoughts about tech</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-02-19T17:37:15.070Z</updated>
+  <updated>2023-02-20T17:31:00.787Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Taming Complexity with Responsibility</title>
+    <link href="https://www.graymatterdeveloper.com/2023/02/20/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/02/20/responsibility-chain/</id>
+    <published>2023-02-20T17:31:00.787Z</published>
+    <updated>2023-02-20T17:31:00.787Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;It-all-starts-with-a-simple-task&quot;&gt;&lt;a href=&quot;#It-all-starts-with-a-simple-task&quot; class=&quot;headerlink&quot; title=&quot;It all starts with a simple
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
-    <link href="https://www.graymatterdeveloper.com/2023/02/19/ecs-intro/"/>
-    <id>https://www.graymatterdeveloper.com/2023/02/19/ecs-intro/</id>
-    <published>2023-02-19T17:37:15.070Z</published>
-    <updated>2023-02-19T17:37:15.070Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/02/20/ecs-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/02/20/ecs-intro/</id>
+    <published>2023-02-20T17:31:00.783Z</published>
+    <updated>2023-02-20T17:31:00.783Z</updated>
     
     <summary type="html">
     
@@ -656,43 +691,6 @@
       <category term="SQL" scheme="https://www.graymatterdeveloper.com/tags/SQL/"/>
     
       <category term="Event-handling" scheme="https://www.graymatterdeveloper.com/tags/Event-handling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World with multiple microservices</title>
-    <link href="https://www.graymatterdeveloper.com/2019/11/28/hello-world-microservices/"/>
-    <id>https://www.graymatterdeveloper.com/2019/11/28/hello-world-microservices/</id>
-    <published>2019-11-28T10:21:23.000Z</published>
-    <updated>2019-11-28T10:21:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;A friend of mine was having trouble finding simple but working example of microservices that he could tinker with, finding instead
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/categories/Programming/Architecture/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="MassTransit" scheme="https://www.graymatterdeveloper.com/tags/MassTransit/"/>
-    
-      <category term="Microservices" scheme="https://www.graymatterdeveloper.com/tags/Microservices/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
   </entry>
   
