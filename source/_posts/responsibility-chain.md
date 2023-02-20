@@ -8,6 +8,8 @@ tags:
 categories:
   - Programming
   - Design Patterns
+top_img: cover.jpg
+cover: cover.jpg
 ---
 
 ## It all starts with a simple task
@@ -96,8 +98,8 @@ public class DeliveryProviderSelector
   {
     chosenProvider = null;
 
-    foreach(var provider in providers){
-      if(provider.CanHandleDelivery(delivery, _customer)){
+    foreach(var provider in providers) {
+      if(provider.CanHandleDelivery(delivery, _customer)) {
         chosenProvider = provider; 
         return true;
       }
