@@ -69,7 +69,7 @@ What should we do about it?
 
 ## Responsibility trumps Chaos
 
-This kind of problem is not something new and fortunately, there is a solution: *"Chain of Responsibility"* pattern. The idea behind the pattern is simple. Instead of having one giant mess of code with various conditional statements and interconnected methods, we divide the possible handlers of the problem into small discrete parts of code. Thus, each handler is responsible for a specific task or condition, and it either handles the request or passes it on to the next handler in the chain. The chain continues until the request is handled or until the end of the chain is reached, at which point the request is considered unhandled.
+This kind of problem is not something new and fortunately, there is a solution: "Chain of Responsibility" pattern. The idea behind the pattern is simple. Instead of having one giant mess of code with various conditional statements and interconnected methods, we divide the possible handlers of the problem into small discrete parts of code. Thus, each handler is responsible for a specific task or condition, and it either handles the request or passes it on to the next handler in the chain. The chain continues until the request is handled or until the end of the chain is reached, at which point the request is considered unhandled.
 This would allow us to better adhere to the *open-close principle* if business logic changes and simplify the extension of the logic.  
 
 In our case, we could apply this pattern by first adding a method ``CanHandleDelivery`` to ``IDeliveryProvider``. The method would *encapsulate* all the relevant conditions for a specific delivery provider and return true whether the provider would accept the delivery or not.
