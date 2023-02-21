@@ -881,7 +881,8 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="xxxx"></script>
+    - <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5G4WP4QCQ"></script>
+    - <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R5G4WP4QCQ') </script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
