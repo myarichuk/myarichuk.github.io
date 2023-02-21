@@ -112,4 +112,8 @@ public class DeliveryProviderSelector
 
 In addition to adhering to the open-closed principle, such approach promotes loose coupling and separation of concerns by dividing the problem into smaller, discrete parts of code. As a result, changes made to one handler are unlikely to affect the other handlers in the chain, making the code more maintainable and extensible.
 
-As we have seen, proper design pattern usage can simplify your life, if the use-case is correctly recognized. That's it, for now. Now go write some code :)
+## Conclusion
+
+As we have seen, proper design pattern usage can simplify your life, if the use-case is correctly recognized. Also, I think that any task, no matter how seemingly simple and insignificant, would benefit from a little planning and deeper understanding of the problem domain. In the example problem I described, asking questions like "would this code change and how?" would have helped coming up with better design than just writing some ``if`` statements.
+
+That's it, for now. Now go write some code :)
