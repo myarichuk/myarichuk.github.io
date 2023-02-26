@@ -5,13 +5,14 @@ comments: false
 ---
 <img align="left" style="margin-right:10px; margin-left:10px;" width="160" src="me_large.jpg" />
 
-## Who am I?
+## Meet Michael, software developer and mad scientist wannabe
 
-Hi, my name is Michael. I am a software developer by day, and a passionate tinkerer by night, spending good portion of my free time on various pet projects, exploring new technologies, testing out ideas and having fun while doing it :)
-The results of my tinkering you can find in my [GitHub repository](https://github.com/myarichuk). No technology or idea is out-of-scope for my tinkering - the more complex the topic, the better!
+Hey there, I'm Michael – a software developer by day and a mad scientist wannabe by night. In my free time, I love tinkering with all kinds of tech, testing out new ideas, and seeing what's possible.
 
-## Graymatter Developer?
-Scott Hanselman in his blog post - [Dark Matter Developers: The Unseen 99%](https://www.hanselman.com/blog/DarkMatterDevelopersTheUnseen99.aspx), coined a term that could be used to describe me - a _“dark matter developer”_.  
-I was a good fit for the description - didn’t have a blog, nor a podcast and did not have or participated in any open-source projects or even spoke publicly. This is changing now, and from a "dark matter developer" I have turned into a "gray matter developer" - still not fully in the light, but getting there.  
-That is why I started this blog and I try to speak at conferences as often as possible, partly because I enjoy it and partly because I hope to benefit other developers with stuff I talk about. 
-By the way, if you have feedback about any of my talks at conferences or any of my pet projects, especially those I actively work on, I'd be happy to hear it!
+You can check out my [GitHub repository](https://github.com/myarichuk) to see some of the things I'm working on. Whether it's experimenting with various algorithms, trying out new libraries or frameworks, diving into obscure or low-level OS APIs, or playing around with infrastructure libraries, I'm always eager to tackle new challenges, no matter how complex, obscure, or cutting-edge.
+
+You might be wondering why you haven't heard of me before. Well, I used to be what some call a "dark matter developer," staying out of anything public and just doing my thing. But I've had a change of heart and decided to share what I've learned – whether that's new and exciting things I've done, bugs I've found, or gotchas I've encountered. I'm here to learn, grow, and contribute to the tech community, so feel free to share your feedback or ideas with me!
+
+That's why I started this blog and started speaking at conferences. I'm not just doing it for the fame and glory (although that's a nice bonus). I want to help other devs to improve their skills, knowledge and if I inspire someone to create cool stuff, that would be amazing :)
+
+If you have any feedback on my anything I wrote, my past talks or projects, I'd love to hear it. I'm always looking for feedback, new ideas or ways to improve.
