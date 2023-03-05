@@ -57,7 +57,7 @@ Now, let's see how will the implementation look like. First, for simplicity's sa
 public class TrackRepository : ITrackRepository 
 {
   private readonly DbSet<Track> _tracks;
-  //ctor here - omitted for clarity
+  //ctor omitted for clarity
 
   //fetch tracks specified by a list of track IDs
   public IReadOnlyList<Track> FetchByIDs(IEnumerable<string> trackIdsToFind)
@@ -82,7 +82,7 @@ public class TrackRepository : ITrackRepository
 public class VoteRepository: IVoteRepository
 {
   private readonly DbSet<Vote> _votes;
-  //ctor here - omitted for clarity
+  //ctor omitted for clarity
 
   public IReadOnlyList<Vote> FetchUpvotesFor(string userId)
   {
@@ -99,10 +99,10 @@ Now, the class actually generating the playlist, would look something like this.
 ```cs
 public class PlaylistRecommenderByGenrePreferences
 {
-  private ITrackRepository _trackRepo;
-  private IVoteRepository _voteRepo;
+  private readonly ITrackRepository _trackRepo;
+  private readonly IVoteRepository _voteRepo;
 
-  //ctor here - omitted for clarity
+  //ctor omitted for clarity
 
   public IEnumerable<Track> FetchRecommendationFor(string userId)
   {
@@ -157,8 +157,8 @@ Next piece of the puzzle would be to implement the new playlist generator. As we
 
 public class PlaylistRecommenderByArtistPreferences
 {
-  private ITrackRepository _trackRepo;
-  private IVoteRepository _voteRepo;
+  private readonly ITrackRepository _trackRepo;
+  private readonly IVoteRepository _voteRepo;
 
   public PlaylistRecommenderByArtistPreferences(
     ITrackRepository trackRepo, 
@@ -212,28 +212,40 @@ In we talk in code terms, it's simply having a class that defines some virtual o
 
 ## So, show me the code
 
-Let's apply the pattern to the code we have already written. First, let's define a base class.
+Let's apply the pattern to the code we have already written. First, let's add more "generalized" method to the track repository.
+
+```cs
+
+public IReadOnlyList<Track> FetchRandomByPredicate(Func<Track, bool> filter)
+{
+  return _tracks.Where(track => filter(track))
+                .OrderBy(Guid.NewGuid())
+                .ToList();
+}
+
+```
+
+Now, let's define a base class.
 
 ```cs
 
 public abstract class PlaylistGenerator
 {
+  protected readonly ITrackRepository TrackRepo;
+  protected readonly IVoteRepository VoteRepo;
 
-  public IEnumerable<Track> FetchRecommendationFor(string userId)
+  public PlaylistRecommenderByArtistPreferences(
+    ITrackRepository trackRepo, 
+    IVoteRepository voteRepo)
   {
-
+    TrackRepo = trackRepo;
+    VoteRepo = voteRepo;
   }
+
+  protected abstract Func<Track, bool> PredicateFilter { get; }
+
+  public IEnumerable<Track> FetchRecommendationFor(string userId) =>
+     VoteRepo.FetchRandomByPredicate(PredicateFilter);
 } 
 
 ```
-
-## The When & Why
-
-If we take a look at both of the implementations of the playlist generator, a pattern emerges: we have a certain steps that are recurring in both of the implementations and it makes sense that all other implementations would follow the same pattern.  
-
-Conceptually, we can summarize a playlist generator like this:  
-
-1. Fetch filtering and aggregation critera
-2. Aggregate and fetch random tracks
-
-If we see a pattern that emerges like this, we can leverage the Template Method pattern to make the code better structured and more maintainable.
