@@ -1,6 +1,5 @@
 ---
 title: Disentangling the Spaghetti Monster
-date: 2023-03-18 08:28:00
 tags:
   - C#
   - Gang Of Four
