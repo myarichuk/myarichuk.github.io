@@ -1,6 +1,6 @@
 ---
 title: Disentangling the Spaghetti Monster
-date: 2023-02-24T16:53:22+02:00
+date: 2023-03-18T16:53:22+02:00
 tags:
   - C#
   - Gang Of Four
@@ -135,7 +135,7 @@ public class PlaylistRecommenderByGenrePreferences
 }
 ```
 
-After we have a simple but functional implementation of random playlist generation is implemented, the new system goes live. Everything works well, and then, aftre a while, users another way to generate a playlist by artist that play the music user liked - sort of "more of the same".  
+After we have a simple but functional implementation of random playlist generation is implemented, the new system goes live. Everything works well, and then, after a while, users another way to generate a playlist by artist that play the music user liked - sort of "more of the same".  
 
 Okay, I might hear you say, that is not that hard. Simply aggregate artists that created the music users liked and fetch more from the same artists.
 We can start from adding another method to ``TrackRepository``
@@ -216,16 +216,15 @@ Let's apply the pattern to the code we have already written. First, let's add mo
 
 ```cs
 
-public IReadOnlyList<Track> FetchRandomByPredicate(Func<Track, bool> filter)
+public IReadOnlyList<Track> FetchByPredicate(Func<Track, bool> filter)
 {
   return _tracks.Where(track => filter(track))
-                .OrderBy(Guid.NewGuid())
                 .ToList();
 }
 
 ```
 
-Now, let's define a base class.
+Now, let's define a base class that we will use as a "base" for our templates.
 
 ```cs
 
@@ -234,7 +233,7 @@ public abstract class PlaylistGenerator
   protected readonly ITrackRepository TrackRepo;
   protected readonly IVoteRepository VoteRepo;
 
-  public PlaylistRecommenderByArtistPreferences(
+  protected PlaylistGenerator(
     ITrackRepository trackRepo, 
     IVoteRepository voteRepo)
   {
@@ -245,7 +244,135 @@ public abstract class PlaylistGenerator
   protected abstract Func<Track, bool> PredicateFilter { get; }
 
   public IEnumerable<Track> FetchRecommendationFor(string userId) =>
-     VoteRepo.FetchRandomByPredicate(PredicateFilter);
+     VoteRepo.FetchByPredicate(PredicateFilter);
 } 
 
 ```
+
+Alright, so now we've got a class that fetches recommendations, and we can mess around with how it fetches them by overriding the ``PredicateFilter``. But there is something missing: aggregation. If you take a look at the already implemented playlist generators, you would see the following pattern:
+
+1. Fetch the tracks based on some critera (we just implemented it above)
+2. Aggregate the tracks with "group by" clause and take some random tracks from the aggregated data
+
+Sure, we could try to cram both (1) and (2) into the ``PredicateFilter``, but let's be honest, in a more complex code-base that's going to turn into a maintenance nightmare after enough time has passed. Instead, let's modify the abstract class ``PlaylistGenerator`` to include the second stage of the algorithm:
+
+```cs
+
+public abstract class PlaylistGenerator<TAggregationKey>
+{
+  protected readonly ITrackRepository TrackRepo;
+  protected readonly IVoteRepository VoteRepo;
+  protected readonly int MaxTrackGroupsToTake;
+  protected readonly int MaxResults;
+
+  protected PlaylistGenerator(
+    ITrackRepository trackRepo, 
+    IVoteRepository voteRepo,
+    int maxTrackGroupsToTake = 3,
+    int maxResults = 100)
+  {
+    TrackRepo = trackRepo;
+    VoteRepo = voteRepo;
+    MaxTrackGroupsToTake = maxTrackGroupsToTake;
+    MaxResults = maxResults;
+  }
+
+  protected abstract Func<Track, bool> PredicateFilter { get; }
+
+  protected abstract Func<Track, TAggregationKey> AggregationKey { get; }
+
+  public IEnumerable<Track> FetchRecommendationFor(string userId)
+  {
+     var tracksToAggregate = VoteRepo.FetchByPredicate(PredicateFilter);
+     var tracksOfGroupedTracks = tracksToAggregate
+       .GroupBy(AggregationKey)
+       .Take(MaxTrackGroupsToTake)
+       .SelectMany(x => x.Select(g => g.TrackId));
+
+     var results = TrackRepo
+       .FetchByIDs(tracksOfGroupedTracks)
+       .OrderBy(Guid.NewGuid())
+       .Take(MaxResults)
+       .ToList();    
+
+     return results;   
+  }
+} 
+
+```
+
+As we can see, in the ``FetchRecommendationFor`` implementation above, we have the algorithm structure unchanging but it can be influenced by override of an abstract properties. Now, all we have left is to implement ``PlaylistRecommenderByArtistPreferences`` and ``PlaylistRecommenderByGenrePreferences``.  
+
+Let's start from ``PlaylistRecommenderByGenrePreferences``:
+
+```cs
+public class PlaylistRecommenderByGenrePreferences: PlaylistGenerator<MusicGenre>
+{
+  private readonly string _targetUserId;
+
+  public PlaylistRecommenderByGenrePreferences(
+    ITrackRepository trackRepo, 
+    IVoteRepository voteRepo,
+    string targetUserId) : base(trackRepo, voteRepo)
+  {
+    _targetUserId = targetUserId;
+  }
+  
+  protected override Func<Track, bool> PredicateFilter
+  {
+    get
+    {      
+      var userVotes = VoteRepo.FetchUpvotesFor(_targetUserId);   
+      var trackIds = userVotes.Select(v => v.TrackId).ToList();
+
+      return track => trackIds.Contains(track.Id);
+    }
+  }
+
+  protected override Func<Track, MusicGenre> AggregationKey => 
+    (track) => track.Genre;
+}
+```
+
+Implementing ``PlaylistRecommenderByArtistPreferences`` would not be much harder:
+
+```cs
+public class PlaylistRecommenderByArtistPreferences: PlaylistGenerator<string>
+{
+  private readonly string _targetUserId;
+
+  public PlaylistRecommenderByGenrePreferences(
+    ITrackRepository trackRepo, 
+    IVoteRepository voteRepo,
+    string targetUserId) : base(trackRepo, voteRepo)
+  {
+    _targetUserId = targetUserId;
+  }
+  
+  protected override Func<Track, bool> PredicateFilter
+  {
+    get
+    {      
+      var userVotes = VoteRepo.FetchUpvotesFor(_targetUserId);    
+      var trackIds = userVotes.Select(v => v.TrackId).ToList();
+
+      return track => trackIds.Contains(track.Id);
+    }
+  }
+
+  protected override Func<Track, string> AggregationKey => 
+    (track) => track.ArtistId;  
+}
+```
+
+## So, let's review our epic battle with the Spaghetti Monster
+
+We've fought with the Spaghetti Monster and emerged victorious. By utilizing the Template Method Pattern, we've brought that messy code closer to a well-organized and maintainable piece of art. And yes, I exaggerate a little, but you know what I mean.
+
+We have improved:
+
+1. Clarity: Our code is now more readable and easier to understand. No more tangled noodles to decipher!
+2. Stability: By separating the logic into different methods, we've reduced the risk of unwanted side effects.
+3. Maintainability: Future updates and changes will be much easier, as each method has a clear purpose and responsibility.
+
+So, the next time you find yourself lost in the depths of bad code, remember that the Template Method Pattern may help to disentangle at least *some* of the mess. May the clean code be with you and may your sandwiches always be tasty!
