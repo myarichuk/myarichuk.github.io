@@ -5,6 +5,7 @@ tags:
   - Gang Of Four
   - Design Patterns
   - Programming
+  - Architecture
 categories:
   - Programming
   - Design Patterns
