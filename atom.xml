@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-03-18T21:01:50.755Z</updated>
+  <updated>2023-03-18T21:05:31.232Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Taming Complexity with Responsibility</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/</id>
-    <published>2023-03-18T21:01:50.755Z</published>
-    <updated>2023-03-18T21:01:50.755Z</updated>
+    <published>2023-03-18T21:05:31.232Z</published>
+    <updated>2023-03-18T21:05:31.232Z</updated>
     
     <summary type="html">
     
@@ -47,6 +47,8 @@
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
       <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
     
   </entry>
@@ -55,8 +57,8 @@
     <title>Disentangling the Spaghetti Monster</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/templates-ftw/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/templates-ftw/</id>
-    <published>2023-03-18T21:01:50.755Z</published>
-    <updated>2023-03-18T21:01:50.755Z</updated>
+    <published>2023-03-18T21:05:31.232Z</published>
+    <updated>2023-03-18T21:05:31.232Z</updated>
     
     <summary type="html">
     
@@ -82,6 +84,8 @@
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
       <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
     
   </entry>
@@ -90,8 +94,8 @@
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/</id>
-    <published>2023-03-18T21:01:50.747Z</published>
-    <updated>2023-03-18T21:01:50.747Z</updated>
+    <published>2023-03-18T21:05:31.228Z</published>
+    <updated>2023-03-18T21:05:31.228Z</updated>
     
     <summary type="html">
     
@@ -118,6 +122,8 @@
       <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
   </entry>
   

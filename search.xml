@@ -28,6 +28,8 @@
             
             <tag> Design Patterns </tag>
             
+            <tag> Architecture </tag>
+            
             <tag> Gang Of Four </tag>
             
         </tags>
@@ -60,6 +62,8 @@
             <tag> Programming </tag>
             
             <tag> Design Patterns </tag>
+            
+            <tag> Architecture </tag>
             
             <tag> Gang Of Four </tag>
             
@@ -95,6 +99,8 @@
             <tag> Entity Component System </tag>
             
             <tag> Design Patterns </tag>
+            
+            <tag> Architecture </tag>
             
         </tags>
       
@@ -697,11 +703,11 @@
             
             <tag> Programming </tag>
             
+            <tag> Architecture </tag>
+            
             <tag> MassTransit </tag>
             
             <tag> Microservices </tag>
-            
-            <tag> Architecture </tag>
             
         </tags>
       
