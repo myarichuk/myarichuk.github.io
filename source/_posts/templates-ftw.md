@@ -10,8 +10,8 @@ categories:
   - Programming
   - Design Patterns
 author: Michael Yarichuk
-top_img: top.jpg
-cover: cover.gif
+top_img: top.png
+cover: cover.png
 ---
 
 ## The What and Why
