@@ -1,6 +1,6 @@
 ---
 title: Disentangling the Spaghetti Monster
-date: 2023-03-18T16:53:22+02:00
+date: 2023-03-18 08:28:00
 tags:
   - C#
   - Gang Of Four
@@ -204,7 +204,7 @@ How can something like this be approached? Well, you might decide to create anot
 
 ## Code, meet Template Method Pattern
 
-So what **is** this template pattern? It is basically a fancy way of saying "follow the same damn steps every time." It's like when you're making a sandwich, you always put the bread down first, then add some pastrami, Swiss cheese, lettuce, and whatever else veggies you happen to like. You don't start with the lettuce and end with the bread, that's just silly.
+So what **is** this template pattern? It is basically a fancy way of saying "follow the same damn steps every time." It's like when you're making a sandwich, you always put the bread down first, then add some pastrami, Swiss cheese, lettuce, and whatever veggies you happen to like. You don't start with the lettuce and end with the bread, that's just silly.
 
 The Template Pattern is all about having a skeleton structure of an algorithm that stays the same, but you can implement the details as needed. So, let's say you're making different types of sandwiches, you still follow the same bread-meat-cheese-veggies routine, but you might switch out the pastrami for turkey or ham, or swap the "basic" cheese for something fancy like brie or gouda.
 
@@ -244,7 +244,7 @@ public abstract class PlaylistGenerator
   protected abstract Func<Track, bool> PredicateFilter { get; }
 
   public IEnumerable<Track> FetchRecommendationFor(string userId) =>
-     VoteRepo.FetchByPredicate(PredicateFilter);
+     TrackRepo.FetchByPredicate(PredicateFilter);
 } 
 
 ```
@@ -367,7 +367,7 @@ public class PlaylistRecommenderByArtistPreferences: PlaylistGenerator<string>
 
 ## So, let's review our epic battle with the Spaghetti Monster
 
-We've fought with the Spaghetti Monster and emerged victorious. By utilizing the Template Method Pattern, we've brought that messy code closer to a well-organized and maintainable piece of art. And yes, I exaggerate a little, but you know what I mean.
+We've fought with the Spaghetti Monster and emerged victorious. By utilizing the Template Method Pattern, we've brought that messy code closer to a well-organized and maintainable piece of art. And yes, I might be exaggerating a bit, but you get the idea.
 
 We have improved:
 
@@ -375,4 +375,4 @@ We have improved:
 2. Stability: By separating the logic into different methods, we've reduced the risk of unwanted side effects.
 3. Maintainability: Future updates and changes will be much easier, as each method has a clear purpose and responsibility.
 
-So, the next time you find yourself lost in the depths of bad code, remember that the Template Method Pattern may help to disentangle at least *some* of the mess. May the clean code be with you and may your sandwiches always be tasty!
+So, the next time you find yourself lost in the depths of bad code, remember that the Template Method Pattern may help to disentangle at least *some* of the mess. May the clean code be with you, and may your sandwiches always be delicious!
