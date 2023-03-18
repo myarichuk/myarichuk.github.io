@@ -13,8 +13,6 @@ top_img: cover.jpg
 cover: cover.jpg
 ---
 
-## It all starts with a simple task
-
 Imagine, one quiet morning, your boss comes to you and says, "Hey, our web shop is growing and we will be having more than one delivery provider now. Can you implement something that would select the best provider after a client pays for a delivery?".
 After some back and forth about the criteria on how a delivery company should be selected - mostly by package size, weight and delivery company area, you set out to write the code. How hard can it be? Just write a few ``if`` statements, and that's it, right?
 
