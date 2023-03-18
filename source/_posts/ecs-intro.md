@@ -5,6 +5,7 @@ tags:
   - Entity Component System
   - Design Patterns
   - Programming
+  - Architecture
 categories:
   - Programming
   - Design Patterns
