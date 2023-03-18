@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-03-18T21:05:31.232Z</updated>
+  <updated>2023-03-18T21:06:40.583Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Taming Complexity with Responsibility</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/</id>
-    <published>2023-03-18T21:05:31.232Z</published>
-    <updated>2023-03-18T21:05:31.232Z</updated>
+    <published>2023-03-18T21:06:40.583Z</published>
+    <updated>2023-03-18T21:06:40.583Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h2 id=&quot;It-all-starts-with-a-simple-task&quot;&gt;&lt;a href=&quot;#It-all-starts-with-a-simple-task&quot; class=&quot;headerlink&quot; title=&quot;It all starts with a simple
+          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
         
       
     
@@ -57,8 +57,8 @@
     <title>Disentangling the Spaghetti Monster</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/templates-ftw/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/templates-ftw/</id>
-    <published>2023-03-18T21:05:31.232Z</published>
-    <updated>2023-03-18T21:05:31.232Z</updated>
+    <published>2023-03-18T21:06:40.583Z</published>
+    <updated>2023-03-18T21:06:40.583Z</updated>
     
     <summary type="html">
     
@@ -94,8 +94,8 @@
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/</id>
-    <published>2023-03-18T21:05:31.228Z</published>
-    <updated>2023-03-18T21:05:31.228Z</updated>
+    <published>2023-03-18T21:06:40.579Z</published>
+    <updated>2023-03-18T21:06:40.579Z</updated>
     
     <summary type="html">
     
