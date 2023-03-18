@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-03-18T20:52:24.113Z</updated>
+  <updated>2023-03-18T20:57:34.102Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Taming Complexity with Responsibility</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/</id>
-    <published>2023-03-18T20:52:24.113Z</published>
-    <updated>2023-03-18T20:52:24.113Z</updated>
+    <published>2023-03-18T20:57:34.102Z</published>
+    <updated>2023-03-18T20:57:34.102Z</updated>
     
     <summary type="html">
     
@@ -55,8 +55,8 @@
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/</id>
-    <published>2023-03-18T20:52:24.109Z</published>
-    <updated>2023-03-18T20:52:24.109Z</updated>
+    <published>2023-03-18T20:57:34.098Z</published>
+    <updated>2023-03-18T20:57:34.098Z</updated>
     
     <summary type="html">
     
@@ -99,7 +99,7 @@
       
         
         
-          &lt;h2 id=&quot;The-What-and-Why&quot;&gt;&lt;a href=&quot;#The-What-and-Why&quot; class=&quot;headerlink&quot; title=&quot;The What and Why&quot;&gt;&lt;/a&gt;The What and Why&lt;/h2&gt;&lt;p&gt;Picture this:
+          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
         
       
     
