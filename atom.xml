@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-12T23:39:48.958Z</updated>
+  <updated>2023-11-12T23:45:20.520Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -17,48 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Disentangling the Spaghetti Monster</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/12/templates-ftw/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/12/templates-ftw/</id>
-    <published>2023-11-12T23:39:48.958Z</published>
-    <updated>2023-11-12T23:39:48.958Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Taming Complexity with Responsibility</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/12/responsibility-chain/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/12/responsibility-chain/</id>
-    <published>2023-11-12T23:39:48.954Z</published>
-    <updated>2023-11-12T23:39:48.954Z</updated>
+    <published>2023-11-12T23:45:20.520Z</published>
+    <updated>2023-11-12T23:45:20.520Z</updated>
     
     <summary type="html">
     
@@ -91,11 +54,48 @@
   </entry>
   
   <entry>
+    <title>Disentangling the Spaghetti Monster</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/12/templates-ftw/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/12/templates-ftw/</id>
+    <published>2023-11-12T23:45:20.520Z</published>
+    <updated>2023-11-12T23:45:20.520Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/12/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/12/ecs-intro/</id>
-    <published>2023-11-12T23:39:48.950Z</published>
-    <updated>2023-11-12T23:39:48.950Z</updated>
+    <published>2023-11-12T23:45:20.512Z</published>
+    <updated>2023-11-12T23:45:20.512Z</updated>
     
     <summary type="html">
     
