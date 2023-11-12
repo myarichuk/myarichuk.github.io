@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-03-18T21:06:40.583Z</updated>
+  <updated>2023-11-12T06:55:32.042Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Taming Complexity with Responsibility</title>
-    <link href="https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/"/>
-    <id>https://www.graymatterdeveloper.com/2023/03/18/responsibility-chain/</id>
-    <published>2023-03-18T21:06:40.583Z</published>
-    <updated>2023-03-18T21:06:40.583Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/12/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/12/responsibility-chain/</id>
+    <published>2023-11-12T06:55:32.042Z</published>
+    <updated>2023-11-12T06:55:32.042Z</updated>
     
     <summary type="html">
     
@@ -55,10 +55,10 @@
   
   <entry>
     <title>Disentangling the Spaghetti Monster</title>
-    <link href="https://www.graymatterdeveloper.com/2023/03/18/templates-ftw/"/>
-    <id>https://www.graymatterdeveloper.com/2023/03/18/templates-ftw/</id>
-    <published>2023-03-18T21:06:40.583Z</published>
-    <updated>2023-03-18T21:06:40.583Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/12/templates-ftw/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/12/templates-ftw/</id>
+    <published>2023-11-12T06:55:32.042Z</published>
+    <updated>2023-11-12T06:55:32.042Z</updated>
     
     <summary type="html">
     
@@ -92,10 +92,10 @@
   
   <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
-    <link href="https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/"/>
-    <id>https://www.graymatterdeveloper.com/2023/03/18/ecs-intro/</id>
-    <published>2023-03-18T21:06:40.579Z</published>
-    <updated>2023-03-18T21:06:40.579Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/12/ecs-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/12/ecs-intro/</id>
+    <published>2023-11-12T06:55:32.038Z</published>
+    <updated>2023-11-12T06:55:32.038Z</updated>
     
     <summary type="html">
     
@@ -552,9 +552,9 @@
       <category term="Parsers" scheme="https://www.graymatterdeveloper.com/categories/Programming/Parsers/"/>
     
     
-      <category term="ANTLR" scheme="https://www.graymatterdeveloper.com/tags/ANTLR/"/>
-    
       <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="ANTLR" scheme="https://www.graymatterdeveloper.com/tags/ANTLR/"/>
     
       <category term="Parsers" scheme="https://www.graymatterdeveloper.com/tags/Parsers/"/>
     
@@ -655,13 +655,13 @@
       <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
       <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
       <category term="IOC/DI" scheme="https://www.graymatterdeveloper.com/tags/IOC-DI/"/>
     
       <category term="C++ Templates" scheme="https://www.graymatterdeveloper.com/tags/C-Templates/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
   </entry>
   
@@ -692,9 +692,9 @@
     
       <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Async" scheme="https://www.graymatterdeveloper.com/tags/Async/"/>
-    
       <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Async" scheme="https://www.graymatterdeveloper.com/tags/Async/"/>
     
       <category term="Multithreading" scheme="https://www.graymatterdeveloper.com/tags/Multithreading/"/>
     
