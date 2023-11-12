@@ -316,6 +316,27 @@
   </url>
   
   <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Async/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Programming/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Multithreading/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.graymatterdeveloper.com/tags/C/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -331,27 +352,6 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/C-Templates/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Programming/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Async/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Multithreading/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -393,20 +393,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Hexo-io/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Blog/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/tags/MassTransit/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -415,6 +401,20 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/Microservices/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Hexo-io/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Blog/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -526,13 +526,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Gotcha/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/tags/ASP-Net-Core/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -541,6 +534,13 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/Middleware/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Gotcha/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -556,14 +556,14 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Programming/C/</loc>
+    <loc>https://www.graymatterdeveloper.com/categories/Programming/Debugging/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Programming/Debugging/</loc>
+    <loc>https://www.graymatterdeveloper.com/categories/Programming/C/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -584,14 +584,14 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Meta/</loc>
+    <loc>https://www.graymatterdeveloper.com/categories/Programming/Architecture/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Programming/Architecture/</loc>
+    <loc>https://www.graymatterdeveloper.com/categories/Meta/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

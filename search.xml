@@ -600,13 +600,13 @@
       
         <tags>
             
+            <tag> Programming </tag>
+            
             <tag> C++ </tag>
             
             <tag> IOC/DI </tag>
             
             <tag> C++ Templates </tag>
-            
-            <tag> Programming </tag>
             
         </tags>
       
@@ -635,9 +635,9 @@
             
             <tag> C# </tag>
             
-            <tag> Programming </tag>
-            
             <tag> Async </tag>
+            
+            <tag> Programming </tag>
             
             <tag> Multithreading </tag>
             
