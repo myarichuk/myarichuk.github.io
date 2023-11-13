@@ -41,7 +41,7 @@ TODO:
 - Explain dump role in diagnosing catastrophic failures.
 - Do some tips or best practices. link to my blog about memory dumps?
 
-## Non-negotiable 3: Comprehensive App Testing
+## Non-negotiable 4: Comprehensive App Testing
 TODO:
 - Discuss different types of testing (unit, functional, integration) and their relevance.
 - Emphasize on the need for meaningful tests, not just high coverage numbers.
