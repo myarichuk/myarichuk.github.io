@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-14T00:26:10.328Z</updated>
+  <updated>2023-11-14T07:01:53.777Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -17,48 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Taming Complexity with Responsibility</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/</id>
-    <published>2023-11-14T00:26:10.328Z</published>
-    <updated>2023-11-14T00:26:10.328Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Disentangling the Spaghetti Monster</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/</id>
-    <published>2023-11-14T00:26:10.328Z</published>
-    <updated>2023-11-14T00:26:10.328Z</updated>
+    <published>2023-11-14T07:01:53.777Z</published>
+    <updated>2023-11-14T07:01:53.777Z</updated>
     
     <summary type="html">
     
@@ -91,11 +54,48 @@
   </entry>
   
   <entry>
+    <title>Taming Complexity with Responsibility</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/</id>
+    <published>2023-11-14T07:01:53.773Z</published>
+    <updated>2023-11-14T07:01:53.773Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/14/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/14/ecs-intro/</id>
-    <published>2023-11-14T00:26:10.320Z</published>
-    <updated>2023-11-14T00:26:10.320Z</updated>
+    <published>2023-11-14T07:01:53.769Z</published>
+    <updated>2023-11-14T07:01:53.769Z</updated>
     
     <summary type="html">
     

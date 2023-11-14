@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/</loc>
+    <loc>https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/</loc>
     
     <lastmod>2023-11-14</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/</loc>
+    <loc>https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/</loc>
     
     <lastmod>2023-11-14</lastmod>
     
@@ -407,20 +407,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Hexo-io/</loc>
-    <lastmod>2023-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Blog/</loc>
-    <lastmod>2023-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/tags/Package-Management/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -429,6 +415,20 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/OpenCV/</loc>
+    <lastmod>2023-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Hexo-io/</loc>
+    <lastmod>2023-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Blog/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
