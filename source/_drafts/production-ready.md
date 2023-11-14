@@ -18,11 +18,13 @@ In the tech world, 'production-ready' is a phrase that gets tossed around a lot�
 
 ## Non-negotiables
 
+Let's start with things that absolutely should be in a *production-ready* software. Of course, I am aiming here at a general use-case; context matters - implementing a comprehensive monitoring system or a comperhensive test suite for [non-mission critical](https://www.techtarget.com/searchitoperations/definition/mission-critical-computing) internal tool may well be a waste of time, for example.
+
 ### Structured Logging and Monitoring
 
-"Ugh, okay. I'll just add some logging here, here and here. Let's finish this code review..."
+But logging is pretty much a given, I might hear you say. "Ugh, okay. I'll just add some logging here, here and here. Let's finish this code review..."
 Sound familiar? I've been there too. If you've heard this from a fellow developer or, even worse, caught yourself saying it, it's time for a serious perspective shift. [Structured logging](https://www.atatus.com/glossary/structured-logging/) and [monitoring](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting) are more than just a tedious task or an item on a review checklist. They are the unsung heroes of the software world, often overlooked in favor of flashy new AI features or sleek UI elements.
-But it's these behind-the-scenes players that keep your software sailing smoothly through the stormy seas of production. They're not just about spitting out lines of text for an eventual, maybe-never glance. They're about creating a coherent story of your application’s life in the wild, bringing order to chaos. And you know, when things hit the fan at 2 AM, you'll be craving logs that read like a detective novel, not a cryptic riddle.
+But it's these behind-the-scenes players that keep your software sailing smoothly through the stormy seas of production. They're not just about spitting out lines of text for an eventual, maybe-never glance. They're about creating a coherent story of your application’s life in the wild, bringing order to chaos. And you know, when things hit the fan at 2 AM, you'll be craving logs that read like a detective novel, not a cryptic riddle. Heck, I have seen plenty of logs that announce there was an error without actually saying what it was!
 
 It's not just about logging, though. Monitoring is your eagle-eyed lookout on the crow's nest, alerting you before disaster strikes. It's the art of distinguishing a one-off glitch from the symptoms of a deeper issue. Without effective monitoring, you're essentially flying blind, hoping for the best but ill-prepared for the worst. At a minimum, monitoring should include historical data on key system metrics, like disk and memory usage, perhaps GC related information if you use a managed language, and crucial application internals, such as cache sizes and internal queue lengths. When your production instance goes foobar at 2 AM, this historical data can be a lifesaver in pinpointing the cause of your system's crash.
 
@@ -30,7 +32,7 @@ Now, let's hit the brakes for a moment and address a common mix-up (yes, I've be
 
 Monitoring is your software's constant health check. It's about keeping an eye on the essentials — things like disk and memory usage, cache sizes, and queue lengths. Think of it as the dashboard in your car, not just warning you when you're running on fumes (or about to crash), but also providing a regular update on the overall health of your system. It ensures your software doesn't derail unexpectedly.
 
-On the flip side, we have performance metrics. This is where you measure your software's horsepower. How fast does it handle requests? Does it buckle under heavy user traffic, or does it hold its ground? Performance metrics offer a deep dive into your software's efficiency under various conditions. It's like a detailed report card, pinpointing exactly where improvements are needed for your software to perform at its peak.
+On the other side of the coin, we have performance metrics. This is where you measure your software's horsepower. How fast does it handle requests? Does it yield under the stress of heavy user traffic, or does it hold its ground? Performance metrics offer a deep dive into your software's efficiency under various conditions. It's like a detailed report card, pinpointing exactly where improvements are needed for your software to perform at its peak.
 
 In essence, while monitoring, well, monitors your software's day-to-day well-being, performance metrics are your strategic tool for performance optimization and troubleshooting bottlenecks. Both are vital, but they serve different roles in the realm of production-ready software.
 
@@ -70,20 +72,21 @@ Memory dumps capture everything – from the values of variables to the state of
 
 #### Why should we care?
 
-In the realm of production, memory dumps are invaluable. They allow us to diagnose issues that are elusive and hard to replicate in a controlled development environment. Think of them as your black box in an airplane, offering crucial insights when everything else fails. With a memory dump, you can:
+In the realm of production, memory dumps are invaluable. They allow us to diagnose issues that are elusive and hard to replicate in a controlled development environment. Think of them as your black box in an airplane, offering crucial insights when everything else fails. With a memory dump, typically, you can:
 
 * Trace the root cause of a crash or memory leak.
 * Understand the state of your application's memory before it crashed.
 * Identify patterns or anomalies that might not be evident during normal debugging.
 * For managed (garbage collected) languages, identify causes for frequent GC cycles.
 
-Now, I'm pretty deep into the .NET world, so if you are a .Net dev you can start here: [a guide on setting up dump debugging for .NET](https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/). But dealing with memory dumps is not something exclusive to .Net. Here are some handy starting points for getting your tooling ready for handling memory dumps in various languages:
+{% note info %}
+Note, I'm pretty deep into the .NET world, so if you are a .Net dev you can start here: [a guide on setting up dump debugging for .NET](https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/). But dealing with memory dumps is not something exclusive to .Net. Here are some starting points for getting your tooling ready for handling memory dumps in various languages:
 
 * For the Python wizards: [Python Memory Dump Guide](https://gist.github.com/toolness/d56c1aab317377d5d17a)
 * Java gurus, check this out: [Speeding up Java Heap Dumps](https://medium.com/platform-engineer/speeding-up-java-heap-dumps-with-gnu-debugger-c01562e2b8f0)
 * JavaScript/Node.js enthusiasts can start here: [Using Heap Snapshot in Node.js](https://nodejs.org/en/docs/guides/diagnostics/memory/using-heap-snapshot)
 * Ruby rockstars, perhaps you will find it useful: [Ruby ObjectSpace Documentation](https://docs.ruby-lang.org/en/master/ObjectSpace.html)
-
+{% endnote %}
 
 #### So, what do I mean by 'facilities'?
 
@@ -119,4 +122,15 @@ Beyond the big three - unit, functional, and integration testing, there's a lot 
 * **Automated Testing (automated UI testing):** It's a variant of black-box testing, where the implementers automate user activities and 'simulate' clicks on buttons in the UI. A lifesaver for repetitive tasks and a staple in modern CI/CD pipelines.
 * **Usability Testing:** This is all about making sure your app doesn't leave your users scratching their heads. It's the difference between a smooth ride and a maze.
 
-TODO: Emphasize on the need for meaningful tests, not just high coverage numbers.
+#### Meaningful tests?
+
+Here is a fun issue I actually encountered in the past. When I came to work for a certain company, they were saying, very proudly, by the way that they have 3k tests and their test coverage is very, very high.
+However, when I started going through the actual tests, I discovered they lacked [assertions](https://en.wikipedia.org/wiki/Test_assertion). At all! Thus, every single test they had was meaningless. This is an extreme example, of course, but I think my point is clear. Not all tests were born the same.  
+
+{% note info %}
+If you're new to testing, here's a quick rundown on why assertions are so important:
+
+* An assertion in testing is like a checkpoint in a race - it's where you verify if you're on the right track. It's a statement that checks whether a certain condition is true. For example, after executing a function, an assertion might check if the output is what you expect.
+* Without assertions, a test might run your code but it won’t tell you if the code is doing what it's supposed to do. The test simply checks if the code runs without crashing, not if it's producing the correct results.
+* Think of writing a test without an assertion like cooking without tasting the food. You can follow the recipe (your code), but without tasting it (asserting), you won’t know if the result is actually good.
+{% endnote %}
