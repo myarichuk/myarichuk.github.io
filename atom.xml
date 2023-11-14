@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-13T07:33:31.104Z</updated>
+  <updated>2023-12-11T19:15:48.000Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Taming Complexity with Responsibility</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/13/responsibility-chain/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/13/responsibility-chain/</id>
-    <published>2023-11-13T07:33:31.104Z</published>
-    <updated>2023-11-13T07:33:31.104Z</updated>
+    <title>Production-Ready is not just a buzzword</title>
+    <link href="https://www.graymatterdeveloper.com/2023/12/11/production-ready/"/>
+    <id>https://www.graymatterdeveloper.com/2023/12/11/production-ready/</id>
+    <published>2023-12-11T19:15:48.000Z</published>
+    <updated>2023-12-11T19:15:48.000Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
+          &lt;h2 id=&quot;The-What-and-the-Why&quot;&gt;&lt;a href=&quot;#The-What-and-the-Why&quot; class=&quot;headerlink&quot; title=&quot;The What and the Why&quot;&gt;&lt;/a&gt;The What and the
         
       
     
@@ -38,27 +38,23 @@
     
       <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+      <category term="Theory" scheme="https://www.graymatterdeveloper.com/categories/Programming/Theory/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
   </entry>
   
   <entry>
     <title>Disentangling the Spaghetti Monster</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/13/templates-ftw/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/13/templates-ftw/</id>
-    <published>2023-11-13T07:33:31.104Z</published>
-    <updated>2023-11-13T07:33:31.104Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/</id>
+    <published>2023-11-14T00:25:27.123Z</published>
+    <updated>2023-11-14T00:25:27.123Z</updated>
     
     <summary type="html">
     
@@ -80,11 +76,48 @@
     
       <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
       <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Taming Complexity with Responsibility</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/</id>
+    <published>2023-11-14T00:25:27.119Z</published>
+    <updated>2023-11-14T00:25:27.119Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
       <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
       <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
     
@@ -92,10 +125,10 @@
   
   <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/13/ecs-intro/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/13/ecs-intro/</id>
-    <published>2023-11-13T07:33:31.100Z</published>
-    <updated>2023-11-13T07:33:31.100Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/14/ecs-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/14/ecs-intro/</id>
+    <published>2023-11-14T00:25:27.115Z</published>
+    <updated>2023-11-14T00:25:27.115Z</updated>
     
     <summary type="html">
     
@@ -117,13 +150,13 @@
     
       <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
       <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
       <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
   </entry>
   
@@ -662,41 +695,6 @@
       <category term="IOC/DI" scheme="https://www.graymatterdeveloper.com/tags/IOC-DI/"/>
     
       <category term="C++ Templates" scheme="https://www.graymatterdeveloper.com/tags/C-Templates/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Synchronization primitives + async/await = trouble</title>
-    <link href="https://www.graymatterdeveloper.com/2019/12/05/async-sync/"/>
-    <id>https://www.graymatterdeveloper.com/2019/12/05/async-sync/</id>
-    <published>2019-12-05T08:38:06.000Z</published>
-    <updated>2019-12-05T08:38:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Recently, my colleague was investigating an interesting issue. A &lt;code&gt;ReaderWriterLockSlim&lt;/code&gt; was sometimes throwing the following
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Programming/Debugging/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Async" scheme="https://www.graymatterdeveloper.com/tags/Async/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Multithreading" scheme="https://www.graymatterdeveloper.com/tags/Multithreading/"/>
     
   </entry>
   
