@@ -94,7 +94,7 @@ Different languages need different tools to capture memory dumps, or *core dumps
 
 Regardless of the environment, capturing a memory dump necessitates the installation of specific tools. To ensure on-demand memory dump capabilities in production, it's crucial to include the installation of these tools as part of your deployment process. So, for example, for a production deployment in .Net docker, we would install the *dotnet-dump* tool and it's prerequisites (.Net SDK).
 
-### Comprehensive App Testing
+### Comprehensive Testing
 
 Now, let's talk about testing. I like to think about testing as a safety net that attempts to catch bugs before they become make production system go foobar.
 I know, it sounds cliche, but it is just that. In this realm, there are three musketeers: unit testing, functional testing, and integration testing. Each plays a distinct role and we will talk a bit about them.
@@ -124,12 +124,28 @@ Beyond the big three - unit, functional, and integration testing, there's a lot 
 
 #### Meaningful tests?
 
-I encountered a rather amusing situation at a company I joined some time ago. They boasted, quite proudly, about their 3,000 tests and impressively high test coverage. However, when I delved into the actual tests, I made a very interesting discovery: they lacked [assertions](https://en.wikipedia.org/wiki/Test_assertion) entirely! As a result, every single test they had was effectively meaningless. This, of course, is an extreme example, but I think drives my point home. Not all tests are created equal.
+I once joined a company that proudly boasted about their 3,000 tests and impressively high test coverage. But when I dug into the actual tests, I stumbled upon a very interesting discovery: they completely lacked [assertions](https://en.wikipedia.org/wiki/Test_assertion)! As a result, every single test they had was effectively meaningless. This might be an extreme example, but it drives my point home. Not all tests are created equal.
 
 {% note info %}
-If you're new to testing, here's a quick rundown on why assertions are so important:
+If you're new to testing, here's why assertions are so important:
 
-* An assertion in testing is like a checkpoint in a race - it's where you verify if you're on the right track. It's a statement that checks whether a certain condition is true. For example, after executing a function, an assertion might check if the output is what you expect.
-* Without assertions, a test might run your code but it won’t tell you if the code is doing what it's supposed to do. The test simply checks if the code runs without crashing, not if it's producing the correct results.
-* Think of writing a test without an assertion like cooking without tasting the food. You can follow the recipe (your code), but without tasting it (asserting), you won’t know if the result is actually good.
+* An assertion in testing is like a checkpoint in a race - it verifies if you're on the right track. It's a statement that checks whether a certain condition is true. For example, after executing a function, an assertion might check if the output matches what you expect.
+* Without assertions, a test might run your code but won’t tell you if the code is actually doing what it's supposed to. The test only checks if the code runs without crashing, not whether it's producing the correct results.
+* Writing a test without an assertion is like cooking without tasting the food. You might follow the recipe (your code), but without tasting it (asserting), you won't know if the result is actually good.
 {% endnote %}
+
+Ok, so what makes a test both good and meaningful, beyond just having proper assertions? First off, let's talk about the AAA pattern: *Arrange, Act, Assert*. This foundational structure in testing also has a variant known as *given-when-then*, part of Behavior-Driven Development (BDD) practice, which focuses on the end-user experience and translates user stories into actual tests.
+
+A key principle for both approaches is focusing on minimal scope. What does that mean? Essentially, tests are like a microscope. Just as a microscope zooms in on a tiny area to reveal the smallest details, a good test narrows its focus to examine one specific segment of code or a single functionality aspect.
+This focused approach ensures each test is clear and concise in what it's checking. If it's a unit or functional test, it should isolate the part being tested, making it easier to pinpoint what's wrong when a test fails and simplifying test maintenance over time. Integration tests won't contain mocks, of course, but they should still test only a single functionality aspect.
+This is particularly crucial in complex systems, where testing too many aspects at once can muddy the waters and make it hard to determine exactly what went wrong if a test fails.
+
+Now, let's dive into another crucial aspect of our testing saga: regression testing. Ever squashed a hard-to-find bug and felt like a rockstar, only to have another one pop up, mocking you? That's where regression testing steps in, like a superhero, to save the day.
+Think of regression testing as your software's guardian. It remembers the bugs and issues you've fought in the past and keeps an eye out to ensure they don't creep back in. Whenever you patch a bug or tweak a feature, regression testing is that meticulous friend who double-checks everything to make sure nothing else got messed up in the process.
+
+Then, there's the 'happy path' testing. I've seen tests that perfectly replicate a code path executed when everything is fine: no invalid user input, no transient errors, no timeouts, or unhandled exceptions. This approach, however, often overlooks potential issues.
+
+* Ideally, we should create tests for every code branch and every possible exception that can be thrown.
+* In practice, given time constraints, it's common to test the happy path first. But then, it's crucial to identify code flows where severe issues might occur and create tests for them. Aiming for about 80% code coverage is a good metric, but don't over-rely on it. Review the tests to ensure they actually test what they're supposed to.
+
+Finally, let's touch on the balance between unit and integration tests. With enough unit tests, even a small code change can ripple through your test base, increasing development costs. So, as your number of tests grows, consider balancing unit tests with integration tests. The latter tends to do more 'black box' checks, which often lowers maintenance costs. Remember, developer time is expensive!
