@@ -1,5 +1,5 @@
 ---
-title: Tapas and Distributed Systems: A Tasty Guide to the Eight Fallacies
+title: Tapas and Distributed Systems - A Tasty Guide to the Eight Fallacies
 date: 2019-19-03 19:15:48
 tags:
   - C#
