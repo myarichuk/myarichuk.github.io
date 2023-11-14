@@ -124,8 +124,7 @@ Beyond the big three - unit, functional, and integration testing, there's a lot 
 
 #### Meaningful tests?
 
-Here is a fun issue I actually encountered in the past. When I came to work for a certain company, they were saying, very proudly, by the way that they have 3k tests and their test coverage is very, very high.
-However, when I started going through the actual tests, I discovered they lacked [assertions](https://en.wikipedia.org/wiki/Test_assertion). At all! Thus, every single test they had was meaningless. This is an extreme example, of course, but I think my point is clear. Not all tests were born the same.  
+I encountered a rather amusing situation at a company I joined some time ago. They boasted, quite proudly, about their 3,000 tests and impressively high test coverage. However, when I delved into the actual tests, I made a very interesting discovery: they lacked [assertions](https://en.wikipedia.org/wiki/Test_assertion) entirely! As a result, every single test they had was effectively meaningless. This, of course, is an extreme example, but I think drives my point home. Not all tests are created equal.
 
 {% note info %}
 If you're new to testing, here's a quick rundown on why assertions are so important:
