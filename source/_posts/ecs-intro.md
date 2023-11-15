@@ -1,5 +1,6 @@
 ---
 title: From Inheritance Hell to Component Heaven, the ECS Pattern
+date: 2023-11-09 23:00:00
 tags:
   - C#
   - Entity Component System

@@ -1,5 +1,6 @@
 ---
 title: Taming Complexity with Responsibility
+date: 2023-11-10 23:00:00
 tags:
   - C#
   - Gang Of Four
