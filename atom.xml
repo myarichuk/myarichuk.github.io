@@ -52,48 +52,11 @@
   </entry>
   
   <entry>
-    <title>Taming Complexity with Responsibility</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/</id>
-    <published>2023-11-15T00:41:03.566Z</published>
-    <updated>2023-11-15T00:41:03.566Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Disentangling the Spaghetti Monster</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/</id>
-    <published>2023-11-15T00:41:03.566Z</published>
-    <updated>2023-11-15T00:41:03.566Z</updated>
+    <published>2023-11-15T00:43:21.553Z</published>
+    <updated>2023-11-15T00:43:21.553Z</updated>
     
     <summary type="html">
     
@@ -122,43 +85,6 @@
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
       <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/</id>
-    <published>2023-11-15T00:41:03.562Z</published>
-    <updated>2023-11-15T00:41:03.562Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;All-you-need-is-love-and-Object-Oriented-right-Right&quot;&gt;&lt;a href=&quot;#All-you-need-is-love-and-Object-Oriented-right-Right&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
   </entry>
   
@@ -194,6 +120,80 @@
       <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
       <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Taming Complexity with Responsibility</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/10/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/10/responsibility-chain/</id>
+    <published>2023-11-10T23:00:00.000Z</published>
+    <updated>2023-11-10T23:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/09/ecs-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/09/ecs-intro/</id>
+    <published>2023-11-09T23:00:00.000Z</published>
+    <updated>2023-11-09T23:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;All-you-need-is-love-and-Object-Oriented-right-Right&quot;&gt;&lt;a href=&quot;#All-you-need-is-love-and-Object-Oriented-right-Right&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
   </entry>
   

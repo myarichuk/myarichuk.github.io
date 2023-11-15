@@ -20,25 +20,7 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
@@ -50,6 +32,24 @@
     <loc>https://www.graymatterdeveloper.com/2023/11/14/production-ready-intro/</loc>
     
     <lastmod>2023-11-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/2023/11/10/responsibility-chain/</loc>
+    
+    <lastmod>2023-11-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/2023/11/09/ecs-intro/</loc>
+    
+    <lastmod>2023-11-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -572,13 +572,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Gotcha/</loc>
-    <lastmod>2023-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/tags/ASP-Net-Core/</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -587,6 +580,13 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/Middleware/</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Gotcha/</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
