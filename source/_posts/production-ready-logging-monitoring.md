@@ -9,11 +9,11 @@ tags:
 categories:
   - Programming
   - Best Practices
-top_img: /2023/11/15/production-ready-2/production-ready-2.jpg
-cover: /2023/11/15/production-ready-2/production-ready-2.jpg
+top_img: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
+cover: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
 ---
 
-Hey there! In the [first post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-1/) of the series, we briefly introduced the concept of *production-ready* software and mentioned that there are several non-negotiable aspects that must be present in a *production-system* ready system.
+Hey there! In the [first post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) of the series, we briefly introduced the concept of *production-ready* software and mentioned that there are several non-negotiable aspects that must be present in a *production-system* ready system.
 
 In this post, we will take a look at the first non-negotiable - the unsung heroes of any software system. Structured Logging and Monitoring.
 

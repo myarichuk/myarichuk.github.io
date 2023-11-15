@@ -9,8 +9,8 @@ tags:
 categories:
   - Programming
   - Best Practices
-top_img: /2023/11/11/production-ready-1/production_ready_background.jpg
-cover: /2023/11/11/production-ready-1/production_ready_background.jpg
+top_img: /2023/11/11/production-ready-intro/production_ready_background.jpg
+cover: /2023/11/11/production-ready-intro/production_ready_background.jpg
 ---
 
 In the tech world, the term 'production-ready' often gets tossed around, sometimes more like a hot potato than a clear standard. But what does it truly mean? It seems like everyone has their own take, often shrouded in personal biases or cloaked in industry jargon.
@@ -37,4 +37,4 @@ In this blog post series, we will take a look at the following aspects of softwa
 
 ## What's next?
 
-In the [next post](https://www.graymatterdeveloper.com/2023/11/15/production-ready-2/), we will take a look at the first non-negotiable, structured logging and monitoring.
+In the [next post](https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/), we will take a look at the first non-negotiable, structured logging and monitoring.
