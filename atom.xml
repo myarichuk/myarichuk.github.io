@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-15T23:00:00.000Z</updated>
+  <updated>2023-11-15T17:43:55.000Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&#39;Production Ready&#39; Non-Negotiable: Performance Metrics</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/production-ready-performance-metrics/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/production-ready-performance-metrics/</id>
+    <published>2023-11-15T17:43:55.000Z</published>
+    <updated>2023-11-15T17:43:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Here’s a curious challenge I faced at Hibernating Rhinos, as part of the core team for the &lt;a href=&quot;https://ravendb.net/&quot;&gt;NoSQL database
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    
+    
+      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    
+      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    
+      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    
+      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    
+  </entry>
+  
+  <entry>
     <title>&#39;Production Ready&#39; Non-Negotiable: Structured Logging and Monitoring</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/</id>
-    <published>2023-11-15T23:00:00.000Z</published>
-    <updated>2023-11-15T23:00:00.000Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/14/production-ready-logging-monitoring/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/14/production-ready-logging-monitoring/</id>
+    <published>2023-11-14T23:00:00.000Z</published>
+    <updated>2023-11-14T23:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -662,41 +697,6 @@
       <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
       <category term="TPL" scheme="https://www.graymatterdeveloper.com/tags/TPL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yet Another (Cryptic) CMake Error</title>
-    <link href="https://www.graymatterdeveloper.com/2019/12/17/cryptic-cmake-errors/"/>
-    <id>https://www.graymatterdeveloper.com/2019/12/17/cryptic-cmake-errors/</id>
-    <published>2019-12-17T19:19:41.567Z</published>
-    <updated>2019-12-17T19:19:41.567Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I like CMake. I really do. But sometimes… it is frustrating.&lt;br&gt;The samples found online are understandable and easy to follow and
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
-    
-      <category term="WTF" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/WTF/"/>
-    
-    
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
-    
-      <category term="WTF" scheme="https://www.graymatterdeveloper.com/tags/WTF/"/>
     
   </entry>
   
