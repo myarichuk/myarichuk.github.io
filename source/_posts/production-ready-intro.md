@@ -9,8 +9,8 @@ tags:
 categories:
   - Programming
   - Best Practices
-top_img: /2023/11/11/production-ready-intro/production_ready_background.jpg
-cover: /2023/11/11/production-ready-intro/production_ready_background.jpg
+top_img: /2023/11/14/production-ready-intro/production_ready_background.jpg
+cover: /2023/11/14/production-ready-intro/production_ready_background.jpg
 ---
 
 In the tech world, the term 'production-ready' often gets tossed around, sometimes more like a hot potato than a clear standard. But what does it truly mean? It seems like everyone has their own take, often shrouded in personal biases or cloaked in industry jargon.
