@@ -1,6 +1,6 @@
 ---
 title: "Production-Ready Software: Introduction"
-date: 2023-11-11 19:15:48
+date: 2023-11-14 19:15:48
 tags:
   - Software Engineering
   - Theory
