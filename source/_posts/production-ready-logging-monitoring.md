@@ -116,6 +116,15 @@ Another thing, and it's something that I've seen happened in the past. Structure
 
 {% endnote %}
 
+## Series Roadmap
+
+- 🔖 [**Introduction: Understanding Production-Ready Software**](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/)
+- 📈 [**Part 1: Structured Logging and Monitoring**](https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/) - *(You Are Here)*
+- ⏳ [**Part 2: Performance Metrics: Ensuring Reliability Under Pressure**](https://www.graymatterdeveloper.com/2023/11/15/production-ready-performance-metrics/)
+- 🧰 [**Part 3: Memory Dumps: Deciphering the Black Box**](https://www.graymatterdeveloper.com/2023/11/15/production-ready-memory-dumps/)
+- 🧪 [**Part 4: Comprehensive Testing: From Unit to Integration**](#) *(Coming Soon)*
+- 🛡️ [**Part 5: Beyond the Basics: Security, Scalability, and Documentation**](#) *(Coming Soon)*
+
 ## What's Next?
 
 In the [next post](https://www.graymatterdeveloper.com/2023/11/15/production-ready-performance-metrics/), we will explore the second non-negotiable: performance metrics and discuss why they are important.
