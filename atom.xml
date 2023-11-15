@@ -124,43 +124,6 @@
   </entry>
   
   <entry>
-    <title>Disentangling the Spaghetti Monster</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/10/templates-ftw/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/10/templates-ftw/</id>
-    <published>2023-11-10T19:15:48.000Z</published>
-    <updated>2023-11-10T19:15:48.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/09/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/09/ecs-intro/</id>
@@ -194,6 +157,43 @@
       <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Disentangling the Spaghetti Monster</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/08/templates-ftw/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/08/templates-ftw/</id>
+    <published>2023-11-08T19:15:48.000Z</published>
+    <updated>2023-11-08T19:15:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
     
   </entry>
   
