@@ -52,48 +52,11 @@
   </entry>
   
   <entry>
-    <title>Disentangling the Spaghetti Monster</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/</id>
-    <published>2023-11-15T00:37:07.501Z</published>
-    <updated>2023-11-15T00:37:07.501Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Taming Complexity with Responsibility</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/</id>
-    <published>2023-11-15T00:37:07.497Z</published>
-    <updated>2023-11-15T00:37:07.497Z</updated>
+    <published>2023-11-15T00:41:03.566Z</published>
+    <updated>2023-11-15T00:41:03.566Z</updated>
     
     <summary type="html">
     
@@ -126,11 +89,48 @@
   </entry>
   
   <entry>
+    <title>Disentangling the Spaghetti Monster</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/</id>
+    <published>2023-11-15T00:41:03.566Z</published>
+    <updated>2023-11-15T00:41:03.566Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/</id>
-    <published>2023-11-15T00:37:07.493Z</published>
-    <updated>2023-11-15T00:37:07.493Z</updated>
+    <published>2023-11-15T00:41:03.562Z</published>
+    <updated>2023-11-15T00:41:03.562Z</updated>
     
     <summary type="html">
     
@@ -164,10 +164,10 @@
   
   <entry>
     <title>Production-Ready Software: Introduction</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/</id>
-    <published>2023-11-11T19:15:48.000Z</published>
-    <updated>2023-11-11T19:15:48.000Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/14/production-ready-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/14/production-ready-intro/</id>
+    <published>2023-11-14T19:15:48.000Z</published>
+    <updated>2023-11-14T19:15:48.000Z</updated>
     
     <summary type="html">
     
