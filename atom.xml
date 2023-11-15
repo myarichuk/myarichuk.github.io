@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-14T18:01:53.406Z</updated>
+  <updated>2023-11-15T23:00:00.000Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&#39;Production Ready&#39; Non-Negotiable: Structured Logging and Monitoring</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/production-ready-2/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/production-ready-2/</id>
+    <published>2023-11-15T23:00:00.000Z</published>
+    <updated>2023-11-15T23:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Hey there! In the &lt;a href=&quot;https://www.graymatterdeveloper.com/2023/11/11/production-ready-1/&quot;&gt;first post&lt;/a&gt; of the series, we briefly
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    
+    
+      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    
+      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    
+      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    
+      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Taming Complexity with Responsibility</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/14/responsibility-chain/</id>
-    <published>2023-11-14T18:01:53.406Z</published>
-    <updated>2023-11-14T18:01:53.406Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/</id>
+    <published>2023-11-15T00:28:55.262Z</published>
+    <updated>2023-11-15T00:28:55.262Z</updated>
     
     <summary type="html">
     
@@ -55,10 +90,10 @@
   
   <entry>
     <title>Disentangling the Spaghetti Monster</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/14/templates-ftw/</id>
-    <published>2023-11-14T18:01:53.406Z</published>
-    <updated>2023-11-14T18:01:53.406Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/</id>
+    <published>2023-11-15T00:28:55.262Z</published>
+    <updated>2023-11-15T00:28:55.262Z</updated>
     
     <summary type="html">
     
@@ -92,10 +127,10 @@
   
   <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/14/ecs-intro/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/14/ecs-intro/</id>
-    <published>2023-11-14T18:01:53.402Z</published>
-    <updated>2023-11-14T18:01:53.402Z</updated>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/</id>
+    <published>2023-11-15T00:28:55.254Z</published>
+    <updated>2023-11-15T00:28:55.254Z</updated>
     
     <summary type="html">
     
@@ -124,6 +159,41 @@
       <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
     
       <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Production-Ready Software: Introduction</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/11/production-ready-1/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/11/production-ready-1/</id>
+    <published>2023-11-11T19:15:48.000Z</published>
+    <updated>2023-11-11T19:15:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;In the tech world, the term ‘production-ready’ often gets tossed around, sometimes more like a hot potato than a clear standard. But
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    
+    
+      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    
+      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    
+      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    
+      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
     
   </entry>
   
@@ -627,76 +697,6 @@
       <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
       <category term="WTF" scheme="https://www.graymatterdeveloper.com/tags/WTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Adventures of a C# dev in C++ land - dependency injection</title>
-    <link href="https://www.graymatterdeveloper.com/2019/12/07/cpp-di-metaprogramming/"/>
-    <id>https://www.graymatterdeveloper.com/2019/12/07/cpp-di-metaprogramming/</id>
-    <published>2019-12-07T01:15:48.000Z</published>
-    <updated>2019-12-07T01:15:48.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I stumbled upon &lt;a href=&quot;https://boost-experimental.github.io/di/index.html&quot;&gt;Boost.DI&lt;/a&gt; by accident and was instantly intrigued: for a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="IOC/DI" scheme="https://www.graymatterdeveloper.com/tags/IOC-DI/"/>
-    
-      <category term="C++ Templates" scheme="https://www.graymatterdeveloper.com/tags/C-Templates/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Synchronization primitives + async/await = trouble</title>
-    <link href="https://www.graymatterdeveloper.com/2019/12/05/async-sync/"/>
-    <id>https://www.graymatterdeveloper.com/2019/12/05/async-sync/</id>
-    <published>2019-12-05T08:38:06.000Z</published>
-    <updated>2019-12-05T08:38:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Recently, my colleague was investigating an interesting issue. A &lt;code&gt;ReaderWriterLockSlim&lt;/code&gt; was sometimes throwing the following
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Programming/Debugging/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Async" scheme="https://www.graymatterdeveloper.com/tags/Async/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Multithreading" scheme="https://www.graymatterdeveloper.com/tags/Multithreading/"/>
     
   </entry>
   
