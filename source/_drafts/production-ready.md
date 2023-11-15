@@ -14,7 +14,7 @@ cover: /2023/12/11/production-ready/production_ready_background.jpg
 
 ## The What and the Why
 
-In the tech world, 'production-ready' is a phrase that gets tossed around a lot—sometimes more like a hot potato than a clear standard. It seems like everyone has their own take, often shrouded in personal biases or cloaked in industry jargon. In this post, we're cutting through the fluff and the corporate mumbo-jumbo. We're diving deep into what 'production-ready' really means for software. From the crucial importance of structured logging to the non-negotiable need for comprehensive testing, we'll explore the essentials that separate a robust, reliable product from a ticking time bomb waiting to implode in the production environment.
+"In the tech world, the term 'production-ready' often gets tossed around, sometimes more like a hot potato than a clear standard. But what does it truly mean? It seems like everyone has their own take, often shrouded in personal biases or cloaked in industry jargon. In this post, I am going to cut through the fluff and the corporate mumbo-jumbo, because things don't have to be complex.
 
 ## Non-negotiables
 
@@ -36,7 +36,7 @@ On the other side of the coin, we have performance metrics. This is where you me
 
 In essence, while monitoring, well, monitors your software's day-to-day well-being, performance metrics are your strategic tool for performance optimization and troubleshooting bottlenecks. Both are vital, but they serve different roles in the realm of production-ready software.
 
-Next, let's discuss *performance metrics*, because why not?
+Now that we've explored the role of structured logging and monitoring, let's delve into another essential aspect: performance metrics.
 
 ### Performance Metrics
 
@@ -54,7 +54,7 @@ A hundred documents in the query result, weighing a hefty three megabytes? That 
 
 And here's the fun part: after identifying the bottleneck, the fix was straightforward. By adding a projection to the query, the customer drastically cut down the payload (apparently, they required only 2 out of roughly 60 fields per document), and voilà, query latency dropped by over 90%.
 
-But wait, there’s more to performance metrics than just troubleshooting. They're also about cost-efficiency, especially in cloud-based setups. Less data transmission equals lower operational costs – a crucial factor given the associated costs in cloud environments.
+Performance metrics serve a dual purpose. Besides aiding in troubleshooting, they're vital for cost-efficiency. In cloud-based setups, for example, reducing data transmission can significantly lower operational costs. This is crucial, considering the hefty price tag often associated with cloud services.
 
 Lastly, an often-overlooked aspect: user experience. It's simple – better performance equals happier users. Faster responses lead to a smoother experience, and who doesn't want that?
 
@@ -101,16 +101,20 @@ I know, it sounds cliche, but it is just that. In this realm, there are three mu
 
 #### Unit Testing: The Building Blocks
 
-Unit testing is all about the 'small' stuff. It focuses on individual components or functions of your application, testing them in isolation. Think of it like checking each brick for cracks before you start building a wall. It’s about making sure that each piece of your code does exactly what it’s supposed to do, no more, no less. On a practical side, unit tests typically use [mocks](https://www.geeksforgeeks.org/software-engineering-mock-introduction/) to *isolate* the 'surrounding' functionality of a certain piece of code.
+Unit testing is all about the 'small' stuff. It focuses on individual components or functions of your application, testing them in isolation. Think of it like checking each brick for cracks before you start building a wall. It’s about making sure that each piece of your code does exactly what it’s supposed to do, no more, no less.
+
+On a practical side, unit tests typically use [mocks](https://www.geeksforgeeks.org/software-engineering-mock-introduction/) to *isolate* the 'surrounding' functionality of a certain piece of code.
 
 #### Functional Testing: The User’s Perspective
 
 In theory, functional testing is about testing your application from the user's perspective, ensuring that it behaves as expected. This type of testing doesn’t care much about the internals; instead, it looks at the application as a black box and checks if it meets the specified requirements. It's like testing if the wall you built with those bricks actually holds up and serves its purpose.
+
 In practice, you would often mock 'external' servies, be they actual services in microservice architecture or software modules that are not under test in a monolith architecture.
 
 #### Integration Testing: The Symphony
 
 Then comes integration testing, where the magic of collaboration happens. This type of testing checks how different modules or services work together. It’s about ensuring that when your code’s components interact, they do so as expected. Integration testing is like making sure that all the walls, floors, and ceilings in a building come together to create a structure that stands firm and functions as intended.
+
 In practice, for an integration test, you would spin up a *real* system, even if is comprised of multiple services and an in-memory database. For that, it is possible to use console functionality to spin up the services, or if a language has special facilities like [.Net has](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0), we could use that.
 
 #### Other Testing Types: The Situational Lineup
@@ -149,3 +153,43 @@ Then, there's the 'happy path' testing. I've seen tests that perfectly replicate
 * In practice, given time constraints, it's common to test the happy path first. But then, it's crucial to identify code flows where severe issues might occur and create tests for them. Aiming for about 80% code coverage is a good metric, but don't over-rely on it. Review the tests to ensure they actually test what they're supposed to.
 
 Finally, let's touch on the balance between unit and integration tests. With enough unit tests, even a small code change can ripple through your test base, increasing development costs. So, as your number of tests grows, consider balancing unit tests with integration tests. The latter tends to do more 'black box' checks, which often lowers maintenance costs. Remember, developer time is expensive!
+
+---
+
+### Beyond the non-negotiables - when good enough isn't enough
+
+While we've covered the essentials in making software production-ready, there are other aspects that may not be as important as the non-negotiable four, but still, significantly contribute to the software's robustness and reliability.
+
+Those aspects are extensive topics that worth a blog post by themselves, but I think this blog post is too long alread as it is. For completeness sake, let's take a look.
+
+#### Disaster Recovery: planning for the worst
+
+Disaster recovery is all about having a plan B (and sometimes C and D) for when things go south. It's not just about backups; it's about having a plan to restore functionality and data integrity after a catastrophic failure.
+
+Typically, a DR plan would involve a backup plan, but also a failover plan for system components, especially critical ones like gateways and databases. And for mission critical components, some systems would include plans to route production traffic to a secondary location with a system with data that mirrors the failed system data.
+
+Think of disaster recovery like having an emergency kit for an unexpected zombie apocalypse in your software world – you hope you'll never need it, but when the zombies come knocking (or in our case, when systems crash unexpectedly), you'll be glad you were prepared
+
+#### Security: not a cliche or a buzzword
+
+In today's highly connected world, security is more than a concern – it's a necessity that can't be overlooked. It’s not just about deploying firewalls or encrypting data; it's about adopting a mindset of proactive defense across every aspect of your application.
+
+Let's delve a bit deeper. Firewalls and data encryption form the first line of defense, guarding against external threats. But the security landscape is far more nuanced. Authentication and authorization schemes are the gatekeepers of user access, ensuring that only those with proper credentials can enter. Regular security audits and [vulnerability scanning](https://www.techtarget.com/searchsecurity/tip/Types-of-vulnerability-scanning-and-when-to-use-each), especially for software dependencies and Docker images, act like ongoing health checks for your system's security posture.
+
+Any software can contain critical vulnerabilities. Take, for example, Microsoft's ASP.Net, which is a web application framework. Microsoft is a big name and sounds impressive, right? But if you have a website written in .Net Core 3.x, your website will inherently contain a [Remote Code Execution (RCE) vulnerability](https://github.com/dotnet/aspnetcore/issues/18337), which is bad. Really bad.
+
+{% note info %}
+In computer security, arbitrary code execution or an RCE vulnerability is loophole allowing hackers to run any commands or code of the attacker's choice on a target machine or in a target process.
+{% endnote %}
+
+#### Scalability: sudden success shouldn't become a failure
+
+Scalability ensures that your software can handle growth – be it more users, more data, or increased complexity. It’s like planning a building's foundation to not just hold the current structure but also the additional floors you might add in the future. This can be as simple as making sure you have a load balanced cluster of database servers, or it can be a complex autoscaling many IaaS providers offer. (see Azure [autoscaling](https://learn.microsoft.com/en-us/azure/architecture/best-practices/auto-scaling) for example)
+
+#### Documentation: the unsung hero
+
+Good documentation often doesn't get the credit it deserves, but it's vital. It’s not just for new team members; it’s a reference point that keeps everyone on the same page. Well-documented code and business flows ensure that your software is maintainable and understandable, not just by current team members but by anyone who might work on it in the future. Yes, there is a maintenace cost involved, but hey, who can remember what effect a cross product of all configuration flags can have on a complex business logic flow spanning multiple services?
+
+## So...
+
+As we've seen, making software production-ready will involve a myriad of factors, from structured logging to comprehensive testing. I am curious: which of these areas do you find most challenging, and how might you approach them differently in your projects?
