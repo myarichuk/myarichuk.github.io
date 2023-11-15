@@ -1,6 +1,6 @@
 ---
 title: "'Production Ready' Non-Negotiable: Structured Logging and Monitoring"
-date: 2023-11-15 23:00:00
+date: 2023-11-14 23:00:00
 tags:
   - Software Engineering
   - Theory
@@ -9,8 +9,8 @@ tags:
 categories:
   - Programming
   - Best Practices
-top_img: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
-cover: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
+top_img: production-ready-2.jpg
+cover: production-ready-2.jpg
 ---
 
 Hey there! In the [previous post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) of the series, we introduced the concept of *production-ready* software and mentioned that there are several non-negotiable elements that must be present in such a system.
@@ -118,4 +118,4 @@ Another thing, and it's something that I've seen happened in the past. Structure
 
 ## What's Next?
 
-In the next post, we will explore the second non-negotiable: performance metrics and discuss why they are important.
+In the [next post](https://www.graymatterdeveloper.com/2023/11/15/production-ready-performance-metrics/), we will explore the second non-negotiable: performance metrics and discuss why they are important.
