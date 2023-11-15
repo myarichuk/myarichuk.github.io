@@ -37,8 +37,8 @@ Before anything else, *production-ready- software isn't about having the most cu
 
 ## Series Roadmap
 
-- 🔖 [**Introduction: Understanding Production-Ready Software**](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) - *(You Are Here)*
-- 📈 [**Part 1: Structured Logging and Monitoring**](https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/)
+- 🔖 [**Introduction: Understanding Production-Ready Software**](https://www.graymatterdeveloper.com/2023/11/14/production-ready-intro/) - *(You Are Here)*
+- 📈 [**Part 1: Structured Logging and Monitoring**](https://www.graymatterdeveloper.com/2023/11/14/production-ready-logging-monitoring/)
 - ⏳ [**Part 2: Performance Metrics: Ensuring Reliability Under Pressure**](https://www.graymatterdeveloper.com/2023/11/15/production-ready-performance-metrics/)
 - 🧰 [**Part 3: Memory Dumps: Deciphering the Black Box**](https://www.graymatterdeveloper.com/2023/11/15/production-ready-memory-dumps/)
 - 🧪 [**Part 4: Comprehensive Testing: From Unit to Integration**](#) *(Coming Soon)*
@@ -46,4 +46,4 @@ Before anything else, *production-ready- software isn't about having the most cu
 
 ## What's next?
 
-In the [next post](https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/), we will take a look at the first non-negotiable, structured logging and monitoring.
+In the [next post](https://www.graymatterdeveloper.com/2023/11/14/production-ready-logging-monitoring/), we will take a look at the first non-negotiable, structured logging and monitoring.
