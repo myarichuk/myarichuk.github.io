@@ -18,8 +18,8 @@
   
   <entry>
     <title>&#39;Production Ready&#39; Non-Negotiable: Structured Logging and Monitoring</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/15/production-ready-2/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/15/production-ready-2/</id>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/production-ready-logging-monitoring/</id>
     <published>2023-11-15T23:00:00.000Z</published>
     <updated>2023-11-15T23:00:00.000Z</updated>
     
@@ -52,48 +52,11 @@
   </entry>
   
   <entry>
-    <title>Taming Complexity with Responsibility</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/</id>
-    <published>2023-11-15T00:28:55.262Z</published>
-    <updated>2023-11-15T00:28:55.262Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
-    
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
-    
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Disentangling the Spaghetti Monster</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/15/templates-ftw/</id>
-    <published>2023-11-15T00:28:55.262Z</published>
-    <updated>2023-11-15T00:28:55.262Z</updated>
+    <published>2023-11-15T00:32:55.813Z</published>
+    <updated>2023-11-15T00:32:55.813Z</updated>
     
     <summary type="html">
     
@@ -126,11 +89,48 @@
   </entry>
   
   <entry>
+    <title>Taming Complexity with Responsibility</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/15/responsibility-chain/</id>
+    <published>2023-11-15T00:32:55.809Z</published>
+    <updated>2023-11-15T00:32:55.809Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    
+    
+      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    
+      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    
+  </entry>
+  
+  <entry>
     <title>From Inheritance Hell to Component Heaven, the ECS Pattern</title>
     <link href="https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/"/>
     <id>https://www.graymatterdeveloper.com/2023/11/15/ecs-intro/</id>
-    <published>2023-11-15T00:28:55.254Z</published>
-    <updated>2023-11-15T00:28:55.254Z</updated>
+    <published>2023-11-15T00:32:55.805Z</published>
+    <updated>2023-11-15T00:32:55.805Z</updated>
     
     <summary type="html">
     
@@ -164,8 +164,8 @@
   
   <entry>
     <title>Production-Ready Software: Introduction</title>
-    <link href="https://www.graymatterdeveloper.com/2023/11/11/production-ready-1/"/>
-    <id>https://www.graymatterdeveloper.com/2023/11/11/production-ready-1/</id>
+    <link href="https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/</id>
     <published>2023-11-11T19:15:48.000Z</published>
     <updated>2023-11-11T19:15:48.000Z</updated>
     
