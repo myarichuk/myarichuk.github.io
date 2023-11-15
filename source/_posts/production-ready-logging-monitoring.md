@@ -13,13 +13,13 @@ top_img: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
 cover: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
 ---
 
-Hey there! In the [previous post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) of the series, we briefly introduced the concept of *production-ready* software and mentioned that there are several non-negotiable elements that must be present in a *production-ready* system.
+Hey there! In the [previous post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) of the series, we introduced the concept of *production-ready* software and mentioned that there are several non-negotiable elements that must be present in such a system.
 
-So, let's take a look at the first non-negotiable - the unsung heroes of any software system. Structured Logging and Monitoring.
+So, let's take a look at the first non-negotiable - the unsung heroes of any software system. [Structured logging](https://www.atatus.com/glossary/structured-logging/) and [Monitoring](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting).
 
-*Oh, but we have logging, it's just some text that we print when stuff happens, why complicate things?*, I might hear you say. *And monitoring? Why would we need that? Our system is up and passes automatic tests and we already have QA folks testing it before release, so what's the problem?*
+*Oh, but we have logging; it's just some text that we print when stuff happens. Why complicate things?*, you might ask. *And monitoring? Why would we need that? We have already a testing suite, so there is no problem...*
 
-Sound familiar? I've been there too. If you've heard this from a fellow developer, your team leader or even worse, caught yourself saying it, I would say it's time for a serious perspective shift. [Structured logging](https://www.atatus.com/glossary/structured-logging/) and [monitoring](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting) are more than just a tedious task or an item on a review checklist. Let's take a look why.
+Sound familiar? Me? I've been there. If you've heard this from a fellow developer, your team leader or even worse, caught yourself saying it, I would say it's time for a serious perspective shift. [Structured logging](https://www.atatus.com/glossary/structured-logging/) and [monitoring](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting) are more than just a tedious task or an item on a review checklist. Let's take a look why. And before we continue, I think it's important to mention that what I write here is not a 'silver bullet'. There may be cases where the cost of implementing and maintaining such solutions are bigger than the value they would provide. Always be mindful of development costs :)
 
 ## Structured Logging: Not Just Another Log File
 
@@ -49,7 +49,7 @@ Those two tools do similar jobs, but in the end, they are not exactly the same: 
 ### Why Structured Logging is Awesome
 
 1. **Searchability**: Ever tried finding a needle in a haystack? That’s what sifting through traditional log files feels like. With structured logging, you can easily filter and search for specific information. Tools like Kibana provide advanced query capabilities, allowing you to make advanced filters for log data.
-2. **Consistency**: Consistency is key, especially when you’re dealing with large, distributed systems. Structured logs ensure that your log format stays uniform across different parts of your application.
+2. **Consistency**: Consistency is key, especially when you’re dealing with large, distributed systems. Structured logs ensure uniform log formatting across different parts of your application.
 3. **Context**: If properly configured and implemented, structured logs provide context. They tell you not just what happened, but also where and why it happened, making debugging more convenient.
 4. **Correlation**: If [correlation Id](https://filipnikolovski.com/posts/correlating-logs/) is used, structured logs can be used to correlate events from different components or services.
 
@@ -63,7 +63,7 @@ Those two tools do similar jobs, but in the end, they are not exactly the same: 
 
 Now, let’s talk about monitoring. If logging is the ‘what’ of your application’s story, monitoring is the ‘how’ and ‘when’. It’s like a health check that tells you how your application is doing at any given moment.
 
-Monitoring is your software's constant health check. It's about keeping an eye on the essentials — things like disk and memory usage, cache sizes, and queue lengths. Think of it as the dashboard in your car, not just warning you when you're running on fumes (or about to crash), but also providing a regular update on the overall health of your system. It ensures your software doesn't derail unexpectedly.
+Monitoring serves as a constant health check for your software. It's about keeping an eye on the essentials — things like disk and memory usage, cache sizes, and queue lengths. Think of it as the dashboard in your car, not just warning you when you're running on fumes (or about to crash), but also providing a regular update on the overall health of your system. It ensures your software doesn't derail unexpectedly.
 
 ### Key Aspects of Effective Monitoring
 
@@ -75,14 +75,14 @@ Monitoring is your software's constant health check. It's about keeping an eye o
 **Note that:**
 
 * Battle-proven monitoring toolkits like [Prometheus](https://prometheus.io/docs/introduction/overview/) often have out-of-the-box [alerting features](https://prometheus.io/docs/alerting/latest/overview/)
-* More often than not, toolkits like Prometheus have [exporters](https://prometheus.io/docs/instrumenting/writing_exporters/) for monitoring data. For example, [this exporter](https://github.com/prometheus/node_exporter) provides metrics for a certain machine (like disk, memory or network usage)
+* More often than not, toolkits like Prometheus have out-of-the-box [exporters](https://prometheus.io/docs/instrumenting/writing_exporters/) that provide data. For example, [this exporter](https://github.com/prometheus/node_exporter) is a really good provider of *system metrics* (like disk, memory or network usage)
 
 {% endnote %}
 
 ### Monitoring Best Practices
 
 * **Define Meaningful Thresholds**: Not every spike in CPU usage is a crisis. Set thresholds that make sense for your application.
-* **Avoid Alert Saturation**: Too many unnecessary alerts and you start ignoring them, just like that fairy tale about the boy who cried 'wolf'. Ensure that your alerts are meaningful and actionable.
+* **Avoid Alert Saturation**: Excessive, unnecessary alerts can lead to indifference, much like the boy who cried 'wolf' in the famous fairy tale. Ensure that your alerts are meaningful and actionable.
 * **Historical Data is Gold**: Make sure to keep historical data, be it a database or tools like Kibana. Without historical data, how will you debug a critical system failure at 2am?
 
 ## Structured Logging and Monitoring: Better Together
@@ -104,11 +104,11 @@ Checking the logs was next. It didn't take too long to find the next piece of th
 
 Putting these pieces together – the crying-for-help disk queue length and a large amount of backups from our logs allowed me to reach a rather obvious conclusion. NAS simply timed out under the heavy load. So the solution was straight forward - I simply made the backups serial and not parallel. But that's not the moral of the story.
 
-What *is* the moral? Simple. Monitoring showed us a symptom – the Disk Queue Length. That told us **what** was wrong. But it's the logs that told us the **why** – the simultaneous backup processes. One without the other? Probably it would have taken me much longer to diagnose and fix the problem.
+What *is* the moral? Simple. Monitoring showed us a symptom – the Disk Queue Length. That told us **what** was wrong. But it's the logs that told us the **why** – the simultaneous backup processes. Without one complementing the other, it would likely have taken me much longer to diagnose and resolve the problem.
 
 ## Conclusion
 
-In the realm of production-ready software, structured logging and monitoring are not just nice-to-haves; they’re non-negotiable. They are essential because they give you the insights and foresight needed to ensure your application is not just surviving but thriving in production.
+In the world of production-ready software, structured logging and monitoring are non-negotiable. They are essential because they give you the insights and foresight needed to ensure your application is not just surviving but thriving in production.
 
 {% note info %}
 
@@ -118,4 +118,4 @@ Another thing, and it's something that I've seen happened in the past. Structure
 
 ## What's Next?
 
-In the next post, we will take a look at the second non-negotiable, performance metrics and discuss why is it important.
+In the next post, we will explore the second non-negotiable: performance metrics and discuss why they are important.
