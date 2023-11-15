@@ -13,13 +13,13 @@ top_img: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
 cover: /2023/11/15/production-ready-logging-monitoring/production-ready-2.jpg
 ---
 
-Hey there! In the [first post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) of the series, we briefly introduced the concept of *production-ready* software and mentioned that there are several non-negotiable aspects that must be present in a *production-system* ready system.
+Hey there! In the [previous post](https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/) of the series, we briefly introduced the concept of *production-ready* software and mentioned that there are several non-negotiable elements that must be present in a *production-ready* system.
 
-In this post, we will take a look at the first non-negotiable - the unsung heroes of any software system. Structured Logging and Monitoring.
+So, let's take a look at the first non-negotiable - the unsung heroes of any software system. Structured Logging and Monitoring.
 
-*Oh, but logging is pretty much a given*, I might hear you say. And monitoring? Why would we need that? Our system is up and passes automatic and QA tests, so what's the problem?
+*Oh, but we have logging, it's just some text that we print when stuff happens, why complicate things?*, I might hear you say. *And monitoring? Why would we need that? Our system is up and passes automatic tests and we already have QA folks testing it before release, so what's the problem?*
 
-Sound familiar? I've been there too. If you've heard this from a fellow developer or, even worse, caught yourself saying it, I would say it's time for a serious perspective shift. [Structured logging](https://www.atatus.com/glossary/structured-logging/) and [monitoring](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting) are more than just a tedious task or an item on a review checklist. Let's take a look why.
+Sound familiar? I've been there too. If you've heard this from a fellow developer, your team leader or even worse, caught yourself saying it, I would say it's time for a serious perspective shift. [Structured logging](https://www.atatus.com/glossary/structured-logging/) and [monitoring](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting) are more than just a tedious task or an item on a review checklist. Let's take a look why.
 
 ## Structured Logging: Not Just Another Log File
 
@@ -36,18 +36,19 @@ Structured logging is about creating log messages that are consistent, searchabl
 
 {% note info %}
 
-Here it would be useful to mention [Kibana](https://www.elastic.co/kibana) and [Splunk](https://www.splunk.com/), powerful tools in managing structured logs. They are not the only ones that can handle structured logs, of course, but they are pretty ubiqutous.
+Without proper tooling, structured logging would remain a fancy concept.  
+[Kibana](https://www.elastic.co/kibana) and [Splunk](https://www.splunk.com/), are powerful and battl-proven tools in managing structured logs. They are not the only ones that can handle structured logs, of course, but they are pretty ubiqutous.
 
 * Kibana, part of the Elastic Stack, offers robust log visualization and advanced search (query) capabilities.
-* Splunk, while more comprehensive, provides powerful search, analysis, and visualization features. These tools can transform structured logs from mere data points into insightful, actionable information, aiding in efficient system monitoring and troubleshooting.
+* Splunk is a bit more holistic, it also provides powerful search features, it has analysis, and visualization features too.
 
-Those two tools do similar jobs, but in the end, they are not the same: Kibana excels in visualizations and is ideal when you need to analyze log patterns over time. Splunk, on the other hand, is a powerhouse for digging deep into data, making it suitable for complex, data-intensive environments.
+Those two tools do similar jobs, but in the end, they are not exactly the same: Kibana excels in visualizations and data discovery. It is ideal when you need to analyze log patterns over time. Splunk, on the other hand, is a powerhouse for digging deep into data, making it more suitable for complex, data-intensive environments.
 
 {% endnote %}
 
 ### Why Structured Logging is Awesome
 
-1. **Searchability**: Ever tried finding a needle in a haystack? That’s what sifting through traditional log files feels like. With structured logging, you can easily filter and search for specific information. Tools like Kibana provide advanced query capabilities, allowing to make advanced filters for log data.
+1. **Searchability**: Ever tried finding a needle in a haystack? That’s what sifting through traditional log files feels like. With structured logging, you can easily filter and search for specific information. Tools like Kibana provide advanced query capabilities, allowing you to make advanced filters for log data.
 2. **Consistency**: Consistency is key, especially when you’re dealing with large, distributed systems. Structured logs ensure that your log format stays uniform across different parts of your application.
 3. **Context**: If properly configured and implemented, structured logs provide context. They tell you not just what happened, but also where and why it happened, making debugging more convenient.
 4. **Correlation**: If [correlation Id](https://filipnikolovski.com/posts/correlating-logs/) is used, structured logs can be used to correlate events from different components or services.
