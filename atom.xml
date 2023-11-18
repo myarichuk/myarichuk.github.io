@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-15T22:19:28.000Z</updated>
+  <updated>2023-11-18T17:31:25.000Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;Production Ready&#39; Non-Negotiable: Comprehensive Testing</title>
+    <link href="https://www.graymatterdeveloper.com/2023/11/18/production-ready-testing/"/>
+    <id>https://www.graymatterdeveloper.com/2023/11/18/production-ready-testing/</id>
+    <published>2023-11-18T17:31:25.000Z</published>
+    <updated>2023-11-18T17:31:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Let’s delve into the most crucial, non-negotiable aspect of &lt;em&gt;production-ready&lt;/em&gt; systems: Testing.&lt;/p&gt;
+&lt;p&gt;In my experience,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    
+    
+      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    
+      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    
+      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    
+      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    
+  </entry>
   
   <entry>
     <title>&#39;Production Ready&#39; Non-Negotiable: Memory Dump Tooling</title>
@@ -292,9 +328,9 @@
     
       <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
-    
       <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    
+      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
       <category term="REST" scheme="https://www.graymatterdeveloper.com/tags/REST/"/>
     
@@ -664,39 +700,6 @@
       <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
       <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello ANTLR (writing parsers is easier than you think!)</title>
-    <link href="https://www.graymatterdeveloper.com/2019/12/25/writing-parsers-easier-than-you-think/"/>
-    <id>https://www.graymatterdeveloper.com/2019/12/25/writing-parsers-easier-than-you-think/</id>
-    <published>2019-12-25T08:21:44.000Z</published>
-    <updated>2019-12-25T08:21:44.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;After playing around with the awesome ANTLR for a while (it is a &lt;a href=&quot;https://www.antlr.org/&quot;&gt;parser generator&lt;/a&gt;, in case you are
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-      <category term="Parsers" scheme="https://www.graymatterdeveloper.com/categories/Programming/Parsers/"/>
-    
-    
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-      <category term="ANTLR" scheme="https://www.graymatterdeveloper.com/tags/ANTLR/"/>
-    
-      <category term="Parsers" scheme="https://www.graymatterdeveloper.com/tags/Parsers/"/>
     
   </entry>
   
