@@ -18,28 +18,32 @@ Let's delve into the most crucial, non-negotiable aspect of *production-ready* s
 
 In my experience, opinions on testing vary widely, but unfortunately, some undervalue its importance or worse, take it for granted. I firmly believe that tests are indispensable; they act as a safety net, catching bugs before they can wreak havoc on a production system.
 It may sound cliché, but this analogy accurately reflects reality.
-In the testing realm, we encounter three major types of tests: unit testing, functional testing, and integration testing. Each plays a distinct role, and I'll discuss them briefly.
+So, let's begin with some taxonomy. Testing realm is a big one, but before anything else, it is worth mentioning the big three: unit testing, functional testing, and integration testing. Each plays a distinct role, and I'll discuss them briefly.
 
 #### Unit Testing: The Building Blocks
 
 Unit testing zeroes in on the 'small stuff'. It isolates and tests individual components or functions of your application. Picture it as examining each brick for flaws before building a wall. It ensures that every code segment performs exactly as intended, no more, no less.
 
-Practically, unit tests often employ [mocks](https://www.geeksforgeeks.org/software-engineering-mock-introduction/) to *isolate* a code piece from its surrounding functionality.
+Practically, unit tests often employ [mocks](https://www.geeksforgeeks.org/software-engineering-mock-introduction/) to *isolate* a code piece from its surrounding functionality and in this way, well written unit tests are designed to test *only* the code that is supposed to be tested.
 
 #### Functional Testing: The User’s Perspective
 
-Theoretically, functional testing involves evaluating your application from the user's perspective, ensuring it behaves as intended. This method doesn’t focus on the internals; rather, it treats the application as a black box and verifies if it meets specified requirements. Imagine testing whether the wall built from those bricks actually stands firm and fulfills its purpose.
+At its core, functional testing is about looking at your application through the eyes of your users. It's not about digging into the code; instead, it's about asking, "Does this do what our users need?" Think of it as checking if the wall built from those bricks actually stands firm and does what it is supposed to.
 
-In practice, this often involves mocking 'external' services, whether they're actual services in a microservice architecture or software modules not under test in a monolithic architecture.
+We don't get tangled in the internals here. We treat the app as a black box - something where we're only concerned with what comes out, not how it’s done on the inside. This approach is key in making sure the app behaves as it's supposed to, based on what we've promised our users.
+
+In practice, this often means mocking up 'external' services. Whether we're dealing with separate services in a microservice setup or just different modules in a single, monolithic application, we simulate parts not currently under test. This way, we can focus on how parts of our app interact and whether they live up to their promises in real-world scenarios.
+
+In short, functional testing is all about those user stories and scenarios. It’s like saying, "Alright, the user wants to do X. Can they do it smoothly and exactly as the product owner defined application behavior?" It’s not just checking off features; it’s ensuring these features work in the way our users and product owners expect them to.
 
 #### Integration Testing: The Big Picture
 
-Integration testing is where the collaborative magic happens. It assesses how different modules or services interact. The goal is to ensure that when code components interact, they do so as expected. Think of it as verifying that all the walls, floors, and ceilings in a building mesh well, forming a sturdy, functional structure.
+Integration testing is where we see if our app's different parts play nice together. It's about making sure that when various bits of our code meet, they interact just as we expect them to. Imagine ensuring that all the walls, floors, and ceilings in a building fit together perfectly, creating a solid, well-functioning structure.
 
-For an integration test, you'd typically spin up a *real* system as part of the test, which may include multiple services and an **in-memory** database. To do this, you can use console functionalities or special language features, like those found in [.Net](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0).
+In an integration test, it’s like we’re firing up a mini-version of our real system. This could include a bunch of services and usually an **in-memory** database to keep things fast and simple. To pull this off, we might need to use console commands to spin up services or use specific language perks, like the ones in [.Net](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0).
 
 {% note info %}
-Note that I have mentioned *in-memory* databases. While it is perfectly viable to set up tests with a persistent databases, it is much faster and requires less maintenance to use an in-memory mode of a database. Not all databases support such mode, but if they do, consider using it for integration tests.
+A quick heads-up: I've mentioned *in-memory* databases here. Sure, you could set up tests with regular, persistent databases, but using an in-memory database is like hitting the fast-forward button. It's quicker and cuts down on maintenance hassle. Keep in mind, though, not every database can do this in-memory trick. If yours can, it's definitely worth considering for your integration tests.
 {% endnote %}
 
 #### Other Testing Types: Important But Situational
@@ -51,36 +55,37 @@ Beyond the big three of unit, functional, and integration testing, there are man
 * **Automated Testing (automated UI testing):** A form of black-box testing where user activities are automated and UI interactions like button clicks are simulated. It's essential for repetitive tasks and a cornerstone of modern CI/CD pipelines.
 * **Usability Testing:** Focuses on ensuring your app is intuitive and user-friendly. It's what differentiates a seamless user experience from a frustrating one.
 
-#### And... Meaningful Tests?
+#### Crafting Tests That Truly Matter
 
-I once joined a company boasting about their 3,000 tests and impressive test coverage. However, a closer look revealed a startling fact: their tests lacked [assertions](https://en.wikipedia.org/wiki/Test_assertion)! This rendered each test effectively meaningless. While this may be an extreme case, it underscores a vital point: not all tests are created equal.
-
-{% note info %}
-For those new to testing, here's the significance of assertions:
-
-* Assertions in testing are akin to checkpoints in a race, confirming if you're on the right track. They're statements that validate whether a certain condition holds true. For instance, after executing a function, an assertion checks if the output aligns with your expectations.
-* Without assertions, a test might execute your code but fail to verify its correctness. The test only confirms that the code runs without crashing, not that it produces accurate results
-* Writing a test without an assertion is like cooking without tasting. You might follow the recipe (your code) to the letter, but without tasting (asserting), you can't be sure of the quality.
-{% endnote %}
-
-So, what makes a test both good and meaningful, beyond having proper assertions? First, let's consider the AAA pattern: *Arrange, Act, Assert*. This structure, along with its variant *given-when-then* from **Behavior-Driven Development (BDD)**, focuses on the end-user experience, translating user stories into tests.
+I remember joining a company that bragged about their 3,000 tests and stellar test coverage. But here’s the kicker: overwhelming majority of those tests didn't have [assertions](https://en.wikipedia.org/wiki/Test_assertion)! They were like runners in a race without a finish line – going through the motions but not really achieving anything. This might be an extreme example, but it's a perfect reminder that quantity doesn't always mean quality in testing.
 
 {% note info %}
-If you hear about BDD for the first time, no worries! I will take a look at BDD later in this post.
+In case you are new to this whole thing, here's the deal with assertions:
+
+* Think of assertions in tests like checkpoints in a race. They're your reality check, confirming whether the code is performing as expected. For example, after a function runs, an assertion checks if the outcome is what you anticipated.
+* A test without assertions might show that your code runs, but it doesn’t confirm it’s doing the right thing. It's like saying, "Hey, the engine's running!" without checking if the car is moving forward.
+* Running a test sans assertion is akin to cooking a meal without tasting it. You might follow the recipe flawlessly, but you'll never know if it actually tastes good.
 {% endnote %}
 
-A key principle here is minimal scope focus. Essentially, tests are like a microscope, zooming in on a small area to reveal fine details. A good test narrows its focus to one specific code segment or functionality. This approach ensures clarity and conciseness in what's being tested. Unit or functional tests should isolate the part being tested for easier troubleshooting and maintenance. Integration tests, while not using mocks, should still focus on a single functionality aspect.
+Before we talk about what makes a test meaningful, it is worth mentioning the design pattern we should write the tests with. Enter AAA pattern: Arrange, Act, Assert. Along with the given-when-then format from **Behavior-Driven Development (BDD)**, these structures ensure tests are not just about code, but about fulfilling user expectations.
 
-In complex systems, testing too many aspects simultaneously can obscure the cause if a test fails. Thus, focusing on a minimal scope is especially important.
+For instance, consider a user story where a user logs into a system. The 'Arrange' part sets up the test environment, 'Act' involves the user entering their credentials, and 'Assert' checks if the system successfully logs them in. This structure ensures that each test is focused, clear, and relevant to user needs.
 
-Next, let's explore regression testing. Ever fixed a tough bug, feeling triumphant, only to encounter a new one taunting you? That's where regression testing, like a vigilant protector, steps in. It acts as a guardian, keeping past bugs and issues at bay, ensuring they don't resurface. After patching a bug or adjusting a feature, regression testing meticulously ensures no other part is adversely affected.
+{% note info %}
+New to BDD? No worries, I'll dive deeper into it later in the post.
+{% endnote %}
 
-Then there's the 'happy path' testing, which replicates a flawless code execution path: no invalid inputs, transient errors, timeouts, or unhandled exceptions. While this is important, it often misses potential pitfalls.
+One crucial thing in testing: focus on a minimal scope. Imagine tests as a microscope, zooming in to reveal the nitty-gritty of a specific code segment or functionality. Keeping tests narrow and focused helps in pinpointing issues precisely. Whether it’s a unit, functional, or integration test, zooming in on one aspect makes for easier troubleshooting and maintenance.
 
-* Ideally, tests should cover every code branch and possible exception.
-* Practically, due to time constraints, it's common to start with the happy path. However, it's essential to identify and test code flows where significant issues might arise. Aiming for about 80% code coverage is a good metric, but it shouldn't be the sole focus. It's crucial to review the tests for their actual efficacy.
+With complex systems, testing too many things at once can be like finding a needle in a haystack. By focusing narrowly, you make your life a lot easier when something goes awry.
 
-Lastly, let's touch on the balance between unit and integration tests. An abundance of unit tests can make even minor code changes ripple through your test base, increasing development costs. As your test suite grows, balancing unit tests with integration tests is advisable. Integration tests tend to perform 'black box' kind of testing, often reducing maintenance costs since we don't have to adjust tests for every single change we make in the system. Remember, developer time is a valuable resource!
+Then there’s regression testing, our unsung hero. Ever squashed a bug and then another pops up, laughing in your face? Regression testing is your shield against this. After fixing something or tweaking a feature, it ensures the rest of your system isn’t thrown out of whack.
+
+And let's talk about 'happy path' testing. It's like walking through a garden on a sunny day - everything's perfect, no hiccups. But, just like a garden isn't always sunny, our code isn’t always on its best behavior. Testing only the happy paths is like preparing for good weather without considering the chance of rain. Sure, starting with the happy path is common, but it's crucial to also venture down the 'unhappy paths'. These are the less-than-ideal scenarios – handling invalid inputs, dealing with timeouts, or managing unexpected errors.
+
+By including these scenarios, we build a comprehensive test strategy that’s ready for anything. Think of it as having both sunglasses and an umbrella – being prepared for both the sunny days and the stormy ones. Aiming for around 80% code coverage is realistic, but remember, it’s not just about hitting numbers. It's more important to focus on how effective your tests are, ensuring they cover the full spectrum of what could go right and wrong.
+
+Lastly, balancing unit and integration tests is key. Too many unit tests, and you might find yourself swamped every time there's a minor code change. As your test suite expands, mixing in integration tests can save you time and hassle. They’re more about the big picture and can be less maintenance-heavy, letting you focus on building great stuff rather than constantly tweaking tests. Remember, in the world of development, time is gold.
 
 #### A Word Or Three About Testing Methodologies
 
