@@ -375,20 +375,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Performance/</loc>
-    <lastmod>2023-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Optimization/</loc>
-    <lastmod>2023-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/tags/Async/</loc>
     <lastmod>2023-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,6 +390,20 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/Multithreading/</loc>
+    <lastmod>2023-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Performance/</loc>
+    <lastmod>2023-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Optimization/</loc>
     <lastmod>2023-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
