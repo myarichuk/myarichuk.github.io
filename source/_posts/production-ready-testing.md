@@ -67,7 +67,7 @@ In case you are new to this whole thing, here's the deal with assertions:
 * Running a test sans assertion is akin to cooking a meal without tasting it. You might follow the recipe flawlessly, but you'll never know if it actually tastes good.
 {% endnote %}
 
-Before we talk about what makes a test meaningful, it is worth mentioning the design pattern we should write the tests with. Enter AAA pattern: Arrange, Act, Assert. Along with the given-when-then format from **Behavior-Driven Development (BDD)**, these structures ensure tests are not just about code, but about fulfilling user expectations.
+First, it is worth mentioning the design pattern we should be writing our tests with. Enter AAA pattern: Arrange, Act, Assert. Along with his cousin, the *given-when-then* pattern from **Behavior-Driven Development (BDD)**, these patterns ensure tests are not just about code, but about fulfilling user expectations.
 
 For instance, consider a user story where a user logs into a system. The 'Arrange' part sets up the test environment, 'Act' involves the user entering their credentials, and 'Assert' checks if the system successfully logs them in. This structure ensures that each test is focused, clear, and relevant to user needs.
 
