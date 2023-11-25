@@ -3,7 +3,7 @@
   <title>Graymatter Developer</title>
   
   <subtitle>Hi! My name is Michael. I sometimes write code :)</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://www.graymatterdeveloper.com/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
   <updated>2023-11-18T17:31:25.000Z</updated>
@@ -23,32 +23,30 @@
     <published>2023-11-18T17:31:25.000Z</published>
     <updated>2023-11-18T17:31:25.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Let’s delve into the most crucial, non-negotiable aspect of &lt;em&gt;production-ready&lt;/em&gt; systems: Testing.&lt;/p&gt;
-&lt;p&gt;In my experience,
+    <summary type="html">&lt;p&gt;Let’s delve into the most crucial, non-negotiable aspect of &lt;em&gt;production-ready&lt;/em&gt; systems: Testing.&lt;/p&gt;
+&lt;p&gt;In my experience,</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
     
     
-      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
     
-      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
     
-      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
-      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
     
   </entry>
   
@@ -59,31 +57,29 @@
     <published>2023-11-15T22:19:28.000Z</published>
     <updated>2023-11-15T22:19:28.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Local debugging? That’s easy. You’ve got your breakpoints, variable inspections, and on-the-fly state changes, provided you’ve got the
+    <summary type="html">&lt;p&gt;Local debugging? That’s easy. You’ve got your breakpoints, variable inspections, and on-the-fly state changes, provided you’ve got the</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
     
     
-      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
     
-      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
     
-      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
-      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
     
   </entry>
   
@@ -94,31 +90,29 @@
     <published>2023-11-15T17:43:55.000Z</published>
     <updated>2023-11-15T17:43:55.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Here’s a curious challenge I faced at Hibernating Rhinos, as part of the core team for the &lt;a href=&quot;https://ravendb.net/&quot;&gt;NoSQL database
+    <summary type="html">&lt;p&gt;Here’s a curious challenge I faced at Hibernating Rhinos, as part of the core team for the &lt;a href=&quot;https://ravendb.net/&quot;&gt;NoSQL database</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
     
     
-      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
     
-      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
     
-      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
-      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
     
   </entry>
   
@@ -129,31 +123,29 @@
     <published>2023-11-14T23:00:00.000Z</published>
     <updated>2023-11-14T23:00:00.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Hey there! In the &lt;a href=&quot;https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/&quot;&gt;previous post&lt;/a&gt; of the series, we
+    <summary type="html">&lt;p&gt;Hey there! In the &lt;a href=&quot;https://www.graymatterdeveloper.com/2023/11/11/production-ready-intro/&quot;&gt;previous post&lt;/a&gt; of the series, we</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
     
     
-      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
     
-      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
     
-      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
-      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
     
   </entry>
   
@@ -164,31 +156,29 @@
     <published>2023-11-14T19:15:48.000Z</published>
     <updated>2023-11-14T19:15:48.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;In the tech world, the term ‘production-ready’ often gets tossed around, sometimes more like a hot potato than a clear standard. But
+    <summary type="html">&lt;p&gt;In the tech world, the term ‘production-ready’ often gets tossed around, sometimes more like a hot potato than a clear standard. But</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
+    <category term="Best Practices" scheme="https://www.graymatterdeveloper.com/categories/Programming/Best-Practices/"/>
     
     
-      <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
+    <category term="Software Engineering" scheme="https://www.graymatterdeveloper.com/tags/Software-Engineering/"/>
     
-      <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
+    <category term="Theory" scheme="https://www.graymatterdeveloper.com/tags/Theory/"/>
     
-      <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
+    <category term="DevOps" scheme="https://www.graymatterdeveloper.com/tags/DevOps/"/>
     
-      <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
+    <category term="Production-Ready" scheme="https://www.graymatterdeveloper.com/tags/Production-Ready/"/>
     
   </entry>
   
@@ -199,33 +189,31 @@
     <published>2023-11-10T23:00:00.000Z</published>
     <updated>2023-11-10T23:00:00.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery
+    <summary type="html">&lt;p&gt;Imagine, one quiet morning, your boss comes to you and says, “Hey, our web shop is growing and we will be having more than one delivery</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
     
   </entry>
   
@@ -236,33 +224,31 @@
     <published>2023-11-09T23:00:00.000Z</published>
     <updated>2023-11-09T23:00:00.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h2 id=&quot;All-you-need-is-love-and-Object-Oriented-right-Right&quot;&gt;&lt;a href=&quot;#All-you-need-is-love-and-Object-Oriented-right-Right&quot;
+    <summary type="html">&lt;h2 id=&quot;All-you-need-is-love-and-Object-Oriented-right-Right&quot;&gt;&lt;a href=&quot;#All-you-need-is-love-and-Object-Oriented-right-Right&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
+    <category term="Entity Component System" scheme="https://www.graymatterdeveloper.com/tags/Entity-Component-System/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
   </entry>
   
@@ -273,33 +259,31 @@
     <published>2023-11-08T19:15:48.000Z</published>
     <updated>2023-11-08T19:15:48.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will
+    <summary type="html">&lt;p&gt;In this blog post, we will explore the practical application of a specific design pattern. To illustrate its usefulness, we will</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
+    <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/categories/Programming/Design-Patterns/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
+    <category term="Architecture" scheme="https://www.graymatterdeveloper.com/tags/Architecture/"/>
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
+    <category term="Design Patterns" scheme="https://www.graymatterdeveloper.com/tags/Design-Patterns/"/>
     
-      <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
+    <category term="Gang Of Four" scheme="https://www.graymatterdeveloper.com/tags/Gang-Of-Four/"/>
     
   </entry>
   
@@ -310,31 +294,29 @@
     <published>2020-04-25T09:28:54.000Z</published>
     <updated>2020-04-25T09:28:54.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;As a long time fan of the lightweight syntax of the awesome &lt;a href=&quot;http://nancyfx.org/&quot;&gt;NancyFx web framework&lt;/a&gt;, I was really
+    <summary type="html">&lt;p&gt;As a long time fan of the lightweight syntax of the awesome &lt;a href=&quot;http://nancyfx.org/&quot;&gt;NancyFx web framework&lt;/a&gt;, I was really</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
+    <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/tags/Programming/"/>
     
-      <category term="REST" scheme="https://www.graymatterdeveloper.com/tags/REST/"/>
+    <category term="REST" scheme="https://www.graymatterdeveloper.com/tags/REST/"/>
     
-      <category term="Framework" scheme="https://www.graymatterdeveloper.com/tags/Framework/"/>
+    <category term="Framework" scheme="https://www.graymatterdeveloper.com/tags/Framework/"/>
     
   </entry>
   
@@ -345,27 +327,25 @@
     <published>2020-04-09T22:17:31.000Z</published>
     <updated>2020-04-09T22:17:31.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Strings are immutable in C#, this is a common knowledge. Unless you use pointers in unsafe blocks, that is.  Apparently, there is
+    <summary type="html">&lt;p&gt;Strings are immutable in C#, this is a common knowledge. Unless you use pointers in unsafe blocks, that is.  Apparently, there is</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
+    <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
+    <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
   </entry>
   
@@ -376,25 +356,23 @@
     <published>2020-03-07T15:37:36.000Z</published>
     <updated>2020-03-07T15:37:36.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;The Twitter sometimes can serve as a place of unexpected insights and very interesting technical questions! For example, the question
+    <summary type="html">&lt;p&gt;The Twitter sometimes can serve as a place of unexpected insights and very interesting technical questions! For example, the question</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
+    <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
   </entry>
   
@@ -405,31 +383,29 @@
     <published>2020-03-03T18:02:14.000Z</published>
     <updated>2020-03-03T18:02:14.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Can the benchmark that compares array iteration vs. pointer based iteration be optimized further? Yep!&lt;br&gt;In a post I wrote earlier
+    <summary type="html">&lt;p&gt;Can the benchmark that compares array iteration vs. pointer based iteration be optimized further? Yep!&lt;br&gt;In a post I wrote earlier</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
+    <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
+    <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
   </entry>
   
@@ -440,27 +416,25 @@
     <published>2020-02-23T06:39:23.000Z</published>
     <updated>2020-02-23T06:39:23.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;After seeing the results of my &lt;a href=&quot;/2020/02/17/data-locality/&quot;&gt;previous post&lt;/a&gt; where I tested performance impact of data
+    <summary type="html">&lt;p&gt;After seeing the results of my &lt;a href=&quot;/2020/02/17/data-locality/&quot;&gt;previous post&lt;/a&gt; where I tested performance impact of data</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
+    <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
+    <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
   </entry>
   
@@ -471,31 +445,29 @@
     <published>2020-02-18T18:48:13.000Z</published>
     <updated>2020-02-18T18:48:13.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;I don’t have much experience in using &lt;a href=&quot;https://lldb.llvm.org/&quot;&gt;LLDB&lt;/a&gt; to debug .Net Core, so when I stumbled upon this little
+    <summary type="html">&lt;p&gt;I don’t have much experience in using &lt;a href=&quot;https://lldb.llvm.org/&quot;&gt;LLDB&lt;/a&gt; to debug .Net Core, so when I stumbled upon this little</summary>
         
       
     
-    </summary>
     
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
-      <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
+    <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="LLDB" scheme="https://www.graymatterdeveloper.com/tags/LLDB/"/>
+    <category term="LLDB" scheme="https://www.graymatterdeveloper.com/tags/LLDB/"/>
     
-      <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
+    <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
     
   </entry>
   
@@ -506,31 +478,29 @@
     <published>2020-02-17T17:31:11.000Z</published>
     <updated>2020-02-17T17:31:11.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;In gamedev articles about Entity-Component-System, data locality is often mentioned as a big reason to use such design pattern. The
+    <summary type="html">&lt;p&gt;In gamedev articles about Entity-Component-System, data locality is often mentioned as a big reason to use such design pattern. The</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
+    <category term="Performance" scheme="https://www.graymatterdeveloper.com/tags/Performance/"/>
     
-      <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
+    <category term="Optimization" scheme="https://www.graymatterdeveloper.com/tags/Optimization/"/>
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
   </entry>
   
@@ -541,29 +511,27 @@
     <published>2020-02-14T17:55:15.000Z</published>
     <updated>2020-02-14T17:55:15.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;When you launch .Net executable with WinDBG, in order to “catch” something nasty like &lt;code&gt;AccessViolationExcetion&lt;/code&gt;, the
+    <summary type="html">&lt;p&gt;When you launch .Net executable with WinDBG, in order to “catch” something nasty like &lt;code&gt;AccessViolationExcetion&lt;/code&gt;, the</summary>
         
       
     
-    </summary>
     
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="WinDBG" scheme="https://www.graymatterdeveloper.com/tags/WinDBG/"/>
+    <category term="WinDBG" scheme="https://www.graymatterdeveloper.com/tags/WinDBG/"/>
     
-      <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
+    <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
     
-      <category term="Gotcha" scheme="https://www.graymatterdeveloper.com/tags/Gotcha/"/>
+    <category term="Gotcha" scheme="https://www.graymatterdeveloper.com/tags/Gotcha/"/>
     
   </entry>
   
@@ -574,29 +542,27 @@
     <published>2020-02-12T23:25:23.000Z</published>
     <updated>2020-02-12T23:25:23.000Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded
+    <summary type="html">&lt;p&gt;When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded</summary>
         
       
     
-    </summary>
     
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
-      <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
+    <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
     
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="WinDBG" scheme="https://www.graymatterdeveloper.com/tags/WinDBG/"/>
+    <category term="WinDBG" scheme="https://www.graymatterdeveloper.com/tags/WinDBG/"/>
     
-      <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
+    <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
     
   </entry>
   
@@ -607,31 +573,29 @@
     <published>2020-01-26T23:28:27.378Z</published>
     <updated>2020-01-26T23:28:27.378Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;When debugging new &lt;a href=&quot;https://ravendb.net/&quot;&gt;RavenDB’s&lt;/a&gt; 32-bit &lt;a href=&quot;https://en.wikipedia.org/wiki/Paging&quot;&gt;pager&lt;/a&gt; for
+    <summary type="html">&lt;p&gt;When debugging new &lt;a href=&quot;https://ravendb.net/&quot;&gt;RavenDB’s&lt;/a&gt; 32-bit &lt;a href=&quot;https://en.wikipedia.org/wiki/Paging&quot;&gt;pager&lt;/a&gt; for</summary>
         
       
     
-    </summary>
     
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Debugging/"/>
     
-      <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
+    <category term="Post-mortem" scheme="https://www.graymatterdeveloper.com/categories/Debugging/Post-mortem/"/>
     
     
-      <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
     
-      <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
+    <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
     
-      <category term="Gdb" scheme="https://www.graymatterdeveloper.com/tags/Gdb/"/>
+    <category term="Gdb" scheme="https://www.graymatterdeveloper.com/tags/Gdb/"/>
     
   </entry>
   
@@ -642,31 +606,29 @@
     <published>2020-01-01T14:35:18.677Z</published>
     <updated>2020-01-01T14:35:18.677Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;In a previous post, I detailed involved and frustrating process I needed to go through to compile OpenCV as part of my application. You
+    <summary type="html">&lt;p&gt;In a previous post, I detailed involved and frustrating process I needed to go through to compile OpenCV as part of my application. You</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
+    <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
-      <category term="Package Management" scheme="https://www.graymatterdeveloper.com/tags/Package-Management/"/>
+    <category term="Package Management" scheme="https://www.graymatterdeveloper.com/tags/Package-Management/"/>
     
-      <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
+    <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
     
   </entry>
   
@@ -677,29 +639,27 @@
     <published>2019-12-25T21:57:38.448Z</published>
     <updated>2019-12-25T21:57:38.448Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;In theory, configuring a popular library like OpenCV in CMake should be easy. In practice, sadly, it is anything BUT easy. Why? Let me
+    <summary type="html">&lt;p&gt;In theory, configuring a popular library like OpenCV in CMake should be easy. In practice, sadly, it is anything BUT easy. Why? Let me</summary>
         
       
     
-    </summary>
     
     
-      <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
     
     
-      <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
     
-      <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
+    <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
-      <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
+    <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
     
   </entry>
   

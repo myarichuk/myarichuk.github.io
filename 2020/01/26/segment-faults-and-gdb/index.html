@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Segmentation faults when using P/Invoke = pointer issues? Not necessarily | Graymatter Developer</title><meta name="author" content="Michael Yarichuk"><meta name="copyright" content="Michael Yarichuk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="When debugging new RavenDB’s 32-bit pager for Linux-based ARM environments, which has platform specific functionality implemented in C and P&#x2F;Invoked from C# code, I ran into an issue: when starting, R">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Segmentation faults when using P/Invoke = pointer issues? Not necessarily | Graymatter Developer</title><meta name="author" content="Michael Yarichuk"><meta name="copyright" content="Michael Yarichuk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="When debugging new RavenDB’s 32-bit pager for Linux-based ARM environments, which has platform specific functionality implemented in C and P&#x2F;Invoked from C# code, I ran into an issue: when starti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Segmentation faults when using P&#x2F;Invoke &#x3D; pointer issues? Not necessarily">
 <meta property="og:url" content="https://www.graymatterdeveloper.com/2020/01/26/segment-faults-and-gdb/index.html">
 <meta property="og:site_name" content="Graymatter Developer">
-<meta property="og:description" content="When debugging new RavenDB’s 32-bit pager for Linux-based ARM environments, which has platform specific functionality implemented in C and P&#x2F;Invoked from C# code, I ran into an issue: when starting, R">
+<meta property="og:description" content="When debugging new RavenDB’s 32-bit pager for Linux-based ARM environments, which has platform specific functionality implemented in C and P&#x2F;Invoked from C# code, I ran into an issue: when starti">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/c/cc/Gdb_archer_fish.svg">
 <meta property="article:published_time" content="2020-01-26T23:28:27.378Z">
@@ -14,29 +14,29 @@
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Gdb">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/c/cc/Gdb_archer_fish.svg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.graymatterdeveloper.com/2020/01/26/segment-faults-and-gdb/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-125949801-1"></script><script>window.dataLayer = window.dataLayer || [];
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/c/cc/Gdb_archer_fish.svg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.graymatterdeveloper.com/2020/01/26/segment-faults-and-gdb/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-125949801-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-125949801-1');
-</script><script>const GLOBAL_CONFIG = { 
+</script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"/search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
   runtime: '',
-  date_suffix: {
-    just: 'Just',
+  dateSuffix: {
+    just: 'Just now',
     min: 'minutes ago',
     hour: 'hours ago',
     day: 'days ago',
@@ -45,11 +45,9 @@ gtag('config', 'UA-125949801-1');
   copyright: undefined,
   lightbox: 'fancybox',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
   },
   isPhotoFigcaption: false,
   islazyload: false,
@@ -57,7 +55,8 @@ gtag('config', 'UA-125949801-1');
   percent: {
     toc: true,
     rightside: false,
-  }
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'Segmentation faults when using P/Invoke = pointer issues? Not necessarily',
   isPost: true,
@@ -65,71 +64,70 @@ gtag('config', 'UA-125949801-1');
   isHighlightShrink: false,
   isToc: true,
   postUpdate: '2020-01-26 23:28:27'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
       }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = url => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      link.onload = () => resolve()
-      link.onerror = () => reject()
-      document.head.appendChild(link)
-    })
-  
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
         if (asideStatus === 'hide') {
@@ -139,30 +137,35 @@ gtag('config', 'UA-125949801-1');
         }
       }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
       }
-    }
-    detectApple()
+      detectApple()
     })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Graymatter Developer" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>const preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
   }
-}
-window.addEventListener('load',()=> { preloader.endLoading() })
 
-if (false) {
-  document.addEventListener('pjax:send', () => { preloader.initLoading() })
-  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/GDB-screenshot.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="Graymatter Developer"><span class="site-name">Graymatter Developer</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Segmentation faults when using P/Invoke = pointer issues? Not necessarily</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-01-26T23:28:27.378Z" title="Created 2020-01-26 23:28:27">2020-01-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-01-26T23:28:27.378Z" title="Updated 2020-01-26 23:28:27">2020-01-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/">Debugging</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/Post-mortem/">Post-mortem</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Segmentation faults when using P/Invoke = pointer issues? Not necessarily"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>When debugging new <a target="_blank" rel="noopener" href="https://ravendb.net/">RavenDB’s</a> 32-bit <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Paging">pager</a> for Linux-based ARM environments, which has platform specific functionality implemented in C and P/Invoked from C# code, I ran into an issue: when starting, RavenDB was throwing a segmentation fault and crashing. Since the C# code didn’t change much, my immediate suspect was some sort of pointer issue in C code, such as trying to dereference a <em>null</em> pointer. </p>
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/GDB-screenshot.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="Graymatter Developer"><span class="site-name">Graymatter Developer</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Segmentation faults when using P/Invoke = pointer issues? Not necessarily</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-01-26T23:28:27.378Z" title="Created 2020-01-26 23:28:27">2020-01-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-01-26T23:28:27.378Z" title="Updated 2020-01-26 23:28:27">2020-01-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/">Debugging</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/Post-mortem/">Post-mortem</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Segmentation faults when using P/Invoke = pointer issues? Not necessarily"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>When debugging new <a target="_blank" rel="noopener" href="https://ravendb.net/">RavenDB’s</a> 32-bit <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Paging">pager</a> for Linux-based ARM environments, which has platform specific functionality implemented in C and P&#x2F;Invoked from C# code, I ran into an issue: when starting, RavenDB was throwing a segmentation fault and crashing. Since the C# code didn’t change much, my immediate suspect was some sort of pointer issue in C code, such as trying to dereference a <em>null</em> pointer. </p>
 <h2 id="GDB-is-awesome-for-handling-segfaults"><a href="#GDB-is-awesome-for-handling-segfaults" class="headerlink" title="GDB is awesome for handling segfaults"></a>GDB is awesome for handling segfaults</h2><p>The <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/GNU_Debugger">GNU Debugger</a> or GDB is very good at tracing such issues. Let’s see how we can find a segfault source in a small example.<br>Consider the following code:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">throw_segment_fault</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span>* x = <span class="number">0</span>;</span><br><span class="line">	*x = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">throw_segment_fault</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -187,10 +190,10 @@ if (false) {
 <p>Running <code>bt</code> will now print source code lines in the stack trace</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(gdb) bt</span><br><span class="line">#0  0x000000000800060a in throw_segment_fault () at segmentFaultThrower.c:5</span><br><span class="line">#1  0x0000000008000621 in main () at segmentFaultThrower.c:10</span><br></pre></td></tr></table></figure>
 
-<h2 id="If-segfaults-happen-when-P-Invoking-a-function-it-is-not-necessarily-because-of-null-pointers"><a href="#If-segfaults-happen-when-P-Invoking-a-function-it-is-not-necessarily-because-of-null-pointers" class="headerlink" title="If segfaults happen when P/Invoking a function, it is not necessarily because of null pointers!"></a>If segfaults happen when P/Invoking a function, it is not necessarily because of null pointers!</h2><p>The new 32-bit pager that I mentioned at the beginning, was using P/Invokes to C code that was used to access operating-system APIs, such as memory-mapping related functions. </p>
+<h2 id="If-segfaults-happen-when-P-Invoking-a-function-it-is-not-necessarily-because-of-null-pointers"><a href="#If-segfaults-happen-when-P-Invoking-a-function-it-is-not-necessarily-because-of-null-pointers" class="headerlink" title="If segfaults happen when P&#x2F;Invoking a function, it is not necessarily because of null pointers!"></a>If segfaults happen when P&#x2F;Invoking a function, it is not necessarily because of null pointers!</h2><p>The new 32-bit pager that I mentioned at the beginning, was using P&#x2F;Invokes to C code that was used to access operating-system APIs, such as memory-mapping related functions. </p>
 <p>I made sure to compile the C library with <code>-g</code> flag and ran RavenDB with GDB attached. I saw the following output (notice the output of <code>bt</code> command):</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Thread 1 &quot;Raven.Server&quot; received signal SIGSEGV, Segmentation fault.</span><br><span class="line">rvn_mmap_file (sz=65536, flags=&lt;optimized out&gt;, handle=0x0, offset=9151260362719350484, addr=0xe6f2ebb, detailed_error_code=0x76af562c &lt;vtable for InlinedCallFrame+8&gt;) at src/posix/mapping.c:421</span><br><span class="line">421         *addr = rvn_mmap(NULL, sz, PROT_READ | PROT_WRITE, mmap_flags, mfh-&gt;fd, offset);</span><br><span class="line">(gdb) bt</span><br><span class="line">#0  rvn_mmap_file (sz=65536, flags=&lt;optimized out&gt;, handle=0x0, offset=9151260362719350484, addr=0xe6f2ebb, detailed_error_code=0x76af562c &lt;vtable for InlinedCallFrame+8&gt;) at src/posix/mapping.c:421</span><br><span class="line">#1  0x513da610 in ?? ()</span><br><span class="line">Backtrace stopped: previous frame identical to this frame (corrupt stack?)</span><br></pre></td></tr></table></figure>
-<p>Such output looked weird to me, especially the <em>corrupt stack</em> part, so I looked at the relevant code.<br>The P/Invoke call in C# part looked like this:</p>
+<p>Such output looked weird to me, especially the <em>corrupt stack</em> part, so I looked at the relevant code.<br>The P&#x2F;Invoke call in C# part looked like this:</p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rc = rvn_mmap_file(size, </span><br><span class="line">  _copyOnWriteMode ? MmapOptions.CopyOnWrite : MmapOptions.None, </span><br><span class="line">  _handle, offset, </span><br><span class="line">  <span class="keyword">out</span> <span class="keyword">var</span> startingBaseAddressPtr,</span><br><span class="line">  <span class="keyword">out</span> <span class="keyword">var</span> errorCode);</span><br></pre></td></tr></table></figure>
 <p>In the C part, <code>rvn_mmap_file()</code> signature looks like this:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">EXPORT <span class="type">int32_t</span> <span class="title">rvn_mmap_file</span><span class="params">(<span class="type">int64_t</span> sz, <span class="type">int64_t</span> flags, <span class="type">void</span> *handle, <span class="type">int64_t</span> offset, <span class="type">void</span> **addr, <span class="type">int32_t</span> *detailed_error_code)</span></span></span><br></pre></td></tr></table></figure>
@@ -200,70 +203,96 @@ if (false) {
 <p>The first thing I noticed is that the <code>handle</code> parameter value is 0 (which means <code>null</code> pointer) and the <code>offset</code> parameter has unreasonably large value.<br>In C# code, by the point the <code>rvn_mmap_file()</code> is invoked, <code>_handle</code> is guaranteed to have a value (otherwise the code would have failed earlier). Together with <em>corrupt stack</em> notification from GDB while executing the <code>bt</code> command, I suspected that some offsets are wrong, since the segfault happens when invoking <code>rvn_mmap_file()</code> itself. </p>
 <p>After looking some more at the code, I noticed that the <code>flags</code> parameter is <code>int64_t</code> and the definition of the corresponding flags enum in C# looks like this:</p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">Flags</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> MmapOptions</span><br><span class="line">&#123;</span><br><span class="line">   None = <span class="number">0</span>,</span><br><span class="line">   CopyOnWrite = (<span class="number">1</span> &lt;&lt; <span class="number">0</span>),</span><br><span class="line">   DeleteOnClose = (<span class="number">1</span> &lt;&lt; <span class="number">1</span>),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Since in C# enums are of <code>System.Int32</code> type, this in fact was the issue. The fix was simply to change the <code>flags</code> type so the signature became:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">EXPORT <span class="type">int32_t</span> <span class="title">rvn_mmap_file</span><span class="params">(<span class="type">int64_t</span> sz, <span class="type">int32_t</span> flags, <span class="type">void</span> *handle, <span class="type">int64_t</span> offset, <span class="type">void</span> **addr, <span class="type">int32_t</span> *detailed_error_code)</span></span></span><br></pre></td></tr></table></figure>
-
 <h2 id="The-moral-of-the-story"><a href="#The-moral-of-the-story" class="headerlink" title="The moral of the story"></a>The moral of the story</h2><p>Usually, segmentation faults are associated with null point dereference or other types of pointer issue, but as we can see here, this doesn’t have to be so.</p>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C#</a><a class="post-meta__tags" href="/tags/Debugging/">Debugging</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/Gdb/">Gdb</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/12/setting-up-windbg/" title="Setting up WinDBG for analyzing memory dumps"><div class="cover" style="background: url(/2020/02/12/setting-up-windbg/WinDbg_256.png)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Setting up WinDBG for analyzing memory dumps</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/01/hunter-cpp-package-manager/" title="Hunter, C++ package management made easy"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hunter, C++ package management made easy</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Michael Yarichuk</div><div class="author-info__description">A place to share steps in my journey to become a better professional</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/myarichuk"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-github"></i></a><a class="social-icon" href="mailto:michael.yarichuk@gmail.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-twitter"></i></a><a class="social-icon" href="https://www.linkedin.com/in/myarichuk/" target="_blank" title=""><i class="fa-brands fa-linkedin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GDB-is-awesome-for-handling-segfaults"><span class="toc-number">1.</span> <span class="toc-text">GDB is awesome for handling segfaults</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#If-segfaults-happen-when-P-Invoking-a-function-it-is-not-necessarily-because-of-null-pointers"><span class="toc-number">2.</span> <span class="toc-text">If segfaults happen when P&#x2F;Invoking a function, it is not necessarily because of null pointers!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-moral-of-the-story"><span class="toc-number">3.</span> <span class="toc-text">The moral of the story</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing"><img src="/2023/11/18/production-ready-testing/production-ready-testing.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Comprehensive Testing"/></a><div class="content"><a class="title" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing">'Production Ready' Non-Negotiable: Comprehensive Testing</a><time datetime="2023-11-18T17:31:25.000Z" title="Created 2023-11-18 17:31:25">2023-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling"><img src="/2023/11/15/production-ready-memory-dumps/production-ready-memory-dump.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Memory Dump Tooling"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling">'Production Ready' Non-Negotiable: Memory Dump Tooling</a><time datetime="2023-11-15T22:19:28.000Z" title="Created 2023-11-15 22:19:28">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics"><img src="/2023/11/15/production-ready-performance-metrics/production-ready-performance.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Performance Metrics"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics">'Production Ready' Non-Negotiable: Performance Metrics</a><time datetime="2023-11-15T17:43:55.000Z" title="Created 2023-11-15 17:43:55">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"><img src="/2023/11/14/production-ready-logging-monitoring/production-ready-2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring">'Production Ready' Non-Negotiable: Structured Logging and Monitoring</a><time datetime="2023-11-14T23:00:00.000Z" title="Created 2023-11-14 23:00:00">2023-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction"><img src="/2023/11/14/production-ready-intro/production_ready_background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Production-Ready Software: Introduction"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction">Production-Ready Software: Introduction</a><time datetime="2023-11-14T19:15:48.000Z" title="Created 2023-11-14 19:15:48">2023-11-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Michael Yarichuk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
-  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
-  if ($mermaidWrap.length) {
-    window.runMermaid = () => {
-      window.loadMermaid = true
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C#</a><a class="post-meta__tags" href="/tags/Debugging/">Debugging</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/Gdb/">Gdb</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/12/setting-up-windbg/" title="Setting up WinDBG for analyzing memory dumps"><div class="cover" style="background: url(/2020/02/12/setting-up-windbg/WinDbg_256.png)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">Setting up WinDBG for analyzing memory dumps</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/01/hunter-cpp-package-manager/" title="Hunter, C++ package management made easy"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">Hunter, C++ package management made easy</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Michael Yarichuk</div><div class="author-info__description">A place to share steps in my journey to become a better professional</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/myarichuk"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-github"></i></a><a class="social-icon" href="mailto:michael.yarichuk@gmail.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-twitter"></i></a><a class="social-icon" href="https://www.linkedin.com/in/myarichuk/" target="_blank" title=""><i class="fa-brands fa-linkedin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GDB-is-awesome-for-handling-segfaults"><span class="toc-number">1.</span> <span class="toc-text">GDB is awesome for handling segfaults</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#If-segfaults-happen-when-P-Invoking-a-function-it-is-not-necessarily-because-of-null-pointers"><span class="toc-number">2.</span> <span class="toc-text">If segfaults happen when P&#x2F;Invoking a function, it is not necessarily because of null pointers!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-moral-of-the-story"><span class="toc-number">3.</span> <span class="toc-text">The moral of the story</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing"><img src="/2023/11/18/production-ready-testing/production-ready-testing.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Comprehensive Testing"/></a><div class="content"><a class="title" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing">'Production Ready' Non-Negotiable: Comprehensive Testing</a><time datetime="2023-11-18T17:31:25.000Z" title="Created 2023-11-18 17:31:25">2023-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling"><img src="/2023/11/15/production-ready-memory-dumps/production-ready-memory-dump.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Memory Dump Tooling"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling">'Production Ready' Non-Negotiable: Memory Dump Tooling</a><time datetime="2023-11-15T22:19:28.000Z" title="Created 2023-11-15 22:19:28">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics"><img src="/2023/11/15/production-ready-performance-metrics/production-ready-performance.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Performance Metrics"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics">'Production Ready' Non-Negotiable: Performance Metrics</a><time datetime="2023-11-15T17:43:55.000Z" title="Created 2023-11-15 17:43:55">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"><img src="/2023/11/14/production-ready-logging-monitoring/production-ready-2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring">'Production Ready' Non-Negotiable: Structured Logging and Monitoring</a><time datetime="2023-11-14T23:00:00.000Z" title="Created 2023-11-14 23:00:00">2023-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction"><img src="/2023/11/14/production-ready-intro/production_ready_background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Production-Ready Software: Introduction"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction">Production-Ready Software: Introduction</a><time datetime="2023-11-14T19:15:48.000Z" title="Created 2023-11-14 19:15:48">2023-11-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Michael Yarichuk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-      Array.from($mermaidWrap).forEach((item, index) => {
-        const mermaidSrc = item.firstElementChild
-        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
-        const mermaidID = 'mermaid-' + index
-        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
-        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
-          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
         })
-      })
-    }
+      }
 
-    const loadMermaid = () => {
-      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
-    }
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
 
-    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
   }
-})()</script><script>function loadDisqus () {
-  var disqus_config = function () {
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const disqus_config = function () {
     this.page.url = 'https://www.graymatterdeveloper.com/2020/01/26/segment-faults-and-gdb/'
     this.page.identifier = '/2020/01/26/segment-faults-and-gdb/'
     this.page.title = 'Segmentation faults when using P/Invoke = pointer issues? Not necessarily'
-  };
+  }
 
-  window.disqusReset = () => {
-    DISQUS.reset({
+  const disqusReset = () => {
+    window.DISQUS && window.DISQUS.reset({
       reload: true,
       config: disqus_config
     })
   }
 
-  if (window.DISQUS) disqusReset()
-  else {
-    (function() { 
-      var d = document, s = d.createElement('script');
-      s.src = 'https://graymatterdeveloperblog.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+  btf.addGlobalFn('themeChange', disqusReset, 'disqus')
+
+  const loadDisqus = () =>{
+    if (window.DISQUS) disqusReset()
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://graymatterdeveloperblog.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
   }
 
-  document.getElementById('darkmode').addEventListener('click', () => {
-    setTimeout(() => window.disqusReset(), 200)
-  })
-}
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
 
-if ('Disqus' === 'Disqus' || !false) {
-  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
-  else loadDisqus()
-} else {
-  function loadOtherComment () {
-    loadDisqus()
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=graymatterdeveloperblog&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
   }
-}
-</script></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-R5G4WP4QCQ"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R5G4WP4QCQ') </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-R5G4WP4QCQ"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R5G4WP4QCQ') </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

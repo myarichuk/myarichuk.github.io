@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Setting up WinDBG for analyzing memory dumps | Graymatter Developer</title><meta name="author" content="Michael Yarichuk"><meta name="copyright" content="Michael Yarichuk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded mixed results - I had to sift through lots of information, someti">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Setting up WinDBG for analyzing memory dumps | Graymatter Developer</title><meta name="author" content="Michael Yarichuk"><meta name="copyright" content="Michael Yarichuk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded mixed results - I had to sift through lots of information, someti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Setting up WinDBG for analyzing memory dumps">
 <meta property="og:url" content="https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/index.html">
@@ -13,29 +13,29 @@
 <meta property="article:tag" content="WinDBG">
 <meta property="article:tag" content=".Net">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/1473701"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-125949801-1"></script><script>window.dataLayer = window.dataLayer || [];
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/1473701"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-125949801-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-125949801-1');
-</script><script>const GLOBAL_CONFIG = { 
+</script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"/search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
   runtime: '',
-  date_suffix: {
-    just: 'Just',
+  dateSuffix: {
+    just: 'Just now',
     min: 'minutes ago',
     hour: 'hours ago',
     day: 'days ago',
@@ -44,11 +44,9 @@ gtag('config', 'UA-125949801-1');
   copyright: undefined,
   lightbox: 'fancybox',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
   },
   isPhotoFigcaption: false,
   islazyload: false,
@@ -56,7 +54,8 @@ gtag('config', 'UA-125949801-1');
   percent: {
     toc: true,
     rightside: false,
-  }
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'Setting up WinDBG for analyzing memory dumps',
   isPost: true,
@@ -64,71 +63,70 @@ gtag('config', 'UA-125949801-1');
   isHighlightShrink: false,
   isToc: true,
   postUpdate: '2020-02-12 23:25:23'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
       }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = url => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      link.onload = () => resolve()
-      link.onerror = () => reject()
-      document.head.appendChild(link)
-    })
-  
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
         if (asideStatus === 'hide') {
@@ -138,40 +136,45 @@ gtag('config', 'UA-125949801-1');
         }
       }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
       }
-    }
-    detectApple()
+      detectApple()
     })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Graymatter Developer" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>const preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
   }
-}
-window.addEventListener('load',()=> { preloader.endLoading() })
 
-if (false) {
-  document.addEventListener('pjax:send', () => { preloader.initLoading() })
-  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2020/02/12/setting-up-windbg/WinDbg.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Graymatter Developer"><span class="site-name">Graymatter Developer</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Setting up WinDBG for analyzing memory dumps</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-02-12T23:25:23.000Z" title="Created 2020-02-12 23:25:23">2020-02-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-02-12T23:25:23.000Z" title="Updated 2020-02-12 23:25:23">2020-02-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/">Debugging</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/Post-mortem/">Post-mortem</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Setting up WinDBG for analyzing memory dumps"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded mixed results - I had to sift through lots of information, sometimes incorrect, sometimes outdated, only after some experimentation, I was able to actually understand what was going on.<br>Though, in a hindsight, WinDBG is much less complex than it seemed in the first place. </p>
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2020/02/12/setting-up-windbg/WinDbg.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Graymatter Developer"><span class="site-name">Graymatter Developer</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Setting up WinDBG for analyzing memory dumps</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-02-12T23:25:23.000Z" title="Created 2020-02-12 23:25:23">2020-02-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-02-12T23:25:23.000Z" title="Updated 2020-02-12 23:25:23">2020-02-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/">Debugging</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Debugging/Post-mortem/">Post-mortem</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Setting up WinDBG for analyzing memory dumps"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>When I needed to investigate a memory dump for a first time, I stared at WinDBG window, not knowing how to begin. My google-fu yielded mixed results - I had to sift through lots of information, sometimes incorrect, sometimes outdated, only after some experimentation, I was able to actually understand what was going on.<br>Though, in a hindsight, WinDBG is much less complex than it seemed in the first place. </p>
 <h2 id="A-word-or-three-on-WinDBG"><a href="#A-word-or-three-on-WinDBG" class="headerlink" title="A word (or three) on WinDBG"></a>A word (or three) on WinDBG</h2><p>WinDBG wikipedia article states that <em>WinDbg is a multipurpose debugger for the Microsoft Windows computer operating system, distributed by Microsoft</em><br>That is nice, but what does it <em>mean</em>?  </p>
 <p>Essentially, WinDBG provides a GUI and a CLI for a debugging engine (defined in DbgEng.dll) that comes as part of <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools">Debugging Tools for Windows</a>, an engine that can debug both user-mode and kernel-mode code. As far as I know, WinDBG is also used to develop Windows itself by Microsoft devs, it is a low-level debugger without all the bells and whistles of Visual Studio, but it is very very powerful.</p>
 <blockquote>
 <p>Why CLI? Because most of the interaction with the “debugee” will be done using text commands typed in WinDBG command propmpt. </p>
 </blockquote>
-<p>By the way, there are more debuggers that share the same engine - <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-using-cdb-and-ntsd">CDB</a> for user-mode debugging and <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-using-kd-and-ntkd">KDB</a> for kernel-mode debugging. The only different between CDB, KDB and WinDBG is that CDB/KDB are console only and can debug only user-mode and kernel-mode respectively, while WinDBG has UI and can be used to debug both modes.</p>
+<p>By the way, there are more debuggers that share the same engine - <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-using-cdb-and-ntsd">CDB</a> for user-mode debugging and <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-using-kd-and-ntkd">KDB</a> for kernel-mode debugging. The only different between CDB, KDB and WinDBG is that CDB&#x2F;KDB are console only and can debug only user-mode and kernel-mode respectively, while WinDBG has UI and can be used to debug both modes.</p>
 <blockquote>
 <p>In case all of this new to you, kernel-mode debugging means that you debug operating systems and drivers, and user-mode debugging means you debug regular programs that run within OS</p>
 </blockquote>
-<h2 id="First-Steps"><a href="#First-Steps" class="headerlink" title="First Steps"></a>First Steps</h2><p>Since we are talking about analyzing a memory dump, the first step would be to actually get a memory dump, which is essentially a snapshot of all that the process contains, things like thread information, allocated memory etc. This can be done via multiple tools, but personally, I usually use <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer">Sysinternals Process Explorer</a><br>Simply select the process you’d like to take a memory dump of, right click and… that’s it.<br><img src="process-explorer.png" alt="Process Explorer"></p>
+<h2 id="First-Steps"><a href="#First-Steps" class="headerlink" title="First Steps"></a>First Steps</h2><p>Since we are talking about analyzing a memory dump, the first step would be to actually get a memory dump, which is essentially a snapshot of all that the process contains, things like thread information, allocated memory etc. This can be done via multiple tools, but personally, I usually use <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer">Sysinternals Process Explorer</a><br>Simply select the process you’d like to take a memory dump of, right click and… that’s it.<br><img src="/process-explorer.png" alt="Process Explorer"></p>
 <blockquote>
 <p>Mini-dumps are very small and contain <em>only</em> information about threads and full dumps contain pretty much everything, their size is much larger, of course.</p>
 </blockquote>
@@ -180,7 +183,7 @@ if (false) {
 <blockquote>
 <p>If you are not sure <em>what</em> PDB files are, take a look at the article “<a target="_blank" rel="noopener" href="https://www.wintellect.com/pdb-files-what-every-developer-must-know">PDB Files: What Every Developer Must Know</a>“. </p>
 </blockquote>
-<p>In order to configure PDB sources, you need to specify them in a symbol server search path format. This can be done either in WinDBG GUI or by setting <code>_NT_SYMBOL_PATH</code> environment variable.<br>For example, on my dev machine, it looks like this:</p>
+<p>In order to configure PDB sources, you need to specify them in a symbol server search path format. This can be done either in WinDBG GUI or by setting <code> _NT_SYMBOL_PATH</code> environment variable.<br>For example, on my dev machine, it looks like this:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cache*e:\Symbols;srv*e:\Symbols*https://msdl.microsoft.com/download/symbols</span><br></pre></td></tr></table></figure>
 
 <p>The format is <code>cache*[local cache folder 1]*[local cache folder 2];srv*[local cache folder]*[symbol server path]</code></p>
@@ -195,7 +198,7 @@ if (false) {
 <p>So, how to load this extension? Simply, run the following command if you want to analyze memory dump taken from full .Net Framework process</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.loadby sos clr</span><br></pre></td></tr></table></figure>
 
-<p>And if you took the memory dump from .Net Core process, the command would be slightly different/</p>
+<p>And if you took the memory dump from .Net Core process, the command would be slightly different&#x2F;</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.loadby sos coreclr</span><br></pre></td></tr></table></figure>
 
 <p>However, there is a very annoying gotcha: in order to properly analyze a .Net memory dump, loaded <code>sos.dll</code> must match the exact version of .Net the process ran under (because <code>sos.dll</code> is built as part of the framework)</p>
@@ -210,65 +213,93 @@ if (false) {
 <p>Note that the <code>dll</code> filename is written <em>without</em> extension. Also, the “old” WinDBG cannot handle whitespaces in the path well, so you should either use the WinDBG Preview or extract the SOSEX plugin into a path without whitespaces.</p>
 </blockquote>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This is the kind of post I wish I had when I started using WinDBG. Hopefully, you will find it useful.</p>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Debugging/">Debugging</a><a class="post-meta__tags" href="/tags/WinDBG/">WinDBG</a><a class="post-meta__tags" href="/tags/Net/">.Net</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/14/windbg-launch-net-executable/" title="Nice little gotcha when loading SOS after launching .Net executable"><img class="cover" src="/2020/02/14/windbg-launch-net-executable/gotcha.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Nice little gotcha when loading SOS after launching .Net executable</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/26/segment-faults-and-gdb/" title="Segmentation faults when using P/Invoke = pointer issues? Not necessarily"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Gdb_archer_fish.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Segmentation faults when using P/Invoke = pointer issues? Not necessarily</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Michael Yarichuk</div><div class="author-info__description">A place to share steps in my journey to become a better professional</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/myarichuk"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-github"></i></a><a class="social-icon" href="mailto:michael.yarichuk@gmail.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-twitter"></i></a><a class="social-icon" href="https://www.linkedin.com/in/myarichuk/" target="_blank" title=""><i class="fa-brands fa-linkedin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-word-or-three-on-WinDBG"><span class="toc-number">1.</span> <span class="toc-text">A word (or three) on WinDBG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#First-Steps"><span class="toc-number">2.</span> <span class="toc-text">First Steps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-dump-is-opened-now-what"><span class="toc-number">3.</span> <span class="toc-text">The dump is opened, now what?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dump-is-open-and-symbols-are-configured-Now-what"><span class="toc-number">4.</span> <span class="toc-text">Dump is open and symbols are configured. Now what?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOS-extension"><span class="toc-number">5.</span> <span class="toc-text">SOS extension</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOSEX-extension"><span class="toc-number">6.</span> <span class="toc-text">SOSEX extension</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">7.</span> <span class="toc-text">Conclusion</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing"><img src="/2023/11/18/production-ready-testing/production-ready-testing.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Comprehensive Testing"/></a><div class="content"><a class="title" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing">'Production Ready' Non-Negotiable: Comprehensive Testing</a><time datetime="2023-11-18T17:31:25.000Z" title="Created 2023-11-18 17:31:25">2023-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling"><img src="/2023/11/15/production-ready-memory-dumps/production-ready-memory-dump.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Memory Dump Tooling"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling">'Production Ready' Non-Negotiable: Memory Dump Tooling</a><time datetime="2023-11-15T22:19:28.000Z" title="Created 2023-11-15 22:19:28">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics"><img src="/2023/11/15/production-ready-performance-metrics/production-ready-performance.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Performance Metrics"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics">'Production Ready' Non-Negotiable: Performance Metrics</a><time datetime="2023-11-15T17:43:55.000Z" title="Created 2023-11-15 17:43:55">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"><img src="/2023/11/14/production-ready-logging-monitoring/production-ready-2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring">'Production Ready' Non-Negotiable: Structured Logging and Monitoring</a><time datetime="2023-11-14T23:00:00.000Z" title="Created 2023-11-14 23:00:00">2023-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction"><img src="/2023/11/14/production-ready-intro/production_ready_background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Production-Ready Software: Introduction"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction">Production-Ready Software: Introduction</a><time datetime="2023-11-14T19:15:48.000Z" title="Created 2023-11-14 19:15:48">2023-11-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Michael Yarichuk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
-  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
-  if ($mermaidWrap.length) {
-    window.runMermaid = () => {
-      window.loadMermaid = true
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Debugging/">Debugging</a><a class="post-meta__tags" href="/tags/WinDBG/">WinDBG</a><a class="post-meta__tags" href="/tags/Net/">.Net</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/14/windbg-launch-net-executable/" title="Nice little gotcha when loading SOS after launching .Net executable"><img class="cover" src="/2020/02/14/windbg-launch-net-executable/gotcha.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">Nice little gotcha when loading SOS after launching .Net executable</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/26/segment-faults-and-gdb/" title="Segmentation faults when using P/Invoke = pointer issues? Not necessarily"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Gdb_archer_fish.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">Segmentation faults when using P/Invoke = pointer issues? Not necessarily</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Michael Yarichuk</div><div class="author-info__description">A place to share steps in my journey to become a better professional</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">42</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/myarichuk"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-github"></i></a><a class="social-icon" href="mailto:michael.yarichuk@gmail.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-twitter"></i></a><a class="social-icon" href="https://www.linkedin.com/in/myarichuk/" target="_blank" title=""><i class="fa-brands fa-linkedin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-word-or-three-on-WinDBG"><span class="toc-number">1.</span> <span class="toc-text">A word (or three) on WinDBG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#First-Steps"><span class="toc-number">2.</span> <span class="toc-text">First Steps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-dump-is-opened-now-what"><span class="toc-number">3.</span> <span class="toc-text">The dump is opened, now what?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dump-is-open-and-symbols-are-configured-Now-what"><span class="toc-number">4.</span> <span class="toc-text">Dump is open and symbols are configured. Now what?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOS-extension"><span class="toc-number">5.</span> <span class="toc-text">SOS extension</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOSEX-extension"><span class="toc-number">6.</span> <span class="toc-text">SOSEX extension</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">7.</span> <span class="toc-text">Conclusion</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing"><img src="/2023/11/18/production-ready-testing/production-ready-testing.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Comprehensive Testing"/></a><div class="content"><a class="title" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing">'Production Ready' Non-Negotiable: Comprehensive Testing</a><time datetime="2023-11-18T17:31:25.000Z" title="Created 2023-11-18 17:31:25">2023-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling"><img src="/2023/11/15/production-ready-memory-dumps/production-ready-memory-dump.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Memory Dump Tooling"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling">'Production Ready' Non-Negotiable: Memory Dump Tooling</a><time datetime="2023-11-15T22:19:28.000Z" title="Created 2023-11-15 22:19:28">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics"><img src="/2023/11/15/production-ready-performance-metrics/production-ready-performance.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Performance Metrics"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics">'Production Ready' Non-Negotiable: Performance Metrics</a><time datetime="2023-11-15T17:43:55.000Z" title="Created 2023-11-15 17:43:55">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"><img src="/2023/11/14/production-ready-logging-monitoring/production-ready-2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Structured Logging and Monitoring"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-logging-monitoring/" title="'Production Ready' Non-Negotiable: Structured Logging and Monitoring">'Production Ready' Non-Negotiable: Structured Logging and Monitoring</a><time datetime="2023-11-14T23:00:00.000Z" title="Created 2023-11-14 23:00:00">2023-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction"><img src="/2023/11/14/production-ready-intro/production_ready_background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Production-Ready Software: Introduction"/></a><div class="content"><a class="title" href="/2023/11/14/production-ready-intro/" title="Production-Ready Software: Introduction">Production-Ready Software: Introduction</a><time datetime="2023-11-14T19:15:48.000Z" title="Created 2023-11-14 19:15:48">2023-11-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Michael Yarichuk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-      Array.from($mermaidWrap).forEach((item, index) => {
-        const mermaidSrc = item.firstElementChild
-        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
-        const mermaidID = 'mermaid-' + index
-        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
-        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
-          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
         })
-      })
-    }
+      }
 
-    const loadMermaid = () => {
-      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
-    }
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
 
-    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
   }
-})()</script><script>function loadDisqus () {
-  var disqus_config = function () {
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const disqus_config = function () {
     this.page.url = 'https://www.graymatterdeveloper.com/2020/02/12/setting-up-windbg/'
     this.page.identifier = '/2020/02/12/setting-up-windbg/'
     this.page.title = 'Setting up WinDBG for analyzing memory dumps'
-  };
+  }
 
-  window.disqusReset = () => {
-    DISQUS.reset({
+  const disqusReset = () => {
+    window.DISQUS && window.DISQUS.reset({
       reload: true,
       config: disqus_config
     })
   }
 
-  if (window.DISQUS) disqusReset()
-  else {
-    (function() { 
-      var d = document, s = d.createElement('script');
-      s.src = 'https://graymatterdeveloperblog.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+  btf.addGlobalFn('themeChange', disqusReset, 'disqus')
+
+  const loadDisqus = () =>{
+    if (window.DISQUS) disqusReset()
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://graymatterdeveloperblog.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
   }
 
-  document.getElementById('darkmode').addEventListener('click', () => {
-    setTimeout(() => window.disqusReset(), 200)
-  })
-}
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
 
-if ('Disqus' === 'Disqus' || !false) {
-  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
-  else loadDisqus()
-} else {
-  function loadOtherComment () {
-    loadDisqus()
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=graymatterdeveloperblog&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
   }
-}
-</script></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-R5G4WP4QCQ"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R5G4WP4QCQ') </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-R5G4WP4QCQ"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R5G4WP4QCQ') </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
