@@ -22,7 +22,7 @@ Usually parsers have two components
 
 >Note: this is pretty much a description of a [GoF design pattern](https://en.wikipedia.org/wiki/Interpreter_pattern)
 
-```mermaid
+{% mermaid %}
 graph LR;
     A[Text]-->B[Lexer]
     B-->C[Parser]
@@ -32,27 +32,29 @@ graph LR;
     style B fill:#e8e4da,stroke:#333,stroke-width:2px
     style C fill:#c2beb4,stroke:#333,stroke-width:2px
     style D fill:#b4dbba,stroke:#333,stroke-width:1px
-```
+{% endmermaid %}
 
 This probably feels too abstract, so let me give a concrete example:  
 Let's say we want to parse the following arithmetic expression: **3 + 2 * 5**
 At first stage, we will pass this text through lexer. After lexing, we would have the following stream of tokens:
-```mermaid
+{% mermaid %}
 graph LR;
   A[3]-->B[operator '+']
   B-->C[2]
   C-->D[operator '*']
   D-->E[5]   
-```
+{% endmermaid %}
   
 Then, the parser will traverse over the tokens and generate abstract syntax tree (AST), in our case, parsing would result with the following AST:
-```mermaid
+
+{% mermaid %}
 graph TB
   A(2)-->B{*}
   C(5)-->B
   B-->D{+}
   E(3)-->D
-```
+{% endmermaid %}
+
 In order to evaluate such expression, we would use DFS to traverse the AST, first evaluating **2 * 5**, then evaluating **result + 3**. 
 That's nice, but show me the code, perhaps? Ok!
 
