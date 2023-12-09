@@ -510,27 +510,6 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Debugging/</loc>
-    <lastmod>2023-12-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/LLDB/</loc>
-    <lastmod>2023-12-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.graymatterdeveloper.com/tags/Linux/</loc>
-    <lastmod>2023-12-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.graymatterdeveloper.com/tags/PostgreSQL/</loc>
     <lastmod>2023-12-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -546,6 +525,27 @@
   
   <url>
     <loc>https://www.graymatterdeveloper.com/tags/Event-handling/</loc>
+    <lastmod>2023-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Debugging/</loc>
+    <lastmod>2023-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/LLDB/</loc>
+    <lastmod>2023-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.graymatterdeveloper.com/tags/Linux/</loc>
     <lastmod>2023-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -687,14 +687,14 @@
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Debugging/</loc>
+    <loc>https://www.graymatterdeveloper.com/categories/Programming/Databases/</loc>
     <lastmod>2023-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.graymatterdeveloper.com/categories/Programming/Databases/</loc>
+    <loc>https://www.graymatterdeveloper.com/categories/Debugging/</loc>
     <lastmod>2023-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
