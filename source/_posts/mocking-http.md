@@ -6,6 +6,8 @@ tags:
   - C#
 categories:
   - Programming
+top_img: mock-http.jpg
+cover: mock-http.jpg
 ---
 
 Ever found yourself deep in unit tests, only to realize you need to mock an HttpClient? Yep, we've all been there. There are many ways of doing it, but which way is the best? Let me show you a straightforward yet flexible way to mock HttpClient. It's simple, effective, and it's going to make your life a whole lot easier.
