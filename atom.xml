@@ -6,7 +6,7 @@
   <link href="https://www.graymatterdeveloper.com/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-11-18T17:31:25.000Z</updated>
+  <updated>2023-12-09T14:06:32.000Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mocking HttpClient the simple way</title>
+    <link href="https://www.graymatterdeveloper.com/2023/12/09/mocking-http/"/>
+    <id>https://www.graymatterdeveloper.com/2023/12/09/mocking-http/</id>
+    <published>2023-12-09T14:06:32.000Z</published>
+    <updated>2023-12-09T14:06:32.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Ever found yourself deep in unit tests, only to realize you need to mock an HttpClient? Yep, we’ve all been there. There are many ways</summary>
+        
+      
+    
+    
+    
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+    
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>&#39;Production Ready&#39; Non-Negotiable: Comprehensive Testing</title>
@@ -627,37 +652,6 @@
     <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
     <category term="Package Management" scheme="https://www.graymatterdeveloper.com/tags/Package-Management/"/>
-    
-    <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenCV + Visual Studio + CMake = Adventure time</title>
-    <link href="https://www.graymatterdeveloper.com/2019/12/25/opencv-and-cmake-in-cpp/"/>
-    <id>https://www.graymatterdeveloper.com/2019/12/25/opencv-and-cmake-in-cpp/</id>
-    <published>2019-12-25T21:57:38.448Z</published>
-    <updated>2019-12-25T21:57:38.448Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;In theory, configuring a popular library like OpenCV in CMake should be easy. In practice, sadly, it is anything BUT easy. Why? Let me</summary>
-        
-      
-    
-    
-    
-    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-    <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
-    
-    
-    <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-    <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
     
     <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
     
