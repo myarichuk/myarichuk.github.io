@@ -6,7 +6,7 @@
   <link href="https://www.graymatterdeveloper.com/atom.xml" rel="self"/>
   
   <link href="https://www.graymatterdeveloper.com/"/>
-  <updated>2023-12-09T14:06:32.000Z</updated>
+  <updated>2023-12-12T20:56:29.000Z</updated>
   <id>https://www.graymatterdeveloper.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Works On My Machine(tm)</title>
+    <link href="https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/"/>
+    <id>https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/</id>
+    <published>2023-12-12T20:56:29.000Z</published>
+    <updated>2023-12-12T20:56:29.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Oh, but it works on my machine! What gives?! Today, I found myself asking the uncaring monitor over and over again, while adding logs</summary>
+        
+      
+    
+    
+    
+    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
+    
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/categories/Programming/Debugging/"/>
+    
+    
+    <category term="C#" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
+    
+    <category term="Debugging" scheme="https://www.graymatterdeveloper.com/tags/Debugging/"/>
+    
+    <category term=".Net" scheme="https://www.graymatterdeveloper.com/tags/Net/"/>
+    
+    <category term="Gotcha" scheme="https://www.graymatterdeveloper.com/tags/Gotcha/"/>
+    
+  </entry>
   
   <entry>
     <title>Mocking HttpClient the simple way</title>
@@ -623,39 +656,6 @@
     <category term="Linux" scheme="https://www.graymatterdeveloper.com/tags/Linux/"/>
     
     <category term="Gdb" scheme="https://www.graymatterdeveloper.com/tags/Gdb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hunter, C++ package management made easy</title>
-    <link href="https://www.graymatterdeveloper.com/2020/01/01/hunter-cpp-package-manager/"/>
-    <id>https://www.graymatterdeveloper.com/2020/01/01/hunter-cpp-package-manager/</id>
-    <published>2020-01-01T14:35:18.677Z</published>
-    <updated>2020-01-01T14:35:18.677Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;In a previous post, I detailed involved and frustrating process I needed to go through to compile OpenCV as part of my application. You</summary>
-        
-      
-    
-    
-    
-    <category term="Programming" scheme="https://www.graymatterdeveloper.com/categories/Programming/"/>
-    
-    <category term="C++" scheme="https://www.graymatterdeveloper.com/categories/Programming/C/"/>
-    
-    
-    <category term="C++" scheme="https://www.graymatterdeveloper.com/tags/C/"/>
-    
-    <category term="CMake" scheme="https://www.graymatterdeveloper.com/tags/CMake/"/>
-    
-    <category term="Package Management" scheme="https://www.graymatterdeveloper.com/tags/Package-Management/"/>
-    
-    <category term="OpenCV" scheme="https://www.graymatterdeveloper.com/tags/OpenCV/"/>
     
   </entry>
   

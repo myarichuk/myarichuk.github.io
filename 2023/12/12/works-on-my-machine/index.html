@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Works On My Machine(tm) | Graymatter Developer</title><meta name="author" content="Michael Yarichuk"><meta name="copyright" content="Michael Yarichuk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Oh, but it works on my machine! What gives?! Today, I found myself asking the uncaring monitor over and over again, while adding logs and going over existing ones, meditating over code while making su">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Works On My Machine(tm)">
+<meta property="og:url" content="https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/index.html">
+<meta property="og:site_name" content="Graymatter Developer">
+<meta property="og:description" content="Oh, but it works on my machine! What gives?! Today, I found myself asking the uncaring monitor over and over again, while adding logs and going over existing ones, meditating over code while making su">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/cover.jpg">
+<meta property="article:published_time" content="2023-12-12T20:56:29.000Z">
+<meta property="article:modified_time" content="2023-12-12T20:56:29.000Z">
+<meta property="article:author" content="Michael Yarichuk">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="Debugging">
+<meta property="article:tag" content=".Net">
+<meta property="article:tag" content="Gotcha">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/cover.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-125949801-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-125949801-1');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Works On My Machine(tm)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-12 20:56:29'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Graymatter Developer" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2023/12/12/works-on-my-machine/top.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Graymatter Developer"><span class="site-name">Graymatter Developer</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tag"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa fa-envelope-open"></i><span> Contact</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Works On My Machine(tm)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-12T20:56:29.000Z" title="Created 2023-12-12 20:56:29">2023-12-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-12T20:56:29.000Z" title="Updated 2023-12-12 20:56:29">2023-12-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Programming/">Programming</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Programming/Debugging/">Debugging</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Works On My Machine(tm)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Oh, but it works on my machine! What gives?! Today, I found myself asking the uncaring monitor over and over again, while adding logs and going over existing ones, meditating over code while making sure I didn’t do any silly mistakes and overall being frustrated. It’s these kinds of head-scratchers that remind us why debugging is both an art and a science</p>
+<h3 id="The-Unseen-Culprit"><a href="#The-Unseen-Culprit" class="headerlink" title="The Unseen Culprit"></a>The Unseen Culprit</h3><p>Picture this: a seemingly innocuous orchestrator service, working perfectly in the local environment, suddenly throws a tantrum when deployed. As I discovered, the devil is in the details — or more accurately, in an unhandled exception lurking in an <code>IHostedService</code> constructor. I paid too much attention to code and possible environmental issues that I missed a very simple issue: a file I wanted to load into cache in the <code>IHostedService</code> constructor simple didn’t exist in the deployed instance, because CI&#x2F;CD wasn’t deploying it.</p>
+<h3 id="The-Smoking-Gun"><a href="#The-Smoking-Gun" class="headerlink" title="The Smoking Gun"></a>The Smoking Gun</h3><p>I remembered that a background service shouldn’t bring down a service like this, at least not without a stack trace of the exception. But apparently, any unhandled exception in the hosted service thread would bring the process down, a la <code>StackOverflowException</code>.<br>The interesting part, there was a reason why I remembered this: Before .Net 6, an unhandled exception thrown in <code>BackgroundService</code> (which implements <code>IHostedService</code>) wouldn’t bring down the process, simply log the exception and continue, but Microsoft <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/hosting-exception-handling">changed that</a> in .Net 6. Well, I learned something new today!</p>
+<h3 id="Solutions…-Solutions…"><a href="#Solutions…-Solutions…" class="headerlink" title="Solutions… Solutions…"></a>Solutions… Solutions…</h3><p>So, what’s the solution? Well, if you use <code>IHostedService</code> as your background workers, the only way to make your code resilient is to wrap your code in <em>try-catch</em> blocks to ensure logging before rethrowing exception, if you do decide to crash your service.<br>If you use <code>BackgroundService</code>, however, Microsoft offers a global solution to control the behavior of exception handling. Simply set a <code>BackgroundServiceExceptionBehavior</code> flag in the <strong>Startup.cs</strong> code of the host and voilà! The <em>old</em> behavior is back.<br>To be more exact, setting <code>BackgroundServiceExceptionBehavior</code> to <code>Ignore</code> will instruct the runtime to log the unhandled exception and continue as if nothing happened. Sometimes, you want to <em>fail fast</em>, sure, and that’s why the new unhandled exception handling of the <code>BackgroundService</code> is useful. But in some cases, you want your service to be as resilient as possible and provide at least partial functionality to your users.</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// credit (from MS article): https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/hosting-exception-handling</span></span><br><span class="line">services.Configure&lt;HostOptions&gt;(hostOptions =&gt;</span><br><span class="line">&#123;</span><br><span class="line">   hostOptions.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<div class="note info flat"><p>Just in case you are not aware of .Net’s background services, it’s really easy.<br>A <code>BackgroundService</code> is a way to create a long running task, which it’s lifetime tied to host’s lifetime. (In this case, .Net host can be a Windows service, Linux daemon, a web service). See more in <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/dotnet/core/extensions/windows-service?pivots=dotnet-8-0">this article</a>.</p>
+<p>A class implementing <code>IHostedService</code> has pretty much the same role as <code>BackgroundService</code> but it’s <em>bare metal</em> kind of framework feature. <a target="_blank" rel="noopener" href="https://www.site24x7.com/learn/ihostedservice-and-backgroundservice.html">This article</a> has a nice overview of the difference between the two.</p>
+</div>
+
+<h3 id="To-Ignore-or-Not-to-Ignore-That’s-the-BackgroundServiceExceptionBehavior-Question"><a href="#To-Ignore-or-Not-to-Ignore-That’s-the-BackgroundServiceExceptionBehavior-Question" class="headerlink" title="To Ignore or Not to Ignore: That’s the BackgroundServiceExceptionBehavior Question"></a>To Ignore or Not to Ignore: That’s the <code>BackgroundServiceExceptionBehavior</code> Question</h3><p>Okay, before we wrap it up, this <code>BackgroundServiceExceptionBehavior.Ignore</code> business is not as straightforward as you might think, and here’s why.</p>
+<h4 id="The-‘Fail-Fast’-Philosophy-A-Blessing-and-a-Curse"><a href="#The-‘Fail-Fast’-Philosophy-A-Blessing-and-a-Curse" class="headerlink" title="The ‘Fail Fast’ Philosophy: A Blessing and a Curse"></a>The ‘Fail Fast’ Philosophy: A Blessing and a Curse</h4><p>First up, the idea of ‘failing fast.’ Sounds pretty good, doesn’t it? Stop the disaster before it wreaks havoc. This approach is gold when you’re dealing with systems where even a hint of data going sideways or invariants being broken, like in distributed consensus protocols, could spell disaster. In these scenarios, failing fast is like an emergency stop button – it’s there to save the day.</p>
+<h4 id="The-Domino-Effect-in-the-RPC-World"><a href="#The-Domino-Effect-in-the-RPC-World" class="headerlink" title="The Domino Effect in the RPC World"></a>The Domino Effect in the RPC World</h4><p>So <em>fail-fast</em> it is, right? Not so fast! In the intricate web of RPC-based systems, one service throwing a fit can start a nasty ripple effect. Think of it like a poorly planned domino setup. And it really doesn’t matter why the service get stuck and stops responding! I recall this one time a service ground pretty much to a halt by ThreadPool starvation. What started as a small glitch snowballed into an hour-long outage of a mission-critical system. Nobody wants that, of course.</p>
+<h4 id="Making-the-Smart-Call"><a href="#Making-the-Smart-Call" class="headerlink" title="Making the Smart Call"></a>Making the Smart Call</h4><p>Here’s the deal: your game plan depends on your playing field. If you a system with RPC-based services, especially a dense mesh of such services, letting them take a hit and keep going. Log the error, keep the lights on, and avoid a full-blown blackout.</p>
+<p>But if you’re in the event or message queue world, where services are more like lone wolves than inter-dependent team players, then maybe let them fail fast. They crash, they burn, but they don’t take down the whole neighborhood with them.</p>
+<h4 id="Crafting-Your-Safety-Net-The-Art-of-Controlled-Chaos"><a href="#Crafting-Your-Safety-Net-The-Art-of-Controlled-Chaos" class="headerlink" title="Crafting Your Safety Net: The Art of Controlled Chaos"></a>Crafting Your Safety Net: The Art of Controlled Chaos</h4><p>But hey, it’s not either-or choice: there is another option, an approach I call a <em>Service Denier</em>. This approach would involve actively monitoring for specific error patterns or broken invariants. Upon detection, these deniers can shut down the affected service or component, effectively acting as a circuit breaker to prevent broader system impact.</p>
+<h4 id="Service-Deniers-A-Silver-Bullet"><a href="#Service-Deniers-A-Silver-Bullet" class="headerlink" title="Service Deniers: A Silver Bullet?"></a>Service Deniers: A Silver Bullet?</h4><p>While the ‘Service Denier’, or perhaps a Circuit-Breaker approach sounds like an elegant solution to prevent cascading failures, it’s not without its own set of quirks and nightmarish pitfalls. For starters, there’s a fine line between being cautious and being overzealous. Imagine a scenario where your service denier is a bit too trigger-happy, shutting down services at the slightest hiccup. This could lead to a situation where you’re inadvertently causing more downtime than the original errors would have. It’s like using a sledgehammer to swat an annoying mosquito - effective, perhaps, but overkill. Additionally, implementing a smart monitoring system that can accurately distinguish between a fatal error and a transient issue not necessarily easy, and in some cases can introduce a non-trivial overhead. For example, there was one time I instrumented my code for gathering <a target="_blank" rel="noopener" href="https://prometheus.io/">Prometheus metrics</a>, I made Prometheus related code so complex that it increased endpoint latency by almost 40%!<br>Any safety net code requires upholding a delicate balance, a keen understanding of your system’s behavior, and, frankly, a bit of trial and error. Over-engineering safety nets might not only add unnecessary complexity but also obscure the root causes of issues, leading to a wild goose chase. In essence, while crafting your Service Denier, it’s crucial to carefully tread the line between vigilance and paranoia.</p>
+<h4 id="My-2-Cents"><a href="#My-2-Cents" class="headerlink" title="My 2 Cents"></a>My 2 Cents</h4><ul>
+<li><strong>Match the Strategy to the System</strong>: No two systems are the same, so don’t go looking for a one-size-fits-all solution here. Typically, hybrid approaches with decisions on case-by-case basis work best.</li>
+<li><strong>Eyes Wide Open</strong>: Set up solid monitoring and ideally, do stress and load testing - lots of issues may pop up when your system under stress or close to it’s maximum throughput. Know how your system behaves when it hits a snag.</li>
+<li><strong>Embrace the Safety Nets</strong>: Get familiar with patterns like rate limiting and circuit breakers. They’re your secret weapon against unexpected disasters.</li>
+</ul>
+<h3 id="Diving-A-Little-Bit-Deeper"><a href="#Diving-A-Little-Bit-Deeper" class="headerlink" title="Diving (A Little Bit) Deeper"></a>Diving (A Little Bit) Deeper</h3><p>Given that my bug occured as an unhandled exception in the constructor, I asked myself: would .Net runtime somehow catch and log the exception in the constructor of the <code>BackgroundService</code>? It seemed unlikely, but I still took a quick peek. And indeed, the policy relates only to <code>BackgroundService::ExecuteAsync()</code>, as can be seen in the <a target="_blank" rel="noopener" href="https://github.com/dotnet/runtime/blob/f9529fd9c3fe8a970fb7a68b7fddd15fb686b5dd/src/libraries/Microsoft.Extensions.Hosting/src/Internal/Host.cs#L176">.Net Runtime repo</a>. Yes, it <em>is</em> an excuse I just made to have a look at what happens under the hood.</p>
+<p>To sum it up, the moral of the story is to never discard the possiblity of silly exceptions; in fact, it’s better to be paranoid about exceptions! <em>Just because you are paranoid, it doesn’t mean nobody is after you!</em> And now, go write some code, possibly with lots of <em>try-catch</em> statements :)</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C#</a><a class="post-meta__tags" href="/tags/Debugging/">Debugging</a><a class="post-meta__tags" href="/tags/Net/">.Net</a><a class="post-meta__tags" href="/tags/Gotcha/">Gotcha</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/12/09/mocking-http/" title="Mocking HttpClient the simple way"><img class="cover" src="/2023/12/09/mocking-http/mock-http.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">Mocking HttpClient the simple way</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/1473701" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Michael Yarichuk</div><div class="author-info__description">A place to share steps in my journey to become a better professional</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/myarichuk"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-github"></i></a><a class="social-icon" href="mailto:michael.yarichuk@gmail.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/myarichuk" target="_blank" title=""><i class="fa-brands fa-twitter"></i></a><a class="social-icon" href="https://www.linkedin.com/in/myarichuk/" target="_blank" title=""><i class="fa-brands fa-linkedin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Unseen-Culprit"><span class="toc-number">1.</span> <span class="toc-text">The Unseen Culprit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Smoking-Gun"><span class="toc-number">2.</span> <span class="toc-text">The Smoking Gun</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solutions%E2%80%A6-Solutions%E2%80%A6"><span class="toc-number">3.</span> <span class="toc-text">Solutions… Solutions…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#To-Ignore-or-Not-to-Ignore-That%E2%80%99s-the-BackgroundServiceExceptionBehavior-Question"><span class="toc-number">4.</span> <span class="toc-text">To Ignore or Not to Ignore: That’s the BackgroundServiceExceptionBehavior Question</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-%E2%80%98Fail-Fast%E2%80%99-Philosophy-A-Blessing-and-a-Curse"><span class="toc-number">4.1.</span> <span class="toc-text">The ‘Fail Fast’ Philosophy: A Blessing and a Curse</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Domino-Effect-in-the-RPC-World"><span class="toc-number">4.2.</span> <span class="toc-text">The Domino Effect in the RPC World</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Making-the-Smart-Call"><span class="toc-number">4.3.</span> <span class="toc-text">Making the Smart Call</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Crafting-Your-Safety-Net-The-Art-of-Controlled-Chaos"><span class="toc-number">4.4.</span> <span class="toc-text">Crafting Your Safety Net: The Art of Controlled Chaos</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Service-Deniers-A-Silver-Bullet"><span class="toc-number">4.5.</span> <span class="toc-text">Service Deniers: A Silver Bullet?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#My-2-Cents"><span class="toc-number">4.6.</span> <span class="toc-text">My 2 Cents</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Diving-A-Little-Bit-Deeper"><span class="toc-number">5.</span> <span class="toc-text">Diving (A Little Bit) Deeper</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/12/12/works-on-my-machine/" title="Works On My Machine(tm)"><img src="/2023/12/12/works-on-my-machine/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Works On My Machine(tm)"/></a><div class="content"><a class="title" href="/2023/12/12/works-on-my-machine/" title="Works On My Machine(tm)">Works On My Machine(tm)</a><time datetime="2023-12-12T20:56:29.000Z" title="Created 2023-12-12 20:56:29">2023-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/09/mocking-http/" title="Mocking HttpClient the simple way"><img src="/2023/12/09/mocking-http/mock-http.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mocking HttpClient the simple way"/></a><div class="content"><a class="title" href="/2023/12/09/mocking-http/" title="Mocking HttpClient the simple way">Mocking HttpClient the simple way</a><time datetime="2023-12-09T14:06:32.000Z" title="Created 2023-12-09 14:06:32">2023-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing"><img src="/2023/11/18/production-ready-testing/production-ready-testing.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Comprehensive Testing"/></a><div class="content"><a class="title" href="/2023/11/18/production-ready-testing/" title="'Production Ready' Non-Negotiable: Comprehensive Testing">'Production Ready' Non-Negotiable: Comprehensive Testing</a><time datetime="2023-11-18T17:31:25.000Z" title="Created 2023-11-18 17:31:25">2023-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling"><img src="/2023/11/15/production-ready-memory-dumps/production-ready-memory-dump.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Memory Dump Tooling"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-memory-dumps/" title="'Production Ready' Non-Negotiable: Memory Dump Tooling">'Production Ready' Non-Negotiable: Memory Dump Tooling</a><time datetime="2023-11-15T22:19:28.000Z" title="Created 2023-11-15 22:19:28">2023-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics"><img src="/2023/11/15/production-ready-performance-metrics/production-ready-performance.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="'Production Ready' Non-Negotiable: Performance Metrics"/></a><div class="content"><a class="title" href="/2023/11/15/production-ready-performance-metrics/" title="'Production Ready' Non-Negotiable: Performance Metrics">'Production Ready' Non-Negotiable: Performance Metrics</a><time datetime="2023-11-15T17:43:55.000Z" title="Created 2023-11-15 17:43:55">2023-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Michael Yarichuk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const disqus_config = function () {
+    this.page.url = 'https://www.graymatterdeveloper.com/2023/12/12/works-on-my-machine/'
+    this.page.identifier = '/2023/12/12/works-on-my-machine/'
+    this.page.title = 'Works On My Machine(tm)'
+  }
+
+  const disqusReset = () => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  btf.addGlobalFn('themeChange', disqusReset, 'disqus')
+
+  const loadDisqus = () =>{
+    if (window.DISQUS) disqusReset()
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://graymatterdeveloperblog.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=graymatterdeveloperblog&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-R5G4WP4QCQ"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R5G4WP4QCQ') </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
