@@ -13,16 +13,16 @@ top_img: top.jpg
 cover: cover.jpg
 ---
 
-Oh, but it works on my machine! What gives?! Today, I found myself asking the uncaring monitor over and over again, while adding logs and going over existing ones, meditating over code while making sure I didn't do any silly mistakes and overall being frustrated. It's these kinds of head-scratchers that remind us why debugging is both an art and a science
+Oh, but it works on my machine! What gives?! Today, I found myself asking the uncaring monitor over and over again, while adding logs and going over existing ones, meditating over code while making sure I didn't do any silly mistakes and overall being frustrated. It's these kinds of head-scratchers that remind us why debugging is both an art and a science.
 
 ### The Unseen Culprit
 
-Picture this: a seemingly innocuous orchestrator service, working perfectly in the local environment, suddenly throws a tantrum when deployed. As I discovered, the devil is in the details — or more accurately, in an unhandled exception lurking in an ``IHostedService`` constructor. I paid too much attention to code and possible environmental issues that I missed a very simple issue: a file I wanted to load into cache in the ``IHostedService`` constructor simple didn't exist in the deployed instance, because CI/CD wasn't deploying it.
+Picture this: a seemingly innocuous orchestrator service, working perfectly in the local environment, suddenly throws a tantrum when deployed. After many hours of puzzling over this, I discovered that the devil is in the details — or more accurately, in an unhandled exception lurking in an ``IHostedService`` constructor. I paid too much attention to code and possible environmental issues that I missed a very simple issue: a file I wanted to load into cache in the ``IHostedService`` constructor simple didn't exist in the deployed instance, because CI/CD wasn't deploying it.
 
 ### The Smoking Gun
 
 I remembered that a background service shouldn't bring down a service like this, at least not without a stack trace of the exception. But apparently, any unhandled exception in the hosted service thread would bring the process down, a la ``StackOverflowException``.
-The interesting part, there was a reason why I remembered this: Before .Net 6, an unhandled exception thrown in ``BackgroundService`` (which implements ``IHostedService``) wouldn't bring down the process, simply log the exception and continue, but Microsoft [changed that](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/hosting-exception-handling) in .Net 6. Well, I learned something new today!
+The interesting part, there was a reason why I remembered this: Before .Net 6, an unhandled exception thrown in ``BackgroundService`` (which implements ``IHostedService``) wouldn't bring down the process, but apparently, Microsoft [changed that](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/hosting-exception-handling) in .Net 6. Well, I learned something new today!
 
 ### Solutions... Solutions...
 
